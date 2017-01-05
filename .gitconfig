@@ -1,0 +1,13 @@
+[user]
+	email = noelworden@gmail.com
+	name = Noel Worden
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[push]
+	default = simple
+[commit]
+	template = /Users/bravo/.customgitmsg.txt
+[core]
+	editor = vim
