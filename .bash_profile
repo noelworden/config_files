@@ -85,7 +85,7 @@ alias gl='git log -15 --pretty=format:'\''%C(yellow)%h %Cgreen%ad %Cred%an %Cres
 alias heroku!="git push heroku master"
 
 #waffle orign push
-alias wpush="git push --set-upstream origin"
+alias gpush="git push --set-upstream origin"
 
 #db
 alias migrate="rake db:migrate"
