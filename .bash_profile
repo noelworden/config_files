@@ -42,6 +42,9 @@ alias wb="cd canvas/woods-bagot"
 #cd nude
 alias nude="cd canvas/nude-skincare"
 
+#cd ward village
+alias wv="cd canvas/WardVillage"
+
 ##### Project Paths ####
 
 #cd bloccit path
@@ -97,6 +100,11 @@ alias dboom="rake db:drop db:create db:migrate db:seed"
 
 # open bash-profile
 alias bashpro='vim ~/.bash_profile'
+
+# git autocomplete
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
 # Exercism
 alias satan='cd ~/exercism/ruby && rvm gemset use exercism'

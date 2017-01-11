@@ -4,7 +4,7 @@
   core:
     disabledPackages: [
       "indent-guide-improved"
-      "whitespace"
+      # "whitespace"
       "trailing-spaces"
     ]
     telemetryConsent: "limited"
@@ -14,6 +14,7 @@
     ]
   editor:
     invisibles: {}
+    showInvisibles: true
   "exception-reporting":
     userId: "41f87525-6c79-613e-a327-ec7ccbf4a4c0"
   "git-diff":
