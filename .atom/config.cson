@@ -2,11 +2,6 @@
   autosave:
     enabled: true
   core:
-    disabledPackages: [
-      "indent-guide-improved"
-      # "whitespace"
-      "trailing-spaces"
-    ]
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"

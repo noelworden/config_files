@@ -25,6 +25,7 @@ source ~/.profile
 ####### ALIAS LIST #######
 alias cl='clear'
 alias be='bundle exec'
+alias video="sudo killall VDCAssistant"
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
@@ -71,7 +72,11 @@ alias ang="cd bloc/bloc-jams-angular"
 #############
 
 #git
-alias branch="git checkout -b"
+alias gcb="git checkout -b"
+
+alias gb="git branch"
+
+alias gc="git checkout"
 
 alias gs="git status"
 
@@ -105,9 +110,6 @@ alias bashpro='vim ~/.bash_profile'
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
-
-# Exercism
-alias satan='cd ~/exercism/ruby && rvm gemset use exercism'
 
 export PATH="/usr/local/bin:$PATH"
 
