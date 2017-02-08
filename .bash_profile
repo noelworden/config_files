@@ -46,30 +46,10 @@ alias nude="cd canvas/nude-skincare"
 #cd ward village
 alias wv="cd canvas/WardVillage"
 
-##### Project Paths ####
+#cd dataminr
+alias data="cd canvas/Dataminr"
 
-#cd bloccit path
-alias bloccit="cd bloc/code/bloccit"
-
-#cd toboom path
-alias toboom="cd bloc/prjct01/toboom/"
-
-#cd wikster path
-alias wikster="cd bloc/prjct02/wikster"
-
-#cd fitness_apocalypse path
-alias fa="cd bloc/prjct03/fitness_apocalypse"
-
-#cd bloc-jams path
-alias jams="cd bloc/bloc-jams"
-
-#cd parkfinder path
-alias park="cd bloc/prjct04/parkfinder"
-
-#cd bloc-jams-angular
-alias ang="cd bloc/bloc-jams-angular"
-
-#############
+#####################
 
 #git
 alias gcb="git checkout -b"
@@ -89,11 +69,14 @@ alias gdif="git diff --cached"
 alias gmas="git checkout master"
 
 alias gl='git log -15 --pretty=format:'\''%C(yellow)%h %Cgreen%ad %Cred%an %Creset%s %Cgreen%d'\'' --date=short'
+
 #heroku
 alias heroku!="git push heroku master"
 
-#waffle orign push
+#git push origin
 alias gpush="git push --set-upstream origin"
+
+######################
 
 #db
 alias migrate="rake db:migrate"
