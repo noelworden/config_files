@@ -2,7 +2,6 @@ export PS1="$GREEN\u$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export PATH=/usr/local/bin:$PATH ##This may need to change
-export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
 #export VISUAL=atom
 #export EDITOR="$VISUAL"
 #export BUNDLER_EDITOR='atom -w'
@@ -60,6 +59,8 @@ alias gc="git checkout"
 
 alias gs="git status"
 
+alias ga="git add"
+
 alias gcm="git commit -m"
 
 alias gcp="git commit -p"
@@ -79,12 +80,15 @@ alias gpush="git push --set-upstream origin"
 ######################
 
 #db
-alias migrate="rake db:migrate"
+alias rollback="rake db:rollback"
+alias migrate="rake db:migrate db:test:prepare"
 alias seed="rake db:seed"
 alias reset="rake db:reset"
 
 # rails cmd helpers
 alias dboom="rake db:drop db:create db:migrate db:seed"
+
+alias dbup="rake db:create db:migrate db:seed"
 
 # open bash-profile
 alias bashpro='vim ~/.bash_profile'
