@@ -1,4 +1,4 @@
-export PS1="$GREEN\u$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+export PS1="$GREEN"stayfrosty"$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export PATH=/usr/local/bin:$PATH ##This may need to change

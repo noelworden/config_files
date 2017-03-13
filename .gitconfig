@@ -8,6 +8,6 @@
 [push]
 	default = simple
 [commit]
-	template = /Users/bravo/.customgitmsg.txt
+	template = /Users/noelworden/.customgitmsg.txt
 [core]
 	editor = vim
