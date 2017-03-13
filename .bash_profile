@@ -78,7 +78,10 @@ alias heroku!="git push heroku master"
 alias gpush="git push --set-upstream origin"
 
 ######################
+#routes
+alias rgrep="rake routes | grep"
 
+######################
 #db
 alias rollback="rake db:rollback"
 alias migrate="rake db:migrate db:test:prepare"

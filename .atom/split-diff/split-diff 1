@@ -1,6 +1,136 @@
-(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var
-o={ti:"5439103"};o.q=w[u],w[u]=new
-UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var
-s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
-noscript
-img src="//bat.bing.com/action/0?ti=5439103&Ver=2 <http://bat.bing.com/action/0?ti=5439103&Ver=2> " height="0" width="0" style="display:none; visibility: hidden;"
+//  ======================================================================================================
+//
+//  Events
+//
+//  ======================================================================================================
+- title 'South Street Seaport Event Space | The Beekman - Events | Brooklyn Bridge Wedding Venues'
+- meta_tag :description, 'The Beekman offers an assortment of event space near South Street Seaport and the Brooklyn Bridge for guests to host their events. Our meeting and wedding venues feature elegant decor and city views. And we can accommodate groups of varying sizes.'
+
+.page-wrapper.booking-push.js-booking-push
+  main.page-main
+
+    //  Hero Panel
+    //  ======================================================================================================
+    header.panel.panel--title.panel--title--events
+      .panel-block.panel-bkgd--events-1
+      .panel-block.panel-bkgd--events-2
+        .panel-content--hero.waterfall.js-waterfall
+          h1.panel-content--hero__header.type--a1
+            span class="text-animation text-animation--events"
+            span.is-visually-hidden Events
+
+          h2.waterfall__item.waterfall__item--in-up.panel-content--hero__title.type--c1 The Beekman has the perfect event space for you.
+          p.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell Whether you are hosting an intimate gathering or an elaborate soiree, The Beekman has the perfect event space for you. Our one-of-a-kind offerings are guaranteed to enhance your most cherished moments.
+
+    //  Menus & Offerings
+    //  ======================================================================================================
+    article.panel-article id="menus-and-offerings"
+
+      // Info panel
+      .panel.panel--grid-three.panel--grid-three--events
+        .panel-block.panel-bkgd--events-vibe
+
+        .panel-block.panel-block--dark.panel-bkgd--events-3
+          .panel-content.waterfall.js-waterfall
+            h2.waterfall__item.waterfall__item--in-up.type--b1.type--center Stylish Occasions
+            h3.waterfall__item.waterfall__item--in-up.type--c1.type--center Social Events, Weddings, Meetings
+
+            hr.waterfall__item.waterfall__item--in-up.panel-divider
+            p.waterfall__item.waterfall__item--in-up.p--drop-cap
+              span.first-letter I
+              | t’s our pleasure to offer you and your guests a distinctly New York experience. Within our awe-inspiring turreted building we have several locations ranging from grand rooms for weddings and corporate events to retro-vibe cocktail spaces, all outfitted with state-of-the-art audio and visual capabilities. Acclaimed chef and restaurateur Tom Colicchio is on hand to conceptualize exclusive menus.
+            p.waterfall__item.waterfall__item--in-up.type--center
+              = link_to 'http://hub.tworoadshotels.com/rfp2/index.cfm?task=form&LDT=0&Props=PROP_15061209523913_BWCN9&CopyID=0', { target: '_blank', class: 'btn--empty js-ga--menu', data: { 'js-ga-label': 'Request Information' } } do |link|
+                span.type--b6.type--uppercase Request Information
+            p.waterfall__item.waterfall__item--in-up.type--center
+              = link_to 'View Menus & Seating Charts', '/beekman-events-package.pdf', { target: '_blank', class: 'link--gold type--b7 js-ga--menu', data: { 'js-ga-label': 'View Menus & Seating Charts' } }
+
+        .panel-block.panel-bkgd--events-4.is-desktop-visible
+          .panel-content.panel-content--wide.waterfall.js-waterfall
+            i.illustration.illustration--machine-event.illustration--left.waterfall__item.waterfall__item--in-up
+
+            .panel-content__floated.waterfall.js-waterfall
+              h3.waterfall__item.waterfall__item--in-up.type--b3.type--uppercase.type--center--mobile Executive Meeting Package
+              p.waterfall__item.waterfall__item--in-up.type--d2.type--center--mobile Includes:
+              ul.list--simple.waterfall__item.waterfall__item--in-up
+                li.list--simple__item.type--b6 Hot Breakfast, Two Breaks and Sandwich Board Lunch for $195 per person.
+                li.list--simple__item.type--b6 Additions and enhancements available.
+
+    //  Spaces
+    //  ======================================================================================================
+    article.panel-article id="event-spaces"
+
+      // Intro Panel
+      .panel.panel--intro.panel--title.panel--title--spaces
+        .panel-block.panel-block--full-width.panel-bkgd--events-spaces
+        .panel-content--hero.panel-content--hero-middle-left.waterfall.js-waterfall
+          h2.panel-content--hero__header.type--a1
+            | Spaces
+          h3.panel-content--hero__title.waterfall__item.waterfall__item--in-up.type--c1 No matter your vision, we have the setting to make it come to life.
+          p.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell We are invigorated by creative and conceptual challenges. Together let’s make your event a unique and memorable experience.
+
+
+      // All Spaces
+      //  ======================================================================================================
+      - @spaces.each do |space|
+        .panel
+          - gallery = space.space_images.each.map { |img| img.image.url }
+
+          .panel-block--66w.panel-block--zoom.panel-block--trigger.js-modal-trigger data-js-gallery="#{gallery.join(", ")}"
+            .panel-block--zoom__item.panel-bkgd--events-spaces-all style="background-image: url(#{gallery.first});"
+
+          .panel-block--40w.bkgd--brown-dark
+            .panel-content.waterfall.js-waterfall
+              h2.waterfall__item.waterfall__item--in-up.type--b1.type--center--mobile #{space.name}
+              p.waterfall__item.waterfall__item--in-up #{space.description}
+              ul.redactor-list.list--bulleted.waterfall__item.waterfall__item--in-up.type--b7
+                = space.details.html_safe
+
+              button.panel__view-btn.waterfall__item.waterfall__item--in-up.link--eggshell.type--b6.js-modal-trigger data-js-gallery="#{gallery.join(", ")}" type="button" View Gallery
+              p.panel__request-link.waterfall__item.waterfall__item--in-up.type--center--mobile
+                = link_to 'http://hub.tworoadshotels.com/rfp2/index.cfm?task=form&LDT=0&Props=PROP_15061209523913_BWCN9&CopyID=0', { target: '_blank', class: 'btn--empty js-ga--spaces', data: { 'js-ga-label': 'Request Information - Entire Lower Level' } } do |link|
+                  span.type--b6.type--uppercase Request Information
+    //  Weddings
+    //  ======================================================================================================
+    article.panel-article id="weddings"
+
+      // Intro Panel
+      .panel.panel--intro.panel--title.panel--title--weddings
+        .panel-block.panel-block--full-width.panel-bkgd--weddings
+          .panel-content--hero.panel-content--hero-far-left
+            h2.panel-content--hero__header.type--a1
+              | Weddings
+
+      // Info panel
+      .panel.panel--grid-three.panel--grid-three--wedding
+        .panel-block.panel-bkgd--weddings-2
+
+        .panel-block.panel-block--dark.panel-bkgd--weddings-1
+          .panel-content.waterfall.js-waterfall
+            h2.waterfall__item.waterfall__item--in-up.type--b1.type--center Your Wedding, Your Way
+            h3.waterfall__item.waterfall__item--in-up.type--c1.type--center Exclusive Wedding Offers
+
+            hr.panel-divider.waterfall__item.waterfall__item--in-up
+            p.waterfall__item.waterfall__item--in-up.p--drop-cap
+              span.first-letter T
+              | he romance of Old New York is alive and well at The Beekman, which offers a blend of classic glamour and contemporary charm that makes it an incomparable venue for the ultimate Manhattan wedding.
+            p.waterfall__item.waterfall__item--in-up.type--center
+              = link_to '/beekman-events-package.pdf', { target: '_blank', class: 'btn--empty js-ga--wedding', data: { 'js-ga-label': 'View Information' } } do |link|
+                span.type--b6.type--uppercase View Information
+
+        .panel-block.panel-bkgd--weddings-3
+          .panel-content.panel-content--wide.waterfall.js-waterfall
+            h3.waterfall__item.waterfall__item--in-up.type--c1 Details
+            ul.list--bulleted.list--bulleted--tight.waterfall.js-waterfall
+              li.list--bulleted__item.waterfall__item.waterfall__item--in-up.type--b6 Menus created by acclaimed chef and restaurateur Tom Colicchio
+              li.list--bulleted__item.waterfall__item.waterfall__item--in-up.type--b6 Ideal for a wedding ceremony and reception for up to 90 guests
+              li.list--bulleted__item.waterfall__item.waterfall__item--in-up.type--b6 Unique spaces suitable for engagement parties, showers, rehearsal dinners and brunches
+              li.list--bulleted__item.waterfall__item.waterfall__item--in-up.type--b6 Relationships with New York City’s premier wedding vendors
+              li.list--bulleted__item.waterfall__item.waterfall__item--in-up.type--b6 Packages include votive candles, printed menu cards, tables and linens
+              li.list--bulleted__item.waterfall__item.waterfall__item--in-up.type--b6 Complimentary one night stay based on food &amp; beverage minimum
+
+  // Include footer
+  = render "shared/footer"
+
+// Include gallery modal
+= render "shared/gallery_modal"
