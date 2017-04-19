@@ -2,6 +2,9 @@
   autosave:
     enabled: true
   core:
+    disabledPackages: [
+      "vim-mode-plus"
+    ]
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"

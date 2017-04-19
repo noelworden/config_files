@@ -48,6 +48,8 @@ alias wv="cd canvas/WardVillage"
 #cd dataminr
 alias data="cd canvas/Dataminr"
 
+#cd beekman
+alias beekman="cd canvas/beekman"
 #####################
 
 #git
@@ -70,6 +72,8 @@ alias gdif="git diff --cached"
 alias gmas="git checkout master"
 
 alias gl='git log -15 --pretty=format:'\''%C(yellow)%h %Cgreen%ad %Cred%an %Creset%s %Cgreen%d'\'' --date=short'
+
+alias branchboom='git branch | grep -v "master" | xargs git branch -D'
 
 #heroku
 alias heroku!="git push heroku master"
