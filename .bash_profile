@@ -34,6 +34,8 @@ alias resource='source ~/.bash_profile'
 # alias pggo='/usr/local/Cellar/postgresql93/9.3.5/bin/pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 # alias pgno='/usr/local/Cellar/postgresql93/9.3.5/bin/pg_ctl -D  /usr/local/var/postgres stop -s -m fast'
 
+#cd food rescue robot
+alias bfr="cd personal/food-rescue-robot"
 #####CANVAS######
 
 #cd woods-bagot
@@ -50,6 +52,9 @@ alias data="cd canvas/Dataminr"
 
 #cd beekman
 alias beekman="cd canvas/beekman"
+
+#cd crunch-member
+alias cmember="cd canvas/crunch-member"
 #####################
 
 #git
