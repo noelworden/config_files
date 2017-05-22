@@ -53,8 +53,14 @@ alias data="cd canvas/Dataminr"
 #cd beekman
 alias beekman="cd canvas/beekman"
 
+#cd Stribling
+alias strib="cd canvas/Stribling"
+
 #cd crunch-member
 alias cmember="cd canvas/crunch-member"
+
+#cd crunch-club
+alias cclub="cd canvas/crunch-club"
 #####################
 
 #git
@@ -113,3 +119,4 @@ fi
 export PATH="/usr/local/bin:$PATH"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="/usr/local/sbin:$PATH"

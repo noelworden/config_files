@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "cf3a545c-961d-44d1-878c-8197df99e5c1"
   autosave:
     enabled: true
   core:
@@ -12,6 +15,7 @@
     ]
   editor:
     invisibles: {}
+    showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "41f87525-6c79-613e-a327-ec7ccbf4a4c0"

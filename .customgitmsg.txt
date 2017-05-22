@@ -1,19 +1,22 @@
 
+#--------------
+# Ticket Number
+#--------------
+
 #------------------------------------------------
 # [ FEAT BUG CHG REFAC PERF DATA TOOL COPY DOC SPEC WIP ]
 # Do not exceed above line in commit txt length
 #------------------------------------------------
+----------------------------------------
 
 
-
-#----------------------------------------------------------------------
+#---------------------------------------------------------------------
 # Description of why, not how.
-### Add issue number to auto-close
 # Link to issue, if needed.
 # wrap desc. text at the end of the above line, do not exceed line
 # length
 #---------------------------------------------------------------------
-#FEAT - feature ,new stuff to the site
+#FEAT - feature, new stuff to the site
 #BUG - any bug fix you put in place
 #CHG - change that is NOT a refactor or a COPY change
 #REFAC - refactors existing code but does not change functionality
@@ -23,4 +26,4 @@
 #COPY - only text changes
 #DOC - changes to documentation
 #SPEC - any test or spec changes
-#WIP- work in progress. USE SPARINGLY
+#WIP - work in progress. USE SPARINGLY
