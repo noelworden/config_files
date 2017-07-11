@@ -16,7 +16,6 @@
   editor:
     invisibles: {}
     showIndentGuide: true
-    showInvisibles: true
   "exception-reporting":
     userId: "41f87525-6c79-613e-a327-ec7ccbf4a4c0"
   "git-diff":

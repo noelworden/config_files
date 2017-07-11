@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
+        "raw": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
-        "spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
+        "rawSpec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
+        "spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/apm-install-dir-117420-43495-7easte.jssobc5wmi"
+      "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/apm-install-dir-11757-2826-12iw83e.wmvvrhpvi"
     ]
   ],
-  "_from": "../d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
-  "_id": "language-haml@0.24.3",
+  "_from": "../d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
+  "_id": "language-haml@0.24.5",
   "_inCache": true,
   "_installable": true,
   "_location": "/language-haml",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
+    "raw": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
-    "spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
+    "rawSpec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
+    "spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
-  "_shasum": "36fc9559e657171af06eb5b9bdd2a53406a78027",
+  "_resolved": "file:../d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
+  "_shasum": "bd42bbff5e91c84832772ceccc5b2646c45fc5d1",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-117420-43495-1h2yk3y.krrimmfgvi/package.tgz",
-  "_where": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/apm-install-dir-117420-43495-7easte.jssobc5wmi",
+  "_spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11757-2826-kqiphj.z1s16ecdi/package.tgz",
+  "_where": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/apm-install-dir-11757-2826-12iw83e.wmvvrhpvi",
   "bugs": {
     "url": "https://github.com/cannikin/language-haml/issues"
   },
@@ -60,5 +60,15 @@
     "type": "git",
     "url": "git+https://github.com/cannikin/language-haml.git"
   },
-  "version": "0.24.3"
+  "version": "0.24.5",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }

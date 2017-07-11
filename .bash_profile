@@ -61,6 +61,10 @@ alias cmember="cd canvas/crunch-member"
 
 #cd crunch-club
 alias cclub="cd canvas/crunch-club"
+
+#cd canvas-united
+alias united="cd canvas/canvas-united"
+
 #####################
 
 #git
@@ -104,7 +108,7 @@ alias seed="rake db:seed"
 alias reset="rake db:reset"
 
 # rails cmd helpers
-alias dboom="rake db:drop db:create db:migrate db:seed"
+alias dboom="rake db:drop db:create db:migrate db:test:prepare db:seed"
 
 alias dbup="rake db:create db:migrate db:seed"
 
@@ -115,6 +119,9 @@ alias bashpro='vim ~/.bash_profile'
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+# gem versions
+alias ruby19='rvm use ruby-1.9.3-p392'
 
 export PATH="/usr/local/bin:$PATH"
 
