@@ -1,4 +1,4 @@
-# split-diff package
+# split-diff [![Installs!](https://img.shields.io/apm/dm/split-diff.svg?style=flat-square)](https://atom.io/packages/split-diff) [![Version!](https://img.shields.io/apm/v/split-diff.svg?style=flat-square)](https://atom.io/packages/split-diff) [![License](https://img.shields.io/apm/l/split-diff.svg?style=flat-square)](https://github.com/mupchrch/split-diff/blob/master/LICENSE.md)
 
 Diffs text between two split panes. New panes are created if less than two panes exist upon run of the package.
 
@@ -14,7 +14,7 @@ You can call any of these commands from your own custom keybinding, simply overr
 
 | Command | Effect | Default Keymaps |
 | ------- | ------ | --------------- |
-| Toggle `split-diff:toggle` | Toggles a diff of the text between two side-by-side panes. Creates panes as necessary. Displays git changes if there is a repository found. | `ctrl-alt-t` |
+| Toggle `split-diff:toggle` | Toggles a diff of the text between two side-by-side panes. Creates panes as necessary. Displays git changes if there is a repository found. | `ctrl-alt-t`,<br>`ctrl-alt-d` (_linux_) |
 | Enable `split-diff:enable` | Enables a diff of the text between two side-by-side panes. Creates panes as necessary. Displays git changes if there is a repository found. | ... |
 | Disable `split-diff:disable` | Disables a diff. Removes any panes that were created by this package. | ... |
 | Ignore Whitespace `split-diff:ignore-whitespace` | Toggles the Ignore Whitespace setting. | ... |
@@ -28,7 +28,8 @@ You can call any of these commands from your own custom keybinding, simply overr
 * **Show Word Diff** - Diffs the words between each line when this box is checked.
 * **Ignore Whitespace** - Will not diff whitespace when this box is checked.
 * **Mute Notifications** - Mutes all warning notifications when this box is checked.
-* **Hide Tree View** - Automatically hides the tree-view during diff. Re-shows on disable.
+* **Turn Off Soft Wrap** - Automatically turns off soft wrap during diff. Restores on disable.
+* **Hide Docks** - Automatically hides all docks during diff (Tree View, Github, etc). Re-shows on disable.
 * **Sync Scrolling** - Syncs the scrolling of the editors.
 #### Colors
 * **Added Color Side** - Which editor (left or right) to highlight as added. The opposite editor will be highlighted as removed.

@@ -1,4 +1,17 @@
 "*":
+  "activate-power-mode":
+    comboMode:
+      enabled: false
+    particles:
+      colours:
+        fixed: "#7413ff"
+      spawnCount:
+        max: 25
+    plugins:
+      playAudio: true
+      screenShake: true
+    screenShake:
+      enabled: false
   "atom-beautify":
     general:
       _analyticsUserId: "cf3a545c-961d-44d1-878c-8197df99e5c1"

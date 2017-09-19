@@ -65,6 +65,9 @@ alias cclub="cd canvas/crunch-club"
 #cd canvas-united
 alias united="cd canvas/canvas-united"
 
+#cd gramercy propery trust
+alias gpt="cd canvas/gramercy-property-trust"
+
 #####################
 
 #git
@@ -111,6 +114,9 @@ alias reset="rake db:reset"
 alias dboom="rake db:drop db:create db:migrate db:test:prepare db:seed"
 
 alias dbup="rake db:create db:migrate db:seed"
+
+# rails webrick server
+alias brick="rails s webrick"
 
 # open bash-profile
 alias bashpro='vim ~/.bash_profile'
