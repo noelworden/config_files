@@ -59,6 +59,9 @@ alias strib="cd canvas/Stribling"
 #cd crunch-member
 alias cmember="cd canvas/crunch-member"
 
+#cd crunch-class
+alias cclass="cd canvas/crunch-class"
+
 #cd crunch-club
 alias cclub="cd canvas/crunch-club"
 
@@ -91,6 +94,8 @@ alias gmas="git checkout master"
 
 alias gl='git log -15 --pretty=format:'\''%C(yellow)%h %Cgreen%ad %Cred%an %Creset%s %Cgreen%d'\'' --date=short'
 
+alias gbd='git branch -d'
+
 alias branchboom='git branch | grep -v "master" | xargs git branch -D'
 
 #heroku
@@ -102,6 +107,10 @@ alias gpush="git push --set-upstream origin"
 ######################
 #routes
 alias rgrep="rake routes | grep"
+
+#####################
+#rspec
+alias bspec="bin/rspec"
 
 ######################
 #db
