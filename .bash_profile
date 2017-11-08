@@ -71,6 +71,12 @@ alias united="cd canvas/canvas-united"
 #cd gramercy propery trust
 alias gpt="cd canvas/gramercy-property-trust"
 
+#cd shopcore
+alias shopcore="cd canvas/shopcore"
+
+#cd react-app
+alias react="cd personal/react-course/react-app"
+
 #####################
 
 #git

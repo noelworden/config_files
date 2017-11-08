@@ -19,6 +19,8 @@
     triggerOnSave: true
   autosave:
     enabled: true
+  "browser-refresh-on-save":
+    scripts: {}
   core:
     disabledPackages: [
       "vim-mode-plus"
