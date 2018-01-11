@@ -77,6 +77,9 @@ alias shopcore="cd canvas/shopcore"
 #cd react-app
 alias react="cd personal/react-course/react-app"
 
+#cd gradebook
+alias gradebook="cd personal/gradebook"
+
 #####################
 
 #git
@@ -104,6 +107,7 @@ alias gbd='git branch -d'
 
 alias branchboom='git branch | grep -v "master" | xargs git branch -D'
 
+alias hard='git reset HEAD --hard'
 #heroku
 alias heroku!="git push heroku master"
 
