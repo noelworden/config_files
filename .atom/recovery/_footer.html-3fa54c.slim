@@ -1,0 +1,157 @@
+//  ==========================================================================
+//
+//  Footer
+//
+//  ==========================================================================
+footer.footer.fp-auto-height.bkgd--charcoal
+  .content-contain.content-contain--1180
+    .footer__interior
+      //  Social
+      //  ==========================================================================
+      .footer-social-group
+        .footer-social-group__twitter-partner
+          = image_tag('logo--twitter-official-partner.png', class: 'footer-social-group__twitter-partner__logo', alt: 'Official Twitter Partner seal')
+          p.type--e6.type--grey-medium.footer-social-group__twitter-partner__text
+            | Dataminr is an Official
+            br
+            | Twitter Partner
+        .footer-social-group__social
+          ul.footer-social.type--center
+            li.footer-social__item
+              = link_to 'https://www.facebook.com/Dataminr/', { class: 'footer-social__item__link link-dim', target: '_blank' } do |link|
+                i.icon.icon-facebook--footer.icon--large.type--grey-medium
+            li.footer-social__item
+              = link_to 'https://twitter.com/Dataminr', { class: 'footer-social__item__link link-dim', target: '_blank' } do |link|
+                i.icon.icon-twitter.icon--large.type--grey-medium
+            li.footer-social__item
+              = link_to 'https://www.linkedin.com/company/dataminr', { class: 'footer-social__item__link link-dim', target: '_blank' } do |link|
+                i.icon.icon-linkedin.icon--large.type--grey-medium
+
+      //  Subscribe
+      //  ==========================================================================
+      .footer-subscribe
+        .footer-section__interior
+          .footer-subscribe__intro
+            h3.footer-subscribe__title.type--d5.type--grey-medium Subscribe to the Debrief Newsletter
+            p.type--e6.type--grey-medium Gain monthly insights into how Dataminr alerts clients to breaking events in real time.
+
+          //  Form
+          //  ==========================================================================
+          .footer-subscribe__form-group
+            // Form error info
+            .form-error-notice.type--center.js-form-error-notice
+              div.type--inline-block.form-error-notice__marker
+                span.type--red.type--d7 !
+              p.form-error-notice__text.type--inline-block.type--e7.type--white--60 Please correct the errors below and then submit the form again.
+
+            // Form submission failure notice
+            .form-error-notice.type--center.js-form-no-submit-notice
+              div.type--inline-block.form-error-notice__marker
+                span.type--red.type--d7 !
+              p.form-error-notice__text.type--inline-block.type--e7.type--blue-grey Your sumission didn't reach us. Please try again.
+
+            .form.form--footer.js-data-from data-js-from="Footer"
+
+              // Form success info
+              .form-success.js-form-success
+                p.type--e3.type--blue-grey.type--center Thanks for subscribing! The newsletter is sent in the first week of every month.
+
+              = form_tag '#', method: 'post', class: 'footer-subscribe__form js-newsletter-signup js-pardot-form', novalidate: 'novalidate'
+                .form__field-group
+                  .input-group
+                    input.input-field.type--d5.js-enable-trigger class="work_email js-form-required js-form-email" id="work_email-footer-form" name="pardot[work_email]" type="email"
+                    label.input-label.type--d5 for="work_email-footer-form" Work Email *
+
+                .form__field-group.form__field-group--disabled.form__field-group--select-arrow.form__field-group--select-arrow-secondary.type--left.input-group.js-disabled
+                  label.label--absolute.type--d5.type--grey-light for="solution" Solution:
+                  select.select.select--secondary.js-select.type--d5.type--blue-bright.js-solution-newsletter id="solution" name="pardot[solution]"
+                    option value="Corporate Security" Corporate Security
+                    option value="Finance" Finance
+                    option value="News" News
+                    option value="Communications" PR / Communications
+
+                input.btn.form__submit.type--d7.type--white type="submit" value="Subscribe"
+
+      //  Site Map
+      //  ==========================================================================
+      .footer-sitemap
+        .footer-section__interior
+          .footer-sitemap__group
+            h3.type--d5.type--grey-medium Solutions
+            ul.footer-sitemap__list
+              li.footer-sitemap__list__item
+                = link_to corporate_security_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Corporate Security
+              li.footer-sitemap__list__item
+                = link_to finance_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Finance
+              li.footer-sitemap__list__item
+                = link_to public_sector_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Public Sector
+              li.footer-sitemap__list__item
+                = link_to news_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white News
+              li.footer-sitemap__list__item
+                = link_to communications_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white PR / Communications
+
+          .footer-sitemap__group
+            h3.type--d5.type--grey-medium Resources
+            ul.footer-sitemap__list
+              li.footer-sitemap__list__item
+                = link_to resources_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white All Resources
+              li.footer-sitemap__list__item
+                = link_to resources_path(tag: 'Case Study'), { class: "link-dim" } do |link|
+                  span.type--e5.type--white Case Studies
+              li.footer-sitemap__list__item
+                = link_to resources_path(tag: 'Article'), { class: "link-dim" } do |link|
+                  span.type--e5.type--white Articles
+              li.footer-sitemap__list__item
+                = link_to resources_path(tag: 'Infographic'), { class: "link-dim" } do |link|
+                  span.type--e5.type--white Infographics
+              li.footer-sitemap__list__item
+                = link_to resources_path(tag: 'Report'), { class: "link-dim" } do |link|
+                  span.type--e5.type--white Reports
+              li.footer-sitemap__list__item
+                = link_to resources_path(tag: 'Video'), { class: "link-dim" } do |link|
+                  span.type--e5.type--white Videos
+              li.footer-sitemap__list__item
+                = link_to resources_path(tag: 'Webinar'), { class: "link-dim" } do |link|
+                  span.type--e5.type--white Webinars
+
+          .footer-sitemap__group
+            h3.type--d5.type--grey-medium About
+            ul.footer-sitemap__list
+              li.footer-sitemap__list__item
+                = link_to about_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white About Dataminr
+              li.footer-sitemap__list__item
+                = link_to team_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Team
+              li.footer-sitemap__list__item
+                = link_to careers_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Careers
+              li.footer-sitemap__list__item
+                = link_to events_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Events
+              li.footer-sitemap__list__item
+                = link_to press_index_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Press
+              li.footer-sitemap__list__item
+                = link_to contact_path, { class: "link-dim" } do |link|
+                  span.type--e5.type--white Contact Us
+
+      //  Copyright
+      //  ==========================================================================
+      .footer-legal
+        hr.footer-legal__hr.is-hidden-sm
+        ul.footer-legal__list
+          li.footer-legal__list__item
+            p.type--e6.type--grey-medium &copy; #{Time.zone.now.year} Dataminr
+          li.footer-legal__list__item
+            = link_to terms_of_use_path, { class: "footer-nav__item__link link-dim" } do |link|
+              span.type--d6.type--grey-medium Terms of Use
+          li.footer-legal__list__item
+            = link_to privacy_policy_path, { class: "footer-nav__item__link link-dim" } do |link|
+              span.type--d6.type--grey-medium Privacy Policy

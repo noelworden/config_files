@@ -1,0 +1,182 @@
+//  ======================================================================================================
+//
+// Detail Page Styles
+//
+//  ======================================================================================================
+.detail { padding-bottom: 20px; }
+
+.detail-box {
+  padding: 30px;
+
+  @include breakpoint(md) {
+    border: 1px solid $grey-light;
+    margin: 60px 60px 0 60px;
+    padding: 45px 60px;
+  }
+
+  @include breakpoint(lg) {
+    margin: 40px 0 0 0;
+    padding: 60px 120px;
+  }
+
+  &--bottom-margin {
+    @include breakpoint(md) { margin-bottom: 65px; }
+  }
+}
+
+.detail-buttons {
+  padding: 30px;
+  position: relative;
+
+  @include breakpoint(md) { padding: 20px 63px 65px 63px; }
+  @include breakpoint(lg) { padding: 20px 0 80px 0; }
+}
+
+.detail-box__caption {
+  margin-top: 25px;
+  @include breakpoint(md) { margin-top: 45px; }
+  @include breakpoint(lg) { margin-top: 35px; }
+}
+
+.detail-tag {
+  @include breakpoint(md) { float: left; }
+}
+
+.detail-box__title {
+  margin-top: 20px;
+  clear: both;
+
+  @include breakpoint(md) { margin-top: 30px; }
+  @include breakpoint(lg) { margin-top: 20px; }
+
+  &--margin-bottom {
+    margin-bottom: 30px;
+    @include breakpoint(md) { margin-bottom: 50px; }
+  }
+}
+
+.detail-box__section {
+  margin: 20px 0 60px 0;
+  &:last-of-type { margin-bottom: 25px; }
+}
+
+.detail-box__description { margin: 20px 0; }
+
+.detail-box__address { margin-bottom: 1px; }
+
+.detail-box__p {
+  margin-bottom: 24px;
+
+  &--last {
+    margin-bottom: 0;
+    margin-top: 55px;
+  }
+}
+
+.detail-box__p.type--inline {
+  position: relative;
+
+  &:after {
+    content: '\A';
+    display: block;
+    height: 24px;
+    white-space: pre;
+  }
+}
+
+.detail-box__buttons {
+  margin: 35px 0 5px 0;
+
+  @include breakpoint(lg) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--two { .detail-box__buttons { @include breakpoint(md) { width: 100%; } } }
+
+//left button on desktop
+  .detail-box__button__left {
+    margin: 4px 0 10px 0;
+    @include breakpoint(lg) { margin: 4px 8px 10px 0; }
+  }
+
+//right button on desktop
+  .detail-box__button__right {
+    margin: 4px 0 10px 0;
+    @include breakpoint(lg) { margin: 4px 0 10px 8px; }
+  }
+}
+
+.detail-box__items {
+  @include breakpoint(md) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &--two { .detail-box__item { @include breakpoint(md) { width: 100%; } } }
+}
+
+.detail-box__item {
+  display: block;
+  padding: 20px 30px;
+  margin: 4px 0;
+
+  @include breakpoint(md) {
+    border-bottom: 0;
+    margin: 0 2px 0 2px;
+    padding: 20px 25px;
+  }
+
+  @include breakpoint(lg) { padding: 20px 60px; }
+}
+
+.detail-box__item__link {
+  display: block;
+  margin: 15px 0 20px 0;
+  text-align: center;
+}
+
+//  ==========================================================================
+//  Social Share
+//  ==========================================================================
+.detail-box__social-group {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.detail-box__caption__tag {
+  order: 2;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    order: 1;
+    width: 50%;
+  }
+}
+
+.detail-social-share {
+  margin-bottom: 15px;
+  order: 1;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    margin-bottom: 0;
+    order: 2;
+    text-align: right;
+    width: 50%;
+  }
+}
+
+.detail-social__item {
+  display: inline-block;
+  vertical-align: middle;
+
+  &:first-of-type { margin-right: 5px; }
+}
+
+.detail-social__item__link {
+  padding: 5px 10px;
+  &--facebook { padding: 5px 7px; }
+}

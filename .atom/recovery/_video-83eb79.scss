@@ -1,0 +1,37 @@
+//  ==========================================================================
+//
+//  Video Module
+//
+//  ==========================================================================
+.video-contain {
+  height: 0;
+  padding-bottom: 56%;
+  position: relative;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+//  ==========================================================================
+//  Background Video
+//  ==========================================================================
+.background-video--container {
+  max-height: 100%;
+  overflow: hidden;
+  position: static;
+}
+
+.background-video {
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+

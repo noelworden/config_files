@@ -31,9 +31,6 @@
       "snippets"
       "atom-css-clean"
       "language-haml"
-      "react"
-      "sort-lines"
-      "split-diff"
       "open-on-github"
       "markdown-preview"
       "link"
@@ -65,7 +62,6 @@
       "language-go"
       "autocomplete-html"
       "atom-beautify"
-      "language-slim"
       "autocomplete-atom-api"
       "autocomplete-plus"
       "autocomplete-snippets"
@@ -76,6 +72,7 @@
       "solarized-dark-syntax"
     ]
   editor:
+    fontSize: 15
     invisibles: {}
     showIndentGuide: true
   "exception-reporting":

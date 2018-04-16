@@ -1,0 +1,22 @@
+/ Successful form submission Facebook tracking pixel
+// javascript:
+//   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+//     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+//     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+//     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+//       document,'script','https://connect.facebook.net/en_US/fbevents.js');
+//       fbq('init', '1782744981994026');
+//       fbq('track', 'Lead');
+// noscript
+//   img height="1" src="https://www.facebook.com/tr?id=1782744981994026&ev=PageView&noscript=1" style="display:none" width="1" /
+
+
+.form-success.js-form-success
+  .form-success__inner
+    p.type--b1= t('register.mahalo')
+    p.type--e1= t('register.copy')
+    - if type == "button"
+      button.btn--yellow--full-width.type--g1.js-success-btn type="button"
+        span= t('register.ok')
+    - elsif type == "link"
+      = link_to t('register.ok'), '/', { class: "type--g1 btn--yellow--full-width" }

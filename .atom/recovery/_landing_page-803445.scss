@@ -1,0 +1,64 @@
+//  ==========================================================================
+//
+//  Culture Landing Page
+//
+//  ==========================================================================
+.landing-main {
+  margin: 120px auto 100px auto;
+  max-width: 700px;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+}
+
+.landing-main__content {
+  @extend .type--b6;
+
+  .line-height--15 {
+    line-height: 15px;
+  }
+
+  a {
+    color: $gold;
+    &:hover { color: $eggshell; }
+  }
+
+  figure {
+    margin: 20px auto;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+  figcaption {
+    @extend .type--d3;
+    @extend .type--gray;
+    @extend .type--normal-case;
+    margin: 10px 0 0 0;
+  }
+
+  strong {
+    @extend %freight-pro;
+    font-weight: bold;
+  }
+
+  & > * + * { margin-top: 22px; }
+}
+
+.landing-item__info__title {
+  display: block;
+  margin: 95px 0 30px 0;
+}
+
+.landing-pagination {
+  clear: left;
+  padding: 30px 0;
+  width: 100%;
+
+  @include breakpoint(lg) { padding: 50px 0 40px 0; }
+
+  a + a {
+    margin-left: 20px;
+    @include breakpoint(lg) { margin-left: 30px; }
+  }
+}

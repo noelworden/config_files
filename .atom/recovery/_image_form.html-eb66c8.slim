@@ -1,0 +1,37 @@
+.panel.panel-default
+  .panel-heading
+    h4.panel-title.clearfix style="line-height: 38px;"
+      / -if @carousel.name == "The Bar Room"
+      /   = f.label 'Please select only one display image per carousel.'
+      - content = @carousel.name == "The Bar Room" ? 'Please select only one display image per carousel.' : 'Image 1 will be the display image.'
+      = f.label "#{content}"
+
+      .btn-group.pull-right
+        .btn.btn-success.js-sort-btn Enable Sort
+        = f.link_to_add 'Add Image', :carousel_images, class: 'btn btn-default pull-right', data: { target: '#carousel-images' }
+  .panel-body#carousel-images.js-sort-items data-type="carousel_images"
+    = f.simple_fields_for :carousel_images, f.object.carousel_images do |tf|
+      .panel.panel-default
+        .panel-heading style='height: 38px;'
+          h5.panel-title.js-image-title
+            = tf.object.new_record? ? 'New Image' : "Image #{tf.index + 1}"
+            = tf.link_to_remove do
+              i.fa.fa-times.pull-right
+        .panel-body.js-sort-bodies
+          .text-center
+            .container-fluid
+              - if tf.object.image.present?
+                = image_tag(tf.object.image.remote_url, width: '240px')
+              - else
+                p
+                  small No image uploaded
+          .js-form-body
+            .row
+              .col-md-6
+                = tf.input :position, as: :hidden
+                = tf.input :image, as: :file, input_html: { class: 'form-control' }
+                = tf.input :retained_image, as: :hidden
+              .col-md-6
+                - if @carousel.name == "The Bar Room"
+                  = tf.input :disp, collection: %w(left right) , label: "Display image for left or right carousel?"
+

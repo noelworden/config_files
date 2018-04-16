@@ -1,0 +1,294 @@
+//  ======================================================================================================
+//
+//  Hotel
+//
+//  ======================================================================================================
+- title 'Luxury Hotels Downtown Manhattan | The Beekman - Hotel | Brooklyn Bridge Hotels'
+- meta_tag :description, 'The Beekman, a luxury hotel in Downtown Manhattan, offers guests access to a variety of amenities, historical attractions, and dining choices. This hotel offers a convenient location near the Brooklyn Bridge, City Hall, South Street Seaport and more.'
+
+.page-wrapper.booking-push.js-booking-push
+  main.page-main
+
+    //  Hero Panel
+    //  ======================================================================================================
+    article.panel.panel--hero.panel--title.panel--title--hotel.section
+      .panel-block.panel-bkgd--hotel-1
+      .panel-block.panel-bkgd--hotel-2
+
+        .panel-content--hero-sprite.waterfall.waterfall--hotel-hero.js-waterfall
+          h1.panel-content--hero__header.type--a1
+            span class="text-animation text-animation--hotel"
+            span.is-visually-hidden Hotel
+
+          h2.panel-content--hero__title.waterfall__item.waterfall__item--in-up.type--c1 The Beekman Adventure Awaits
+          p.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell Old world glamour meets modern luxury at The Beekman—the centerpiece of Manhattan’s most dynamic and historical downtown neighborhood.
+          .hotel-badge.waterfall__item.waterfall__item--in-up
+            = image_tag('hotel-badge.png', class: 'hotel-badge__img', alt: 'Condé Nast Traveler 2017 Badge')
+
+    //  History Panel
+    //  ======================================================================================================
+    article.panel-article.section id="history"
+      // Info panel
+      .panel--auto-height.panel--history.panel-bkgd--hotel-history
+        .history-timeline
+        .history-content--hero.waterfall.js-waterfall
+          h3.waterfall__item.waterfall__item--in-up.type--b1 Hotel History
+          p.waterfall__item.waterfall__item--in-up.type--c1 A New York Staple Since 1761
+
+        .history-piece.history-piece--1761.waterfall.waterfall--nested.js-waterfall
+          .history-piece__img
+            = image_tag('timeline--1761.jpg', class: 'waterfall__item waterfall__item--in-up', alt: 'Shakespeare Portrait')
+          .history-piece__content
+            p.history-piece__content__date.waterfall__item.waterfall__item--in-up.type--c1.type--gold.type--lowercase 1761
+            p.history-piece__content__snippet-1.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell
+              | Shakespeare’s
+              em<> Hamlet
+              | has its New York debut at the Chapel Street Theatre.
+            p.history-piece__content__snippet-2.waterfall__item.waterfall__item--in-up.type--b3.type--gold The heritage of The Beekman is ingrained with history’s most influential cultural icons.
+
+        .history-piece.history-piece--1830.history-piece--reversed.waterfall.waterfall--nested.js-waterfall
+          .history-piece__img
+            = image_tag('timeline--1830.jpg', class: 'waterfall__item waterfall__item--in-up', alt: 'Clinton Hall Portrait')
+          .history-piece__content
+            p.history-piece__content__date.waterfall__item.waterfall__item--in-up.type--c1.type--gold.type--lowercase 1830-1850s
+            p.history-piece__content__snippet-1.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell
+              | Clinton Hall: Home of NYU & the Mercantile Library Association with illustrious members including Ralph Waldo Emerson, Mark Twain, and Henry David Thoreau. Edgar Allan Poe publishes his paper
+              em<> The Broadway Journal
+              | on this site.
+            p.history-piece__content__snippet-2.waterfall__item.waterfall__item--in-up.type--b3.type--gold Prior to the construction of this historic building, the site hosted a succession of creative and academic achievements.
+
+        .history-piece.history-piece--1883.waterfall.waterfall--nested.js-waterfall
+          .history-piece__img
+            = image_tag('timeline--1883.jpg', class: 'waterfall__item waterfall__item--in-up', alt: 'Temple Court Historic Portrait')
+          .history-piece__content
+            p.history-piece__content__date.waterfall__item.waterfall__item--in-up.type--c1.type--gold.type--lowercase 1883
+            p.history-piece__content__snippet-1.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell Temple Court, one of Manhattan’s original skyscrapers, is completed the same year as the Brooklyn Bridge.
+            p.history-piece__content__snippet-2.waterfall__item.waterfall__item--in-up.type--b3.type--gold During the 19th century, The Beekman’s upward trajectory paralleled the ascendance of New York City.
+
+        .history-piece.history-piece--1998.history-piece--reversed.waterfall.waterfall--nested.js-waterfall
+          .history-piece__img
+            p.history-piece__content__date.waterfall__item.waterfall__item--in-up.type--c1.type--gold.type--lowercase 1998-2012
+            p.history-piece__content__snippet-1.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell
+              | 5 Beekman Street’s façade is officially declared a New York City Landmark. In 2000, Iman shoots a
+              em<> Harper’s Bazaar
+              | spread inside the unrenovated building. In 2012, fashion house Maison Margiela throws an epic party attended by the city’s socialites.
+          .history-piece__content
+            p.history-piece__content__snippet-2.waterfall__item.waterfall__item--in-up.type--b3.type--gold Over the past 100 years, its unparalleled structural and architectural integrity remained.
+
+        .history-piece.history-piece--2016.history-piece--reversed.waterfall.waterfall--nested.js-waterfall
+          .history-piece__img
+            = image_tag('timeline--2016.jpg', class: 'waterfall__item waterfall__item--in-up', alt: 'Modern Day Beekman Exterior')
+          .history-piece__content
+            p.history-piece__content__date.waterfall__item.waterfall__item--in-up.type--c1.type--gold.type--lowercase 2016
+            p.history-piece__content__snippet-1.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell The Beekman, A Thompson Hotel opens
+
+    //  Architecture & Design
+    //  ======================================================================================================
+    // Intro Panel
+    article.section id="architecture-and-design"
+      .panel.panel--intro.panel--title.panel--title--architecture
+        .panel-block.panel-block--full-width.panel-bkgd--architecture
+        .panel-content--hero.waterfall.js-waterfall
+          h2.panel-content--hero__header.type--a1
+            span.text--spacing-20 A
+            | rc
+            span.text--spacing-50 h
+            span.text--spacing-20 i
+            span.text--spacing-70 t
+            | e
+            span.text--spacing-20 c
+            span.text--spacing-100 t
+            span.text--spacing-50 u
+            | re
+
+            span.type--block
+              | +
+              span.text--spacing-20 D
+              span.text--spacing-70 e
+              span.text--spacing-20 s
+              span.text--spacing-50 i
+              | gn
+
+          h3.panel-content--hero__title.waterfall__item.waterfall__item--in-up.type--c1 A Masterpiece Reimagined
+          p.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell Lovingly restored to its former glory, the historic landmark building exudes elegance and charm. Award-winning designer Martin Brudnizki enhances the intersection of classic and contemporary elements with his singular aesthetic vision.
+
+    // Arrival
+    .panel.panel--reverse.panel--reverse-row.section
+      .panel-block.panel-bkgd--architecture-arrival-1
+      .panel-block.panel-bkgd--architecture-arrival-2
+        .panel-content.waterfall.js-waterfall
+          h2.waterfall__item.waterfall__item--in-up.type--b1.type--center You’ve Arrived
+          h3.waterfall__item.waterfall__item--in-up.type--c1.type--center Welcome to the Family
+
+          hr.waterfall__item.waterfall__item--in-up.panel-divider
+          p.waterfall__item.waterfall__item--in-up.p--drop-cap
+            span.first-letter C
+            | ross the mosaic marble threshold and you’ll be greeted at our evocative reception space that harkens back to the golden age of travel. A patchwork of upholstered vintage Persian rugs wrap this welcoming cove adorned with antique glass lamps and a polished timber top. Let this eccentric welcoming be the first of many cherished Beekman experiences.
+
+    // Atrium
+    .panel.section
+      .panel-block.panel-bkgd--architecture-atrium-1
+      .panel-block.panel-bkgd--architecture-atrium-2
+        .panel-content.waterfall.js-waterfall
+          h2.waterfall__item.waterfall__item--in-up.type--b1.type--center The Atrium
+          h3.waterfall__item.waterfall__item--in-up.type--c1.type--center An Architectural Sensation
+
+          hr.waterfall__item.waterfall__item--in-up.panel-divider
+          p.waterfall__item.waterfall__item--in-up.p--drop-cap
+            span.first-letter T
+            | he heart of The Beekman is undoubtedly its nine-story atrium. Capped by a pyramidal skylight, the one-of-a-kind feature has been passionately restored, illuminating the hotel from within. The upper levels of the atrium are decorated with Victorian wrought-iron railings and balustrades and ornamented with flowers, dragons, and sunbursts. On the main floor the atrium forms a stage where guests can gather in a series of intimate seating areas amid decadent décor.
+
+    //  Amenities
+    //  ======================================================================================================
+    article.panel-article id="amenities"
+
+      // Intro Panel
+      .panel.panel--intro.panel--title.panel--title--amenities
+        .panel-block.panel-block--full-width.panel-bkgd--amenities
+        .panel-content--hero.panel-content--hero-left
+          h2.panel-content--hero__header.type--a1
+            | A
+            span.text--spacing-50 m
+            | e
+            span.text--spacing-50 n
+            span.text--spacing-20 i
+            span.text--spacing-100 t
+            span.text--spacing-20 i
+            span.text--spacing-50 es
+          .panel-content--hero__group.waterfall.js-waterfall
+            h3.waterfall__item.waterfall__item--in-up.panel-content--hero__title.type--c1 Want For Nothing
+            p.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell It’s all here—destination dining, welcoming lounges, hidden cozy corners, and staff eager to exceed your expectations.
+
+      // Amenity Info Panel
+      .panel.panel--amenities
+        .panel-block.panel-block--33w.panel-bkgd--amenities-dining
+          .panel-content.panel-content--table
+            h2.type--b1.type--gold.type--center
+              | Dining
+              br
+              | Offerings
+
+          .panel-detail
+            ul.list--simple
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Signature restaurant Temple Court
+                p.type--b7 by chef Tom Colicchio
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold The Bar Room
+                p.type--b7 by chef Tom Colicchio
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Signature restaurant Augustine
+                p.type--b7 by Keith McNally
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Private Events and Catering
+                p.type--b7 by Tom Colicchio’s Temple Court
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold 24-hour in-room dining
+                p.type--b7 by Tom Colicchio’s Temple Court
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold 24-hour in-room dining
+                p.type--b7 by Tom Colicchio’s Temple Court
+
+        .panel-block.panel-block--33w.panel-bkgd--amenities-in-room
+          .panel-content.panel-content.panel-content--table
+            h2.type--b1.type--gold.type--center
+              | In-Room
+              br
+              | Amenities
+
+          .panel-detail
+            ul.list--simple
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Complimentary evening turndown service
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Chromecast compatible flat screen TV
+                p.type--b7 with 110 channels and custom movie package option
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Locally curated minibar program
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold State-of-the-art Revo Super Signal Deluxe Table Radio
+                p.type--b7 with Bluetooth Wireless Streaming
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Exclusive D.S. &amp; Durga bath amenities
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Luxurious sateen Sferra linens
+
+        .panel-block.panel-block--33w.panel-bkgd--amenities-hotel
+          .panel-content.panel-content--table
+            h2.type--b1.type--gold.type--center
+              | Hotel
+              br
+              | Amenities
+
+          .panel-detail
+            ul.list--simple
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Les Clefs d’Or concierge service
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Courtesy luxury Lexus house car
+                p.type--b7 available upon request
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Dual-level fitness center
+                p.type--b7 featuring Peloton studio spin bikes
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Valet Parking
+                p.type--b7 Rates start at $65 per vehicle.
+                p.type--b7 Rate is based on a 24-hour period, no in-and-out privileges.
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold Complimentary newspaper
+                p.type--b7 service available daily
+              li.list--simple__item
+                p.type--b6.type--uppercase.type--gold LEED-certified building
+
+
+    //  Art
+    //  ======================================================================================================
+    article.panel-article id="art"
+
+      // Intro Panel
+      .panel.panel--intro.panel--title.panel--title--art
+        .panel-block.panel-block--full-width.panel-bkgd--art
+        .panel-content--hero.panel-content--hero-right.waterfall.js-waterfall
+          h2.panel-content--hero__header.type--a1
+            span.text--spacing-20 A
+            span.text--spacing-50 r
+            | t
+          h3.panel-content--hero__title.waterfall__item.waterfall__item--in-up.type--c1 A Thought-Provoking Collection
+          p.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell Curated by Katherine Gass, the collection includes over 60 paintings, photographs, prints, works on paper, and sculptures by international and American artists that are installed throughout the hotel’s public spaces and guestrooms.
+
+      // Curated Collection
+      .panel
+        .panel-block.panel-bkgd--art-collection-1
+        .panel-block.panel-bkgd--art-collection-2
+          .panel-content.waterfall.js-waterfall
+            h2.waterfall__item.waterfall__item--in-up.type--b1.type--center An Artful Conversation
+            h3.waterfall__item.waterfall__item--in-up.type--c1.type--center What's On View
+
+            hr.waterfall__item.waterfall__item--in-up.panel-divider
+            p.waterfall__item.waterfall__item--in-up.p--drop-cap
+              span.first-letter T
+              | he art collection at The Beekman references and evokes the hotel’s location at the foot of the Brooklyn Bridge, near the East River and City Hall Park, and the multi-layered history felt from an eccentric past filled with literary giants, scientific visionaries, and thought- leaders of the American Romantic period who once dwelled here.
+            p.waterfall__item.waterfall__item--in-up The Beekman art collection is infused with a sense of magical realism and guided by the spirit of the 19th century writers like Ralph Waldo Emerson and Edgar Allan Poe, a forefather of science fiction writing, who frequented the Mercantile Library Association when it was located at this site.
+            p.waterfall__item.waterfall__item--in-up Featured are newly commissioned site-specific artworks by Jane Hammond and Patrick Jacobs, among others.
+
+      // Featured Artist
+      .panel.panel--reverse.panel--reverse-row
+        .panel-block.panel-bkgd--art-artist-1 style="background-image: url(#{@artist.image.remote_url})"
+        .panel-block.panel-bkgd--art-artist-2
+          .panel-content.waterfall.js-waterfall
+            h2.waterfall__item.waterfall__item--in-up.type--b1.type--center = @artist.name.upcase
+            h3.waterfall__item.waterfall__item--in-up.type--c1.type--center Featured Artist
+
+            hr.waterfall__item.waterfall__item--in-up.panel-divider
+            p.waterfall__item.waterfall__item--in-up = @artist.description
+
+      .panel--auto-height.panel--no-pad
+        .panel-video-group.js-video-btn
+          .panel-video-wrapper
+            .panel-video-wrapper-group
+              .panel-video-play
+            video.panel-video.js-video.js-ga--hotel-video preload="none" poster="#{image_url(@artist.poster.remote_url)}"
+              source src="#{@artist.video_url}" type="video/mp4"
+
+  // Include footer
+  = render "shared/footer"

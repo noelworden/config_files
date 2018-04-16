@@ -1,0 +1,23 @@
+article.panel-article id="the-alley-cat"
+  // Info panel
+  .panel.panel--alley-cat.panel--grid
+    .panel-block.panel-block--trigger.panel-block--zoom.js-modal-trigger data-js-gallery="#{@alley_cat_right_gallery.join(', ')}"
+      .panel-block--zoom__item.panel-bkgd--bar-room-2 style="background-image: url(#{@alley_cat_right_gallery.first})"
+    
+    / .panel-block.panel-block--bar-room-3.panel-bkgd--alley-cat-2
+    /   .panel-content.waterfall.js-waterfall
+    /     p.waterfall__item.waterfall__item--in-up.p--drop-cap
+    /       span.first-letter W
+    /       | hether you’re after a pre-meal aperitif, a light dinner and drinks, or a sneaky nightcap, precision bartenders are on hand to ensure the most pleasurable libations. Honkaku shōchū, craft Japanese beer, boutique sake, and a library of Japanese whiskey add to an array of cultish concoctions on offer. For those culinary minded and hungry folk, the menu offers classic and modern reinterpretations of Japanese Izakaya comfort food
+    /       p.waterfall__item.waterfall__item--in-up
+    /         | Tuesday - Friday | 6pm – 2am
+    /         br
+    /         | Saturday | 7pm – 3am
+    /         br
+    /         | Closed Sunday & Monday
+    /     p.waterfall__item.waterfall__item--in-up
+    /       - @alley_cat_pdf.each do |pdf|
+    /         = link_to pdf.name.titleize, pdf.pdf_url.remote_url, { class: 'link--gold type--b7', target: "_blank" }
+    /         br
+    / .panel-block.is-desktop-visible.panel-block--trigger.panel-block--zoom.js-modal-trigger data-js-gallery="#{@alley_cat_left_gallery.join(', ')}"
+    /   .panel-block--zoom__item.panel-bkgd--bar-room-3 style="background-image: url(#{@alley_cat_left_gallery.first})"

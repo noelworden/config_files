@@ -1,0 +1,196 @@
+//  ==========================================================================
+//
+//  Main Menu include
+//
+//  ==========================================================================
+- if controller_name == "pages"
+  - tab = "_blank" ||= nil
+
+- binding.pry
+nav.menu-bar.booking-push.is-desktop-visible.js-booking-push.js-desktop-nav-bar
+  ul.menu
+    li.menu-item--home class="#{'is-active' if current_page?('/')}"
+      = link_to root_path, { class: 'menu-item__link' } do |link|
+        = image_tag('logo--beekman-b.svg', class: 'menu-item__logo--b is-hidden-xl', width: '95')
+        = image_tag('logo--beekman-horizontal.svg', class: 'menu-item__logo is-visible-xl', role: 'img', alt: 'The Beekman, A Thompson Hotel Logo')
+
+    //  Hotel
+    //  ==========================================================================
+    li.menu-item.js-menu-item class="#{'is-active' if current_page?('/hotel')}"
+      = link_to hotel_path, { target: tab, class: 'menu-item__link', title: 'Hotel' } do |link|
+        span.menu-item__link__borders
+        span.type--b7 Hotel
+
+      ul.menu--dropdown.js-submenu
+        li.menu-item
+          = link_to hotel_path(anchor: 'history'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold History
+            .menu-item__zoom-contain
+              = image_tag('nav--hotel-history.jpg', class: 'menu-item__zoom-contain__img', alt: 'The Beekman Exterior Nassau Street')
+
+        li.menu-item
+          = link_to hotel_path(anchor: 'architecture-and-design'), { class: 'menu-item__link js-smooth-scroll' }
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Architecture &amp; Design
+            .menu-item__zoom-contain
+              = image_tag('nav--hotel-architecture.jpg', class: 'menu-item__zoom-contain__img', alt: 'Historic Hotel Atrium, Interior Balconies, And Skylight')
+
+        li.menu-item
+          = link_to hotel_path(anchor: 'amenities'), { class: 'menu-item__link js-smooth-scroll' }
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Amenities
+            .menu-item__zoom-contain
+              = image_tag('nav--hotel-amenities.jpg', class: 'menu-item__zoom-contain__img', alt: 'Intimate Hotel Lobby Sitting Area')
+
+        li.menu-item
+          = link_to hotel_path(anchor: 'art'), { class: 'menu-item__link js-smooth-scroll' }
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Art
+            .menu-item__zoom-contain
+              = image_tag('nav--hotel-art.jpg', class: 'menu-item__zoom-contain__img', alt: 'Katherine Gass Art Collection')
+
+        = render "shared/menu_offer", offer: offers.hotel.first, label: 'Hotel Offer'
+
+    //  Rooms
+    //  ==========================================================================
+    li.menu-item.js-menu-item class="#{'is-active' if current_page?('/rooms')}"
+      = link_to rooms_path, { class: 'menu-item__link' } do |link|
+        span.menu-item__link__borders
+        span.type--b7 Rooms
+
+      ul.menu--dropdown.js-submenu
+        li.menu-item
+          = link_to rooms_path(anchor: 'rooms'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Rooms
+            .menu-item__zoom-contain
+              = image_tag('nav--rooms-rooms.jpg', class: 'menu-item__zoom-contain__img', alt: 'Luxury Hotel Queen Bed & Lamp')
+
+        li.menu-item
+          = link_to rooms_path(anchor: 'suites'), { class: 'menu-item__link js-smooth-scroll' }
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Suites
+            .menu-item__zoom-contain
+              = local_image_tag('nav--rooms-suites', 'jpg', [580, 1280], class: 'menu-item__zoom-contain__img', sizes: '(min-width: 1280px) 0px, 25vw', alt: 'Luxury Hotel Suite Couch')
+              /= image_tag('nav--rooms-suites.jpg', class: 'menu-item__zoom-contain__img', alt: '')
+
+        li.menu-item
+          = link_to rooms_path(anchor: 'turret-penthouses'), { class: 'menu-item__link js-smooth-scroll' }
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Penthouses
+            .menu-item__zoom-contain
+              = image_tag('nav--rooms-penthouses.jpg', class: 'menu-item__zoom-contain__img', alt: '')
+
+        li.menu-item
+          = link_to offers_path, { class: 'menu-item__link js-smooth-scroll' }
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Offers
+            .menu-item__zoom-contain
+              = image_tag('nav--rooms-offers.jpg', class: 'menu-item__zoom-contain__img', alt: 'Luxury Hotel Front Desk')
+
+        = render "shared/menu_offer", offer: offers.rooms.first, label: 'Rooms Offer'
+
+    //  Eat & Drink
+    //  ==========================================================================
+    li.menu-item.js-menu-item class="#{'is-active' if current_page?('/eat-and-drink')}"
+      = link_to eat_and_drink_path, { class: 'menu-item__link' } do |link|
+        span.menu-item__link__borders
+        span.type--b7 Eat &amp; Drink
+
+      ul.menu--dropdown.js-submenu
+        li.menu-item
+          = link_to eat_and_drink_path(anchor: 'temple-court'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold
+                | Temple
+                br
+                | Court
+            .menu-item__zoom-contain
+              = image_tag('nav--eatdrink-temple-court.jpg', class: 'menu-item__zoom-contain__img', alt: 'Temple Court Dining Room Area With Mirror')
+
+        li.menu-item
+          = link_to eat_and_drink_path(anchor: 'the-bar-room'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold
+                | The Bar
+                br
+                | Room
+            .menu-item__zoom-contain
+              = image_tag('nav--eatdrink-barroom.jpg', class: 'menu-item__zoom-contain__img', alt: 'The Bar Room Angled Bar Seating')
+
+        li.menu-item
+          = link_to eat_and_drink_path(anchor: 'augustine'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Augustine
+            .menu-item__zoom-contain
+              = image_tag('nav--eatdrink-augustine.jpg', class: 'menu-item__zoom-contain__img', alt: 'Augustine Restaurant Seating With Booths')
+
+        li.menu-item
+          = link_to eat_and_drink_path(anchor: 'cellar-lounge'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold
+                | Cellar
+                br
+                | Lounge
+            .menu-item__zoom-contain
+              = image_tag('nav--eatdrink-cellarlounge.jpg', class: 'menu-item__zoom-contain__img', alt: 'Historic Balcony Metalwork Closeup')
+
+        = render "shared/menu_offer", offer: offers.eat.first, label: 'Eat & Drink Offer'
+
+    //  Events
+    //  ==========================================================================
+    li.menu-item.js-menu-item class="#{'is-active' if current_page?('/events')}"
+      = link_to events_path, { class: 'menu-item__link' } do |link|
+        span.menu-item__link__borders
+        span.type--b7 Events
+
+      ul.menu--dropdown.js-submenu
+        li.menu-item
+          = link_to events_path(anchor: 'menus-and-offerings'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold
+                | Menus &amp;
+                br
+                | Offerings
+            .menu-item__zoom-contain
+              = local_image_tag('nav--events-menus-offerings', 'jpg', [580, 1280], class: 'menu-item__zoom-contain__img', sizes: '(min-width: 1280px) 0px, 25vw', alt: 'Luxury Manhattan Hotel Restaurant Seating')
+              /= image_tag('nav--events-menus-offerings.jpg', class: 'menu-item__zoom-contain__img', alt: '')
+
+        li.menu-item
+          = link_to events_path(anchor: 'event-spaces'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold
+                | Event
+                br
+                | Spaces
+            .menu-item__zoom-contain
+              = image_tag('nav--events-eventspaces.jpg', class: 'menu-item__zoom-contain__img', alt: 'Table With Exposed Brick Wall')
+
+        li.menu-item
+          = link_to events_path(anchor: 'weddings'), { class: 'menu-item__link js-smooth-scroll' } do |link|
+            .menu-item__link__center
+              span.menu-item__link__title.type--b10.type--gold Weddings
+            .menu-item__zoom-contain
+              = image_tag('nav--events-weddings.jpg', class: 'menu-item__zoom-contain__img', alt: 'Wedding Glasses and Floral Arrangements')
+        = render "shared/menu_offer", offer: offers.events.first, label: 'Events Offer'
+
+    //  Neighborhood
+    //  ==========================================================================
+    li.menu-item class="#{'is-active' if current_page?('/neighborhood')}"
+      = link_to neighborhood_path, { class: 'menu-item__link js-ga--top-nav-click', data: { 'js-ga-label': 'Neighborhood' } } do |link|
+        span.menu-item__link__borders
+        span.type--b7 Neighborhood
+
+    //  Culture
+    //  ==========================================================================
+    li.menu-item class="#{'is-active' if current_page?('/culture')}"
+      = link_to posts_path, { class: 'menu-item__link js-ga--top-nav-click', data: { 'js-ga-label': 'Culture' } } do |link|
+        span.menu-item__link__borders
+        span.type--b7 Culture
+
+    //  Book Your Stay
+    //  ==========================================================================
+    li.menu-item--callout
+      button.menu-item__link.js-booking-button.js-ga--top-nav-click data-js-ga-label='Book Your Stay'
+        span.type--b7.type--brown-dark.type--center Book Your Stay

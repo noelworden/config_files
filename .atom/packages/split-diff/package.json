@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11795-88658-1petigy.771o979zfr/package.tgz",
+        "raw": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11795-88658-1petigy.771o979zfr/package.tgz",
-        "spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11795-88658-1petigy.771o979zfr/package.tgz",
+        "rawSpec": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
+        "spec": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/apm-install-dir-11795-88658-bfenqa.7dzgsqbyb9"
+      "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/apm-install-dir-118016-1422-1j0h0j9.uo4dxcg14i"
     ]
   ],
-  "_from": "../d-11795-88658-1petigy.771o979zfr/package.tgz",
-  "_id": "split-diff@1.5.1",
+  "_from": "../d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
+  "_id": "split-diff@1.5.2",
   "_inCache": true,
   "_location": "/split-diff",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11795-88658-1petigy.771o979zfr/package.tgz",
+    "raw": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11795-88658-1petigy.771o979zfr/package.tgz",
-    "spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11795-88658-1petigy.771o979zfr/package.tgz",
+    "rawSpec": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
+    "spec": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-11795-88658-1petigy.771o979zfr/package.tgz",
-  "_shasum": "82195927ab8c00d0f851c65c9d483408df8d0346",
+  "_resolved": "file:../d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
+  "_shasum": "ad959b16012899148985046e33819bfc589fdc8e",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/d-11795-88658-1petigy.771o979zfr/package.tgz",
-  "_where": "/private/var/folders/cr/yv_hy5mj3p7ftk4_k_qw0hm40000gp/T/apm-install-dir-11795-88658-bfenqa.7dzgsqbyb9",
+  "_spec": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/d-118016-1422-1b6kpno.yyq9iqw7b9/package.tgz",
+  "_where": "/private/var/folders/sj/lpmy2m754qbbv8pdc694hrr40000gp/T/apm-install-dir-118016-1422-1j0h0j9.uo4dxcg14i",
   "bugs": {
     "url": "https://github.com/mupchrch/split-diff/issues"
   },
@@ -44,7 +44,7 @@
   "description": "A split pane diff tool.",
   "devDependencies": {},
   "engines": {
-    "atom": ">= 1.17 < 2.0.0"
+    "atom": ">= 1.19 < 2.0.0"
   },
   "homepage": "https://github.com/mupchrch/split-diff#readme",
   "keywords": [
@@ -76,58 +76,5 @@
     "type": "git",
     "url": "git+https://github.com/mupchrch/split-diff.git"
   },
-  "version": "1.5.1",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [
-      {
-        "name": "diff",
-        "version": "3.3.1",
-        "path": "node_modules/diff/lib/index.js"
-      }
-    ],
-    "extensions": {
-      ".js": [
-        "lib/buffer-extender.js",
-        "lib/compute-diff.js",
-        "lib/compute-word-diff.js",
-        "lib/diff-view.js",
-        "lib/editor-diff-extender.js",
-        "lib/style-calculator.js",
-        "lib/sync-scroll.js",
-        "node_modules/diff/dist/diff.js",
-        "node_modules/diff/dist/diff.min.js",
-        "node_modules/diff/lib/convert/dmp.js",
-        "node_modules/diff/lib/convert/xml.js",
-        "node_modules/diff/lib/diff/array.js",
-        "node_modules/diff/lib/diff/base.js",
-        "node_modules/diff/lib/diff/character.js",
-        "node_modules/diff/lib/diff/css.js",
-        "node_modules/diff/lib/diff/json.js",
-        "node_modules/diff/lib/diff/line.js",
-        "node_modules/diff/lib/diff/sentence.js",
-        "node_modules/diff/lib/diff/word.js",
-        "node_modules/diff/lib/index.js",
-        "node_modules/diff/lib/patch/apply.js",
-        "node_modules/diff/lib/patch/create.js",
-        "node_modules/diff/lib/patch/merge.js",
-        "node_modules/diff/lib/patch/parse.js",
-        "node_modules/diff/lib/util/array.js",
-        "node_modules/diff/lib/util/distance-iterator.js",
-        "node_modules/diff/lib/util/params.js",
-        "node_modules/diff/runtime.js"
-      ],
-      ".coffee": [
-        "lib/config-schema.coffee",
-        "lib/split-diff.coffee",
-        "lib/ui/footer-view.coffee",
-        "lib/ui/loading-view.coffee"
-      ],
-      ".json": [
-        "node_modules/diff/package.json",
-        "package.json"
-      ]
-    },
-    "folders": []
-  }
+  "version": "1.5.2"
 }

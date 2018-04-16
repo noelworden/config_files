@@ -1,0 +1,92 @@
+//  ==========================================================================
+//
+//  Mobile Menu include
+//
+//  ==========================================================================
+.mobile-menu-bar.is-desktop-hidden.js-mobile-nav-bar
+  ul.mobile-menu-overview
+    li.mobile-menu-overview__item
+      button.mobile-menu__button.mobile-menu__button--home.js-mobile-menu-btn
+        span.mobile-menu__burger.js-hamburger
+
+    li.mobile-menu-overview__item
+      = link_to homepage_path, { class: 'mobile-menu-overview__item__link' } do |link|
+        = image_tag('logo--beekman-b.svg', class: 'mobile-menu__logo', width: '70')
+
+    li.mobile-menu-overview__item
+      button.mobile-menu__button.mobile-menu__button--callout.js-mobile-booking-btn
+        = image_tag('logo--key.jpg', alt: 'Book Icon')
+        span.type--b7.type--white.type--uppercase Book
+
+nav.mobile-menu-content.js-mobile-menu
+  .mobile-menu-content__contain
+    ul.mobile-menu-pages.list--standard
+      li.mobile-menu-pages__item.list--standard__item class="#{'is-active' if current_page?('/hotel')}"
+        = link_to 'Hotel', hotel_path, { class: 'mobile-menu-pages__item__link list--standard__item__link type--b11 type--uppercase' }
+      li.mobile-menu-pages__item.list--standard__item class="#{'is-active' if current_page?('/rooms')}"
+        = link_to 'Rooms', rooms_path, { class: 'mobile-menu-pages__item__link list--standard__item__link type--b11 type--uppercase' }
+      li.mobile-menu-pages__item.list--standard__item class="#{'is-active' if current_page?('/eat-and-drink')}"
+        = link_to 'Eat & Drink', eat_and_drink_path, { class: 'mobile-menu-pages__item__link list--standard__item__link type--b11 type--uppercase' }
+      li.mobile-menu-pages__item.list--standard__item class="#{'is-active' if current_page?('/events')}"
+        = link_to 'Events', events_path, { class: 'mobile-menu-pages__item__link list--standard__item__link type--b11 type--uppercase' }
+      li.mobile-menu-pages__item.list--standard__item class="#{'is-active' if current_page?('/neighborhood')}"
+        = link_to 'Neighborhood', neighborhood_path, { class: 'mobile-menu-pages__item__link list--standard__item__link type--b11 type--uppercase js-ga--top-nav-click', data: { 'js-ga-label': 'Neighborhood' } }
+      li.mobile-menu-pages__item.list--standard__item class="#{'is-active' if current_page?('/culture')}"
+        = link_to 'Culture', posts_path, { class: 'mobile-menu-pages__item__link list--standard__item__link type--b11 type--uppercase js-ga--top-nav-click', data: { 'js-ga-label': 'Culture' } }
+      li.mobile-menu-pages__item.list--standard__item class="#{'is-active' if current_page?('/offers')}"
+        = link_to 'Offers', offers_path, { class: 'mobile-menu-pages__item__link list--standard__item__link type--b11 type--uppercase type--eggshell' }
+      li.mobile-menu-pages__item.mobile-menu-pages__item--callout.list--standard__item
+        = link_to 'tel:1-212-233-2300', { class: 'mobile-menu-pages__item__link' } do |link|
+          i.icon.icon--before.icon-phone.type--brown
+          span.type--b11.type--uppercase.type--brown Call: 212.233.2300
+
+    .mobile-menu-info
+      .mobile-menu-contact
+        p.type--b12
+          = link_to 'https://goo.gl/maps/Xg9mzAAHRqG2', { target: '_blank', class: 'link type--eggshell type--inline-block' }
+              | 123 Nassau Street
+              br
+              | New York, NY 10038
+              br
+              | 212.233.2300
+
+        p.type--b12
+          span.type--block Check-in: 3pm
+          span.type--block Check-out: 12pm
+
+      form.mobile-menu-signup.js-newsletter-signup method="post"
+        label.form-field--label.type--b12 for="email" Sign Up for Exclusive Offers
+        input.form-field--input.type--b12 id="email" type="email" name="email" placeholder="email" required="required"
+        button.form-field--submit.btn--empty type="submit"
+          span.type--b6.type--uppercase Sign Up
+
+    ul.mobile-menu-social
+      li.mobile-menu-social__item
+        = link_to 'https://www.instagram.com/thebeekmanny/', { class: 'mobile-menu-social__item__link', target: '_blank' } do |link|
+          i.icon.icon-instagram.type--brown
+      li.mobile-menu-social__item
+        = link_to 'https://twitter.com/thebeekmanhotel', { class: 'mobile-menu-social__item__link', target: '_blank' } do |link|
+          i.icon.icon-twitter.type--brown
+      li.mobile-menu-social__item
+        = link_to 'https://www.facebook.com/The-Beekman-Hotel-Residences-161474093878515/', { class: 'mobile-menu-social__item__link', target: '_blank' } do |link|
+          i.icon.icon-facebook.type--brown
+      li.mobile-menu-social__item
+        = link_to 'https://www.tripadvisor.com/Hotel_Review-g60763-d8615610-Reviews-The_Beekman_A_Thompson_Hotel-New_York_City_New_York.html', { class: 'mobile-menu-social__item__link mobile-menu-social__item-tripadvisor', target: '_blank' } do |link|
+          i.icon.icon-tripadvisor.type-icon-sm.type--brown
+
+    ul.mobile-menu-footer.list--simple
+      li.list--simple__item.mobile-menu-footer__item
+        = link_to 'Press', press_path, { target: '_blank', class: 'mobile-menu-footer__item__link type--b7'}
+      li.list--simple__item.mobile-menu-footer__item
+        = link_to 'Residences', 'http://residences.thebeekman.com/', { target: '_blank', class: 'mobile-menu-footer__item__link type--b7'}
+      li.list--simple__item.mobile-menu-footer__item
+        = link_to 'FAQ', faq_path, { target: '_blank', class: 'mobile-menu-footer__item__link type--b7'}
+      - if @fact_sheet.present?
+        li.list--simple__item
+          = link_to 'Fact Sheet', @fact_sheet.pdf_url.remote_url, { target: '_blank', class: "mobile-menu-footer__item__link type--b7" }
+      li.list--simple__item.mobile-menu-footer__item
+        = link_to 'Thompson Hotels Blog', 'http://blog.thompsonhotels.com/', { target: '_blank', class: 'mobile-menu-footer__item__link type--b7'}
+      li.list--simple__item.mobile-menu-footer__item
+        = link_to 'Thompson Hotels Careers', 'http://www.tworoadshotels.com/hospitality-jobs-careers', { target: '_blank', class: 'mobile-menu-footer__item__link type--b7'}
+      li.list--simple__item.mobile-menu-footer__item
+        = link_to 'Privacy Policy', privacy_policy_path, { target: '_blank', class: 'mobile-menu-footer__item__link type--b7'}

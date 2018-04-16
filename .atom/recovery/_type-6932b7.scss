@@ -1,0 +1,814 @@
+//  ==========================================================================
+//
+//  Type Styles
+//
+//  ==========================================================================
+//  ==========================================================================
+//  Font Families
+//  ==========================================================================
+%font-regular {
+  font-family: $font-regular;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%font-light {
+  font-family: $font-light;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%font-bold {
+  font-family: $font-bold;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%font-bold-cond {
+  font-family: $font-bold-cond;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%font-black-cond {
+  font-family: $font-black-cond;
+  font-style: normal;
+  font-weight: normal;
+}
+
+//  ==========================================================================
+//  Font Mods
+//  ==========================================================================
+%uppercase { text-transform: uppercase; }
+%lowercase { text-transform: lowercase; }
+%underline { text-decoration: underline; }
+
+.type--uppercase      { @extend %uppercase;    }
+.type--lowercase      { @extend %lowercase;    }
+.type--underline-line { @extend %underline;    }
+.type--mixed          { text-transform: none;  }
+.type--center         { text-align: center;    }
+.type--right          { text-align: right;     }
+.type--left           { text-align: left;      }
+.type--inline         { display: inline;       }
+.type--inline-block   { display: inline-block; }
+.type--block          { display: block;        }
+.type--no-wrap        { white-space: nowrap;   }
+
+.type--break-word {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.type--break-word--200 {
+  display: inline-block;
+  max-width: 200px;
+  vertical-align: middle;
+}
+
+.type--strikethrough {
+  color: $white;
+  text-decoration: line-through;
+}
+
+.type--border-adorned {
+  display: inline-block;
+  margin: 0 12px;
+  vertical-align: middle;
+}
+
+.type--solid-underline {
+  border-top: solid 2px $gray-light;
+  position: relative;
+}
+
+.type--underline {
+  position: relative;
+
+  &:after {
+    background-size: auto 100%;
+    background: url(get-image('border--dot.png')) repeat-x;
+    bottom: -3px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &--gray {
+    &:after {
+      background-size: auto 100%;
+      background: url(get-image('border--dot-gray.png')) repeat-x;
+      bottom: -1px;
+    }
+  }
+
+  &--red {
+    &:after {
+      background-size: auto 100%;
+      background: url(get-image('border--dot-red.png')) repeat-x;
+      bottom: -1px;
+    }
+  }
+}
+
+//  ==========================================================================
+//  A's / Interstate Bold Condensed
+//  Section titles
+//  ==========================================================================
+.type--a1,
+.type--a2,
+.type--a3,
+.type--a4,
+.type--a5,
+.type--a6,
+.type--a8,
+.type--a7 {
+  @extend %font-bold-cond;
+  color: $charcoal;
+}
+
+.type--a1 {
+  line-height: 35px;
+  @include font-size(32);
+
+  @include breakpoint(md) { @include font-size(36); }
+  @include breakpoint(lg) { @include font-size(40); }
+}
+
+.type--a2 {
+  line-height: 45px;
+  @include font-size(35);
+}
+
+.type--a3 {
+  line-height: 30px;
+  @include font-size(26);
+}
+
+.type--a4 {
+  @extend %uppercase;
+  line-height: 14px;
+  @include font-size(14);
+  @include letter-spacing(50);
+
+  @include breakpoint(md) {
+    line-height: 18px;
+    @include font-size(17);
+    @include letter-spacing(100);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 24px;
+    @include font-size(22);
+  }
+}
+
+.type--a5 {
+  @extend %uppercase;
+  line-height: 14px;
+  @include font-size(14);
+  @include letter-spacing(50);
+
+  @include breakpoint(md) {
+    line-height: 17px;
+    @include font-size(16);
+    @include letter-spacing(75);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 18px;
+    @include font-size(17);
+  }
+}
+
+.type--a6 {
+  @extend %uppercase;
+  line-height: 15px;
+  @include font-size(15);
+  @include letter-spacing(100);
+}
+
+.type--a7 {
+  @extend %uppercase;
+  line-height: 18px;
+  @include font-size(13);
+  @include letter-spacing(200);
+}
+
+.type--a8 {
+  @extend %uppercase;
+  line-height: 14px;
+  @include font-size(13);
+  @include letter-spacing(47);
+
+  @include breakpoint(md) {
+    line-height: 17px;
+    @include font-size(16);
+    @include letter-spacing(75);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 18px;
+    @include font-size(17);
+  }
+}
+
+.type--a9 {
+  @extend %uppercase;
+  line-height: 14px;
+  @include font-size(13);
+  @include letter-spacing(47);
+
+  @include breakpoint(lg) {
+    line-height: 18px;
+    @include font-size(17);
+  }
+}
+
+//  ==========================================================================
+//  B's / Interstate Black Condensed
+//  Hero titles
+//  ==========================================================================
+.type--b1,
+.type--b2,
+.type--b3,
+.type--b4,
+.type--b5,
+.type--b6,
+.type--b7,
+.type--b8,
+.type--b9,
+.type--b10 {
+  @extend %font-black-cond;
+  @extend %uppercase;
+  color: $snow;
+}
+
+.type--b1 {
+  line-height: 50px;
+  @include font-size(55);
+  @include letter-spacing(75);
+
+  @include breakpoint(sm) {
+    line-height: 70px;
+    @include font-size(75);
+  }
+
+  @include breakpoint(md) {
+    line-height: 115px;
+    @include font-size(140);
+    @include letter-spacing(100);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 150px;
+    @include font-size(175);
+  }
+}
+
+.type--b2 {
+  line-height: 45px;
+  @include font-size(45);
+  @include letter-spacing(50);
+
+  @include breakpoint(sm) {
+    line-height: 60px;
+    @include font-size(65);
+  }
+
+  @include breakpoint(lg) {
+    @include font-size(100);
+    @include letter-spacing(80);
+  }
+}
+
+.type--b3 {
+  line-height: 45px;
+  @include font-size(40);
+  @include letter-spacing(75);
+
+  @include breakpoint(sm) {
+    line-height: 50px;
+    @include font-size(55);
+  }
+
+  @include breakpoint(md) {
+    line-height: 90px;
+    @include font-size(92);
+    @include letter-spacing(100);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 120px;
+    @include font-size(126);
+  }
+}
+
+.type--b4 {
+  line-height: 45px;
+  @include font-size(45);
+  @include letter-spacing(50);
+
+  @include breakpoint(sm) {
+    line-height: 60px;
+    @include font-size(65);
+  }
+
+  @include breakpoint(lg) {
+    @include font-size(82);
+    @include letter-spacing(80);
+  }
+
+  @include breakpoint(xl) {
+    @include font-size(100);
+    @include letter-spacing(80);
+  }
+}
+
+.type--b5 {
+  line-height: 44px;
+  @include font-size(44);
+  @include letter-spacing(125);
+}
+
+.type--b6 {
+  text-align: left;
+  color: $training-dark;
+  line-height: 17px;
+  @include font-size(17);
+  @include letter-spacing(80);
+}
+
+.type--b7 {
+  text-align: left;
+
+  @include breakpoint(xs) {
+    line-height: 17px;
+    @include font-size(17);
+    @include letter-spacing(80);
+  }
+
+  @include breakpoint(md) {
+    line-height: 32px;
+    @include font-size(37);
+    @include letter-spacing(103);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 46px;
+    @include font-size(56);
+    @include letter-spacing(125);
+  }
+}
+
+.type--b8 {
+  text-align: left;
+  line-height: 22px;
+  @include font-size(14);
+  @include letter-spacing(20);
+  @include breakpoint(md) {
+    line-height: 45px;
+    @include font-size(40);
+    @include letter-spacing(80);
+  }
+}
+
+.type--b9 {
+  line-height: 30px;
+  @include font-size(30);
+  @include letter-spacing(55);
+
+  @include breakpoint(sm) {
+    line-height: 40px;
+    @include font-size(45);
+  }
+}
+
+.type--b10 {
+  line-height: 45px;
+  @include font-size(40);
+  @include letter-spacing(75);
+
+  @include breakpoint(md) {
+    line-height: 90px;
+    @include font-size(92);
+    @include letter-spacing(50);
+  }
+}
+//  ==========================================================================
+//  C's / Interstate Light
+//  Text styles
+//  ==========================================================================
+.type--c1,
+.type--c2,
+.type--c3,
+.type--c4,
+.type--c5,
+.type--c6,
+.type--c7,
+.type--c8,
+.type--c9 {
+  @extend %font-light;
+  color: $charcoal;
+}
+
+.type--c1 {
+  line-height: 26px;
+  @include font-size(24);
+  @include letter-spacing(25);
+
+  @include breakpoint(md) {
+    line-height: 33px;
+    @include font-size(28);
+  }
+
+  @include breakpoint(lg) { @include font-size(33); }
+}
+
+.type--c2 {
+  @extend .type--center;
+  line-height: 26px;
+  @include font-size(18);
+  @include letter-spacing(-25);
+
+  @include breakpoint(md) {
+    line-height: 32px;
+    @include font-size(22);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 35px;
+    @include font-size(25);
+  }
+}
+
+.type--c3 {
+  line-height: 24px;
+  @include font-size(16);
+
+  @include breakpoint(lg) {
+    line-height: 26px;
+    @include font-size(17);
+  }
+}
+
+.type--c4 {
+  line-height: 20px;
+  @include font-size(14);
+}
+
+.type--c5 {
+  line-height: 19px;
+  @include font-size(15);
+  @include letter-spacing(40);
+}
+
+.type--c6 {
+  @extend .type--uppercase;
+  line-height: 10px;
+  @include font-size(10);
+  @include letter-spacing(80);
+}
+
+.type--c7 {
+  line-height: 18px;
+  @include font-size(12);
+
+  @include breakpoint(lg) {
+    line-height: 22px;
+    @include font-size(18);
+  }
+}
+
+.type--c8 {
+  @include letter-spacing(50);
+  line-height: 18px;
+  @include font-size(12);
+}
+
+.type--c9 {
+  @include font-size(20);
+  line-height: 24px;
+}
+
+//  ==========================================================================
+//  D's / Interstate Regular
+//  Text styles
+//  ==========================================================================
+.type--d1,
+.type--d2,
+.type--d3,
+.type--d4,
+.type--d5,
+.type--d6,
+.type--d7,
+.type--d8,
+.type--d9,
+.type--d10,
+.type--d11 {
+  @extend %font-regular;
+  color: $charcoal;
+}
+
+.type--d1 {
+  @extend %uppercase;
+  line-height: 26px;
+  @include font-size(26);
+}
+
+.type--d2 {
+  line-height: 23px;
+  @include font-size(18);
+  @include letter-spacing(25);
+
+  @include breakpoint(lg) {
+    line-height: 25px;
+    @include font-size(20);
+  }
+}
+
+.type--d3 {
+  line-height: 21px;
+  @include font-size(16);
+
+  @include breakpoint(md) { line-height: 24px; }
+}
+
+.type--d4 {
+  line-height: 18px;
+  @include font-size(15);
+  @include letter-spacing(100);
+}
+
+.type--d5 {
+  line-height: 20px;
+  @include font-size(14);
+}
+
+.type--d6 {
+  line-height: 16px;
+  @include font-size(12);
+  @include letter-spacing(50);
+}
+
+.type--d7 {
+  line-height: 16px;
+  @include font-size(12);
+
+  @include breakpoint(sm) {
+    line-height: 24px;
+    @include font-size(16);
+  }
+}
+
+.type--d8 {
+  line-height: 18px;
+  @include font-size(13);
+  @include letter-spacing(100);
+
+  @include breakpoint(xl) { @include font-size(14); }
+}
+
+.type--d9 {
+  line-height: 16px;
+  @include font-size(11);
+  @include letter-spacing(50);
+}
+
+.type--d10 {
+  line-height: 21px;
+  @include font-size(16);
+
+  @include breakpoint(lg) {
+    line-height: 25px;
+    @include font-size(20);
+  }
+}
+
+.type--d11 {
+  line-height: 20px;
+  @include font-size(14);
+
+  @include breakpoint(lg) {
+    line-height: 28px;
+    @include font-size(18);
+  }
+}
+
+.type--d12 {
+  line-height: 17px;
+  @include font-size(10);
+
+  @include breakpoint(md) {
+    line-height: 18px;
+    @include font-size(12);
+  }
+
+  @include breakpoint(lg) {
+    line-height: 24px;
+    @include font-size(16);
+  }
+}
+
+.type--d13 {
+  line-height: 16px;
+  @include font-size(14);
+}
+
+.type--d14 {
+  line-height: 12px;
+  @include font-size(9);
+
+  @include breakpoint(md) {
+    line-height: 16px;
+    @include font-size(12);
+  }
+}
+
+//  ==========================================================================
+//  E's / Interstate Bold
+//  Names
+//  ==========================================================================
+.type--e1,
+.type--e2,
+.type--e3,
+.type--e4,
+.type--e5,
+.type--e6,
+.type--e7,
+.type--e8,
+.type--e9,
+.type--e10,
+.type--e11,
+.type--e12,
+.type--e13,
+.type--e14 {
+  @extend %font-bold;
+  color: $charcoal;
+}
+
+.type--e1 {
+  line-height: 30px;
+  @include font-size(30);
+  @include letter-spacing(-20);
+
+  @include breakpoint(sm) {
+    line-height: 35px;
+    @include font-size(35);
+  }
+
+  @include breakpoint(md) {
+    line-height: 40px;
+    @include font-size(40);
+  }
+}
+
+.type--e2 {
+  line-height: 30px;
+  @include font-size(25);
+  @include letter-spacing(40);
+
+  @include breakpoint(md) {
+    line-height: 33px;
+    @include font-size(33);
+  }
+}
+
+.type--e3 {
+  @extend %uppercase;
+  color: $white;
+  line-height: 21px;
+  @include font-size(15);
+  @include letter-spacing(100);
+}
+
+.type--e4 {
+  @extend %uppercase;
+  color: $white;
+  line-height: 12px;
+  @include font-size(12);
+  @include letter-spacing(60);
+}
+
+.type--e5 {
+  @extend %uppercase;
+  line-height: 14px;
+  @include font-size(11);
+  @include letter-spacing(200);
+}
+
+.type--e6 {
+  @extend %uppercase;
+  color: $white;
+  line-height: 21px;
+  @include font-size(15);
+  @include letter-spacing(25);
+}
+
+.type--e7 {
+  @extend %uppercase;
+  line-height: 14px;
+  @include font-size(13);
+  @include letter-spacing(200);
+}
+
+.type--e8 {
+  @extend %uppercase;
+  line-height: 12px;
+  @include font-size(11);
+  @include letter-spacing(180);
+}
+
+.type--e9 {
+  @extend %uppercase;
+  line-height: 14px;
+  @include font-size(24);
+
+  @include breakpoint(md) {
+    line-height: 20px;
+    @include font-size(26);
+  }
+}
+
+.type--e10 {
+  @extend %uppercase;
+  line-height: 40px;
+  @include font-size(40);
+}
+
+.type--e11 {
+  line-height: 40px;
+  @include font-size(40);
+
+  @include breakpoint(md) {
+    line-height: 50px;
+    @include font-size(50);
+  }
+}
+
+.type--e12 {
+  @extend %font-bold;
+  @extend %uppercase;
+  color: $charcoal;
+  line-height: 20px;
+  @include font-size(22);
+  @include letter-spacing(10);
+
+  @include breakpoint(md) {
+    @include font-size(30);
+  }
+}
+
+.type--e13 {
+  @include font-size(20);
+  line-height: 24px;
+}
+
+.type--e14 {
+  @extend %font-bold;
+  @extend %uppercase;
+  @include font-size(20);
+  line-height: 24px;
+
+  @include breakpoint(md) {
+    @include font-size(22);
+    line-height: 26px
+  }
+
+  @include breakpoint(lg) {
+    @include font-size(24);
+    line-height: 28px;
+    @include letter-spacing(20);
+  }
+}
+
+//  ==========================================================================
+//  Colors
+//  ==========================================================================
+.type--opacity-80    { opacity: 0.8; }
+.type--yellow        { color: $yellow; }
+.type--white         { color: $white;  }
+.type--gray-dark     { color: $gray-dark; }
+.type--gray-light    { color: $gray-light; }
+.type--gray-medium   { color: $gray-medium; }
+.type--crimson       { color: $classes-primary; }
+.type--carrot-orange { color: $training-primary; }
+.type--purple        { color: $purple; }
+.type--training-dark { color: $training-dark; }
+.type--summer-sky    { color: $clubs-primary }
+.type--blue-light    { color: $blue-light; }
+.type--charcoal      { color: $charcoal; }
+.type--charcoal--50  { color: rgba($charcoal, 0.5); }
+.type--charcoal--40  { color: rgba($charcoal, 0.4); }
+.type--charcoal--80  { color: rgba($charcoal, 0.8); }
+
+.type--facebook-blue    { color: $facebook-blue; }
+.type--instagram-orange { color: $instagram-orange; }
+.type--twitter-blue     { color: $twitter-blue; }
+
+.type--red { color: $red; }
+
+.type--letter-spacing-pt5 { @include letter-spacing(50); }

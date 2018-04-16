@@ -1,0 +1,9 @@
+.form-success.js-form-success
+  .form-success__inner
+    p.type--b1= t('register.mahalo')
+    p.type--e1= t('register.copy')
+    - if type == "button"
+      button.btn--yellow--full-width.type--g1.js-success-btn type="button"
+        span= t('register.ok')
+    - elsif type == "link"
+      = link_to t('register.ok'), '/', { class: "type--g1 btn--yellow--full-width" }

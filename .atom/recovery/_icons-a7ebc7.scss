@@ -1,0 +1,284 @@
+//  ==========================================================================
+//
+//  Icons
+//
+//  ==========================================================================
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $font-icons !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--after {
+  margin-left: 8px;
+  @include font-size(11);
+}
+
+.icon--before {
+  margin-right: 8px;
+
+  &.icon-global-link-arrow {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+}
+
+.icon--xxl    { @include font-size(65); }
+.icon--xl     { @include font-size(50); }
+.icon--large  { @include font-size(22); }
+.icon--medium { @include font-size(16); }
+.icon--med-15 { @include font-size(15); }
+.icon--med-14 { @include font-size(14); }
+.icon--small  { @include font-size(12); }
+
+.icon-email-share {
+  position: relative;
+  top: 1px;
+  &:before { content: "\e948"; }
+}
+.icon-facebook:before {
+  content: "\e949";
+}
+.icon-api:before {
+  content: "\e947";
+}
+.icon-benefits-huzzah:before {
+  content: "\e943";
+}
+.icon-benefits-hands:before {
+  content: "\e944";
+}
+.icon-benefits-food:before {
+  content: "\e945";
+}
+.icon-benefits-brain:before {
+  content: "\e946";
+}
+.icon-better-way:before {
+  content: "\e93f";
+}
+.icon-bring-others:before {
+  content: "\e940";
+}
+.icon-drive:before {
+  content: "\e941";
+}
+.icon-own:before {
+  content: "\e942";
+}
+.icon-slack:before {
+  content: "\e93d";
+}
+.icon-notification:before {
+  content: "\e93e";
+}
+.icon-x:before {
+  content: "\e93c";
+}
+.icon-aim:before {
+  content: "\e938";
+}
+.icon-desktop:before {
+  content: "\e939";
+}
+.icon-email:before {
+  content: "\e93a";
+}
+.icon-mobile:before {
+  content: "\e93b";
+}
+.icon-general:before {
+  content: "\e91d";
+}
+.icon-media:before {
+  content: "\e91e";
+}
+.icon-recruiting:before {
+  content: "\e936";
+}
+.icon-support:before {
+  content: "\e937";
+}
+.icon-face-to-face:before {
+  content: "\e91a";
+}
+.icon-phone-screen:before {
+  content: "\e91b";
+}
+.icon-resume:before {
+  content: "\e91c";
+}
+.icon-bulb:before {
+  content: "\e901";
+}
+.icon-head:before {
+  content: "\e902";
+}
+.icon-peace:before {
+  content: "\e903";
+}
+.icon-stopwatch:before {
+  content: "\e904";
+}
+.icon-about-left-carousel-arrow:before {
+  content: "\e900";
+}
+.icon-about-right-carousel-arrow:before {
+  content: "\e905";
+}
+.icon-benefits-coaching-mentoring:before {
+  content: "\e906";
+}
+.icon-benefits-community-outreach:before {
+  content: "\e907";
+}
+.icon-benefits-dependent-commuter:before {
+  content: "\e908";
+}
+.icon-benefits-employee-discounts:before {
+  content: "\e909";
+}
+.icon-benefits-employee-stock-options:before {
+  content: "\e90a";
+}
+.icon-benefits-family-perks:before {
+  content: "\e90c";
+}
+.icon-benefits-flexible-work-stations:before {
+  content: "\e90d";
+}
+.icon-benefits-free-meals-beverages:before {
+  content: "\e90e";
+}
+.icon-benefits-insurance:before {
+  content: "\e90f";
+}
+.icon-benefits-internal-comm-knowledge-share:before {
+  content: "\e910";
+}
+.icon-benefits-paid-time-off:before {
+  content: "\e911";
+}
+.icon-benefits-personal-development:before {
+  content: "\e912";
+}
+.icon-benefits-retirement:before {
+  content: "\e913";
+}
+.icon-benefits-social-events:before {
+  content: "\e914";
+}
+.icon-benefits-talented-colleagues:before {
+  content: "\e915";
+}
+.icon-benefits-wellness-program:before {
+  content: "\e916";
+}
+.icon-contact {
+  display: block;
+  margin-left: -8px;
+  margin-top: 5px;
+  height: 32px;
+  @include font-size(25);
+
+  &:before { content: "\e917"; }
+}
+.icon-login {
+  @include font-size(32);
+  &:before { content: "\e918"; }
+}
+.icon-glassdoor {
+  position: relative;
+  top: 1px;
+
+  &:before { content: "\e919"; }
+}
+.icon-arrow-dropdown-down:before {
+  content: "\e91f";
+}
+.icon-case-study-dataminr-logo:before {
+  content: "\e920";
+}
+.icon-case-study-timeline-top:before {
+  content: "\e921";
+}
+.icon-twitter {
+  position: relative;
+  top: 1px;
+
+  &:before { content: "\e922"; }
+}
+.icon-contact-general:before {
+  content: "\e923";
+}
+.icon-contact-media:before {
+  content: "\e924";
+}
+.icon-contact-recruiting:before {
+  content: "\e925";
+}
+.icon-contact-support:before {
+  content: "\e926";
+}
+.icon-features-advanced-custom-alerting:before {
+  content: "\e927";
+}
+.icon-features-breaking-news-alerts:before {
+  content: "\e928";
+}
+.icon-features-bulk-upload:before {
+  content: "\e929";
+}
+.icon-features-custom-alerting:before {
+  content: "\e930";
+}
+.icon-features-ios-android-apps:before {
+  content: "\e92a";
+}
+.icon-features-save-share:before {
+  content: "\e92b";
+}
+.icon-features-slack:before {
+  content: "\e92c";
+}
+.icon-features-track-story:before {
+  content: "\e92d";
+}
+.icon-features-tweetdeck-integration:before {
+  content: "\e92e";
+}
+.icon-features-workflow-integration:before {
+  content: "\e92f";
+}
+.icon-form-dropdown-arrow:before {
+  content: "\e930";
+}
+.icon-global-home-location-marker:before {
+  content: "\e931";
+}
+.icon-global-link-arrow:before {
+  content: "\e932";
+}
+.icon-global-link-download-icon {
+  &:before { content: "\e933"; }
+  &.icon--after { @include font-size(16); }
+  &.icon--after.icon--small { @include font-size(13); }
+}
+.icon-linkedin:before {
+  content: "\e935";
+}
+.icon-facebook:before {
+  content: "\e900";
+}
+.icon-vertical-plus:before {
+  content: "\e935";
+}

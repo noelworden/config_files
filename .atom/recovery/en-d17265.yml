@@ -1,0 +1,429 @@
+en:
+  previous: previous
+  read_more: read more
+  learn_more: learn more
+  view_more: view more
+  view_less: view less
+  more_events: more events
+  most_recent: most recent
+  filter: filter
+  filter_by_type: fiter by type
+  close: close
+  back: back
+  more_info: more info
+  more_videos: more videos
+  by_tag: by tag
+  next: next
+  play_video: Play Video
+  waiea: Waiea
+  anaha: Anaha
+  aeo: Ae'o
+  gateway_towers: Gateway Towers
+  ke_kilohana: Ke Kilohana
+  menu:
+    menu: menu
+    neighborhood: Neighborhood
+    residences: Residences
+    shopping: Shopping & Food
+    life: Life & Culture
+    map: Map
+    events: Events
+    search:
+      search: Search
+      learn: learn more about each of our residences
+      reset: reset search input
+      type: type to begin
+    info:
+      residential: Residential Information
+      neighborhood_info: Neighborhood Information
+      shopping_info: Shopping Info
+      book: Book a Tour
+      register: Register Interest
+      where_hear: how did you hear about us?
+      broker: Broker Resources
+      connect: Connect with us
+      newsletter: Newsletter Signup
+      email: Email Us
+      call: Call us
+      visit: Visit us at the IBM Building
+      register_options:
+        events: Events
+        google: Google Search
+        inflight: Inflight Publication
+        magazine: Magazine
+        news: News Article
+        newspaper: Newspaper Ad
+        online: Online Ad
+        broker: Broker Referral
+        other: Other Referral
+        promotional: Promotional Email
+        signage: Signage
+        social: Social Media
+        dont_remember: Don't Remember
+  footer:
+    visit: Visit our Sales Center at the IBM Building
+    neighborhood_info: Neighborhood Information
+    residential_news: Residential news
+    press_releases: Press releases
+    broker_portal: Broker portal
+    shopping_hours: Shopping hours & info
+    retail_leasing: Retail Leasing & rentals
+    connect: Connect With Us
+    copyright: "Copyright Howard Hughes"
+    terms_of_use: Terms of Use
+    privacy_policy: Privacy Policy
+    disclaimer: Disclaimer
+    email_label: "Email:"
+    email: Email us
+    sign_up: Sign up
+    neighborhood_updates: Neighborhood Updates
+    neighborhood_copy: Stay up to date on all of the latest news about Ward Village shops, restaurants, community events and more. Learn about developments in the neighborhood and how you can come enjoy them.
+    residential_information: Residential Information
+    register_copy: Register your interest to receive more information about new residences or speak with a Ward Village representative.
+  homepage:
+    quick_link: Quick Links
+    acquainted: Get Acquainted with our community
+    best_of: The Best of Village Life
+    social: Our Social Landscape
+    follow: Follow @wardvillage
+    recommendations: Neighborhood Recommendations
+  search:
+    all: All
+    filter_by: "filter by:"
+    displaying: Displaying
+    all_results: Displaying all results
+    tags: tags - select to filter
+    sorry: sorry about that. try removing some filters or changing your search.
+    show_tags: show tags
+    no_results: no results matching
+  search_filters:
+    article: Article
+    place: Place
+    event: Event
+  pages:
+    neighborhood: Neighborhood
+    residences: Residences
+    coastal: a coastal community in the heart of Honolulu
+    explore: Explore Hawaii's most extraordinary collection of residences
+  places:
+    today: Today
+    open_today: "Open Today:"
+    directions: Get Directions
+    parking: parking information
+    upcoming: upcoming events
+    about: about
+    check: check us out on
+    deals: deals & promos
+    related: related articles
+  shopping:
+    shopping_and_food: Shopping & Food
+    directory: Directory
+    deals_promotions: Deals & Promotions
+    editors_picks: Editor's Picks
+    a_z_directory_links: A-Z Directory Links
+    parking: Parking
+    description: At Ward Village, parking is easy and convenient. We offer over 2,900 parking stalls with complimentary and paid valet services. All parking lots and parking garage entrances can be accessed from Auahi, Kamake‘e, Queen Street and Ward Avenue.
+    parking_link01: Parking Map
+    find_everything: Find everything you want and need at Ward Village
+    explore_directory: Explore our Directory
+    shopping: Shopping
+    recreation: Recreation
+    services: Services
+    food: Food
+    jump: Jump to A-Z Directory List
+    top_deals:  Top Deals & Promotions
+    more: More Happening at Ward
+    editors_picks_more: Editor's Picks & More
+    restaurants: A-Z Shops & Restaurants
+  marketing:
+    disclaimer: This website is not intended to be an offer to sell nor a solicitation of offers to buy real estate in Ward Village development to residents of Connecticut, Idaho, Illinois, New Jersey, New York, Oregon, Pennsylvania or South Carolina, or to residents of any other jurisdiction where prohibited by law. No offering can be made to residents of New York until an offering plan is filed with the Department of Law of the State of New York. EQUAL HOUSING OPPORTUNITY.
+    explore: Explore the Residential Opportunties Available at Ward Village
+    register: register your interest
+    register_intro: From townhomes, condominiums to penthouses there is a new home to enrich your family life. Register to receive the latest news and information about the residences at Ward Village.
+    form:
+      broker: Yes, I am a residential sales broker
+  map:
+    subcategory:
+      food: food
+      shopping: shopping
+      arts: arts & entertainment
+      recreation: recreation
+      parks: parks & rec
+      transportation: transportation
+      services: services
+      editor: editor's picks
+    explore: explore the village
+    homes: view homes
+    food:
+      chinese_hot_pot: Chinese/Hot Pot
+      american: American
+      coffee_juice: Coffee & Juice
+      dessert: Dessert
+      fast_food: Fast Food
+      mexican: Mexican
+      japanese: Japanese
+      vietnamese: Vietnamese
+      korean: Korean
+      local_hawaiian: Local/Hawaiian
+      italian: Italian
+    shopping:
+      island_active_wear: Island & Active Wear
+      beauty_products_salons: Beauty Products & Salons
+      clothing_stores_boutiques: Clothing Stores & Boutiques
+      children_s_apparel: Children's Apparel
+      hawaiian_arts_gifts: Hawaiian Arts & Gifts
+      homegoods: Homegoods
+      grocery_convenience_stores: Grocery & Convenience Stores
+      footwear_accessories: Footwear & Accessories
+      specialty_stores: Specialty Stores
+      specialty_food: Specialty Food
+      stationary_books: Stationary/Books
+    arts:
+      movies_games: Movies & Games
+      entertainment_venues: Entertainment Venues
+      murals_statues: Murals & Statues
+    parks:
+      fitness: Fitness
+      parks_beaches: Parks & Beaches
+      fishing: Fishing
+      scuba_diving: Scuba Diving
+      other_ocean_activities: Other Ocean Activities
+      sailing: Sailing
+    transportation:
+      bus: Bus
+      bike_racks: Bike Racks
+      parking_lots: Parking Lots
+      volta_charging_stations: Volta Charging Stations
+      trolleys: Trolleys
+    services:
+      offices: Offices
+      services: Services
+      restrooms: Restrooms
+    welcome: Welcome to Ward Village
+    subtitle: With over 150 shops, restaurants, and activities in the neighborhood, there's lots to discover. Use the filters to the left to explore.
+    second_subtitle: Or want an easy way to get started?
+    see_all: see all editor's picks
+  life:
+    life_and_culture: Life & Culture
+    everything: Everything Hawaii has to offer, right in your backyard
+    neighborhood_life: Neighborhood Life
+    community: Community Video Spotlight
+    upcoming: Upcoming Events
+  residences:
+    price_range: Available Price Range
+    home_types: Available Home Types
+    anchor_retail: Anchor Retail
+    move_in_date: Estimated move-in date
+    status: Status
+    more_about: More about
+  events:
+    events: Events
+    friends: tell your friends
+    upcoming: upcoming events
+    parking: parking information
+    related: related articles
+    more_happening: more happening at ward
+    directions: Get Directions
+    something: Something fun for everyone
+    hide: Hide calendar
+    happening: See what's happening on
+    today: No events today.
+    perfect: Perfect day to explore Ward Village.
+    check: Check below for more events
+    no_events: "no upcoming events"
+    event_over: this event appears to be over. feel free to check back in the future as more events may be scheduled.
+    next_event: Next Event
+  share:
+    facebook: share on facebook
+    twitter: share on twitter
+    link: share link
+  social:
+    facebook: Facebook
+    instagram: Instagram
+    twitter: Twitter
+  sections:
+    make: Make Ward Village Home
+    visit: Visit us at the IBM building
+    visit_copy: The Ward Village showroom and sales office.
+    visit_copy_long: The Ward Village showroom and sales office. Take a tour of our model residences on site.
+    visit_gallery: Visit Sales Gallery
+    register: Register your interest
+    receive: Receive the latest news and information about the residences at Ward Village.
+    view_residences: View residences
+    view_copy: Find a home you’ll love. Learn about the residential offerings available at Ward Village.
+    call_us: Call us
+    email: Email Us
+    contact: Contact Us
+    news_videos: News & Videos
+    featured_media: Featured Videos & Media
+    residences_learn_more: Learn more
+  register:
+    mahalo: Mahalo for registering your interest!
+    copy: As a member of our interest list, we will send you the latest news and updates from Ward Village. We look forward to sharing more about our community with you.
+    ok: ok
+  editorial:
+    photo_of: Photo %{index} of %{length}
+    share: share this article
+    tags: tags
+    drop_by: drop by for a visit
+    more_stories: more stories to discover
+    tags_interested: tags you might be interested in
+  register_interest:
+    updates: Receive the latest updates and let us help you find a new home at Ward Village
+    schedule_today: Schedule your private tour today<br />(808) 369-9600 or <a class="link--underline--yellow" href="mailto:&#115;&#97;le&#115;&#46;info&#64;war&#100;vill&#97;ge&#46;c&#111;m"><span>&#115;&#97;le&#115;&#46;info&#64;war&#100;vill&#97;ge&#46;c&#111;m</span></a>
+    first_name: first name
+    last_name: last name
+    email: email
+    phone: phone
+    street_address: street address
+    city: city
+    country: country
+    state: state/province
+    zip: zip code
+    language: language preference
+    broker: Yes, I am a Broker
+    most_important: To best serve you, please tell us what is most important to you in your home search.
+    submit: submit
+    required: required fields
+    legal_1: This is not intended to be an offer to sell in any jurisdiction where prohibited by law. Ward Village is a proposed master planned development in Honolulu, Hawaii that does not yet exist. Exclusive Project Broker Ward Village Properties, LLC. Copyright
+    legal_2: . Equal Housing Opportunity. Exclusive Project Broker for Ke Kilohana - Locations LLC. Copyright
+    legal_3: . Equal Housing Opportunity.
+    legal_new_york: "Notice to New York Residents - The developer of Ward Village and its principals are not incorporated in, located in, or resident in the state of New York. No offering is being made in or directed to any person or entity in the state of New York or to New York residents by or on behalf of the developer/offeror or anyone acting with the developer/offeror’s knowledge. No such offering, or purchase or sale of real estate by or to residents of the state of New York, shall take place until all registration and filing requirements under the Martin Act and the Attorney General’s regulations are complied with, a written exemption is obtained pursuant to an application is granted pursuant to and in accordance with Cooperative Policy Statements #1 or #7, or a “No-Action” request is granted."
+  terms_of_use:
+    terms: Terms of Use
+    acceptance: Acceptance of Terms and Conditions.
+    welcome: Welcome to the website of Victoria Ward, Limited ("Company", "we" or "us"). The following terms and conditions (these "Terms of Use") govern your access to and use of WardVillage.com including any content, functionality and services offered on or through WardVillage.com (the "Website").
+    read: Please read the Terms of Use carefully before you start to use the Website. By using the Website, you accept and agree to be bound and abide by these Terms of Use. If you do not want to agree to these Terms of Use, you must not access or use the Website.
+    changes: Changes to the Terms of Use.
+    revise: We may revise and update these Terms of Use from time to time in our sole discretion. All changes are effective immediately when we post them. Your continued use of the Website following the posting of revised Terms of Use means that you accept and agree to the changes. You are expected to check this page each time you access this Website so you are aware of any changes, as they are binding on you.
+    limited: Limited Use.
+    non_commercial: This Website is provided for your personal and non-commercial use only. Without express written consent, you may not download (other than a cached copy) modify, copy, distribute, transmit, display, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, or services obtained from any portion of this Website.
+    offers: The Website is not intended to be an offer to sell nor a solicitation of offers to buy real estate in the Ward Village development to residents of Connecticut, Idaho, New York, New Jersey, and Oregon, or to residents of any other jurisdiction where prohibited by law.
+    prohibited_use: No Unlawful Or Prohibited Use.
+    prohibited_detail: You may not use this Website for any purpose that is unlawful or prohibited by these terms and conditions. You may not use this Website in any manner that could damage, disable, overburden, and impair the Website in any way. You may not attempt to gain unauthorized access to this Website, other user’s accounts, and/or computer systems connected to this Website through hacking or any other means. You may not use any automatic device, process or means to access the Website for any purpose, including monitoring or copying any of the material on the Website. You may not use any manual process to monitor or copy any of the material on the Website or for any other unauthorized purpose without our prior written consent.
+    privacy: Privacy and Protection of Personal Information.
+    see_our_1: See our
+    privacy_policy: Privacy Policy
+    see_our_2: for information relating to the collection and use of your personal information.
+    intellectual_property: Intellectual Property Rights.
+    intellectual_property_details: The Website and its entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by the Company, its licensors or other providers of such material and are protected by United States and international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws.
+    trademarks: Trademarks.
+    trademarks_detail: WARD VILLAGE, the WV Design, VICTORIA WARD, LIMITED and all related names, logos, product and service names, designs and slogans are trademarks of the Company or its affiliates or licensors. You must not use such marks without the prior written permission of the Company. THE HOWARD HUGHES CORPORATION is a registered trademark, U.S. Patent and Trademark Office. All other names, logos, product and service names, designs and slogans on this Website are the trademarks of their respective owners.
+    links: Links.
+    links_detail: This Website may contain links to other sites on the World Wide Web. We provide these links to you only as a convenience, and the inclusion of any link does not imply endorsement of any other site or any association with its operators. You acknowledge and agree that this Website is not responsible for the availability of such external sites or resources, nor responsible or liable for any content, products, or other materials on or available from such sites or resources. You further acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such site or resource.
+    reliance: Reliance on Information Posted.
+    reliance_information: The information presented on or through the Website is made available solely for general information purposes. We do not warrant the accuracy, completeness or usefulness of this information. Any reliance you place on such information is strictly at your own risk. To the maximum extent permitted by law, we disclaim all liability and responsibility arising from any reliance placed on such materials by you or any other visitor to the Website, or by anyone who may be informed of any of its contents.
+    reliance_third_parties: This Website may include content provided by third parties, including materials provided by other users, bloggers and third-party licensors, syndicators, aggregators and/or reporting services. All statements and/or opinions expressed in these materials, and all articles and responses to questions and other content, other than the content provided by the Company, are solely the opinions and the responsibility of the person or entity providing those materials. These materials do not necessarily reflect the opinion of the Company. We are not responsible, or liable to you or any third party, for the content or accuracy of any materials provided by any third parties.
+    changes: Changes to the Website.
+    changes_detail: We may update the content on this Website from time to time, but its content is not necessarily complete or up-to-date. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.
+    disclaimer: Disclaimer of Warranties.
+    disclaimer_use: YOUR USE OF THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. NEITHER THE COMPANY NOR ANY PERSON ASSOCIATED WITH THE COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY OR AVAILABILITY OF THE WEBSITE. WITHOUT LIMITING THE FOREGOING, NEITHER THE COMPANY NOR ANYONE ASSOCIATED WITH THE COMPANY REPRESENTS OR WARRANTS THAT THE WEBSITE, ITS CONTENT OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE WILL BE ACCURATE, RELIABLE, ERROR-FREE OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT OUR SITE OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.
+    disclaimer_warranties: THE COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR PARTICULAR PURPOSE.
+    disclaimer_exclusions: THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
+    limitation: Limitation of Liability.
+    limitation_liabilities: We will not be liable for any damages of any kind arising from the use of this Website, including, but not limited to direct, indirect, incidental, punitive, and consequential damages. If you are dissatisfied with any portion of this Website or with any of these Terms of Use your sole and exclusive remedy is to discontinue using the Website.
+    limitation_damages: IN NO EVENT WILL THE COMPANY, ITS AFFILIATES OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE.
+    limitation_exclusions: THE FOREGOING DOES NOT AFFECT ANY LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
+    limitation_claims: Limitation on Time to File Claims.
+    limitation_claims_detail: ANY CAUSE OF ACTION OR CLAIM YOU MAY HAVE ARISING OUT OF OR RELATING TO THESE TERMS OF USE OR THE WEBSITE MUST BE COMMENCED WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES, OTHERWISE, SUCH CAUSE OF ACTION OR CLAIM IS PERMANENTLY BARRED.
+    indemnification: Indemnification.
+    indemnification_detail: You agree to defend, indemnify and hold harmless the Company, its affiliates, licensors and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses or fees (including reasonable attorneys’ fees) arising out of or relating to your violation of these Terms of Use or your use of the Website, including, but not limited to, any use of the Website’s content or services other than as expressly authorized in these Terms of Use or your use of any information obtained from the Website.
+    governing: Governing Law and Jurisdiction.
+    governing_dispute: All matters relating to the Website and these Terms of Use and any dispute or claim arising therefrom or related thereto (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the internal laws of the State of Texas, U.S.A., without giving effect to any choice or conflict of law, provision or rule (whether of the State of Texas or any other jurisdiction).
+    governing_suit: Any legal suit, action or proceeding arising out of, or related to, these Terms of Use or the Website shall be instituted exclusively in the federal courts of the United States or the courts of the State of Texas in each case located in the City of Dallas and County of Dallas, although we retain the right to bring any suit, action or proceeding against you for breach of these Terms of Use in your country of residence or any other relevant country. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.
+    waiver: Waiver and Severability.
+    waiver_detail: No waiver by the Company of any term or condition set forth in these Terms of Use shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of the Company to assert a right or provision under these Terms of Use shall not constitute a waiver of such right or provision.
+    waiver_contempt: If any provision of these Terms of Use is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms of Use will continue in full force and effect.
+    entire_agreement: Entire Agreement.
+    entire_agreement_1: These Terms of Use and our
+    entire_agreement_2: constitute the sole and entire agreement between you and Victoria Ward, Limited with respect to the Website and supersede all prior and contemporaneous understandings, agreements, representations and warranties, both written and oral, with respect to the Website.
+  privacy:
+    privacy_policy: Privacy Policy
+    welcome: Welcome to the website of Victoria Ward, Limited (“Company”, “we” or “us”). This policy describes the types of information we may collect from you or that you may provide when you visit the website WardVillage.com (our “Website”) and our practices for collecting, using, maintaining, protecting and disclosing that information.
+    policy_about: We have adopted the following privacy policy because we understand that you want to know how the information that you provide to us is being used. The following explains, among other things, how and why your personal information is collected, how it is utilized and in what type of capacities.
+    policy_application: This policy does not apply to information collected by us offline or through any other means, including on any other website, or by any third party.
+    policy_read: Please read this policy carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is not to use our Website. By accessing or using this Website, you agree to this privacy policy. This policy may change from time to time. Your continued use of this Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.
+    info_collected: Information We Collect About You and How We Collect It.
+    info_users: "We may collect several types of information from and about users of our Website, including information:"
+    info_users_personal: by which you may be personally identified, such as name, postal address, e-mail address or telephone number (“personal information”);
+    info_users_identifying: that is about you but individually does not identify you, such as automatically recorded times and dates of visits to the site; and/or
+    info_users_internet: about your internet connection, the equipment you use to access our Website and usage details.
+    we_collect: "We collect this information:"
+    we_collect_1: Directly from you when you provide it to us.
+    we_collect_2: Automatically as you navigate through the site. Information collected automatically may include usage details, IP addresses and information collected through cookies.
+    info_you_provide: Information You Provide to Us.
+    info_about_you: "The information we collect on or through our Website may include:"
+    info_about_you_1: Information that you provide by filling in forms on our Website. This includes information provided at the time of requesting additional information. We may also ask you for information when you report a problem with our Website.
+    info_about_you_2: Records and copies of your correspondence (including e-mail addresses), if you contact us.
+    usage_details: Usage Details, IP Addresses And Cookies.
+    usage_automatic: "As you navigate through and interact with our Website, we may automatically collect certain information about your equipment, browsing actions and patterns, including:"
+    usage_automatic_1: Details of your visits to our Website, including traffic data, location data, and other communication data and the resources that you access and use on the Website.
+    usage_automatic_2: Information about your computer and internet connection, including your IP address, operating system and browser type.
+    info_enables: "The information we collect automatically is statistical data. It helps us to improve our Website and to deliver a better and more personalized service by enabling us to:"
+    info_enables_1: Estimate our audience size and usage patterns.
+    info_enables_2: Store information about your preferences, allowing us to customize our Website according to your individual interests.
+    info_enables_3: Speed up your searches.
+    info_enables_4: Recognize you when you return to our Website.
+    technologies: "The technologies we use for this automatic data collection may include:"
+    technologies_cookies: Cookies (or browser cookies). Cookie technology is used for tracking general user profiles by placing small files into your browser on your computer’s hard drive. Our cookies do not gather personally identifiable information. We utilize cookies to retain your profile for quick navigation and to communicate appropriate information that matches your needs and interests. Cookies are also used as a tool to improve our website based on user trends. Most web browsers automatically accept cookies, but you can change your browser to prevent cookies from being placed in your computer without your consent. If your computer is programmed to reject our cookies, you should still be able to use the capabilities of our website, but we do not guarantee your ability to do so. We do not have access to any cookies which may be placed in your browser by unaffiliated third-parties.
+    how_we_use: How We Use Your Information.
+    we_use_your_info: "We use information that we collect about you or that you provide to us, including any personal information:"
+    we_use_your_info_1: To present our Website and its contents to you.
+    we_use_your_info_2: To provide you with information, products or services that you request from us.
+    we_use_your_info_3: To fulfill any other purpose for which you provide it.
+    we_use_your_info_4: For market research purposes, for project planning and/or for developing prospect lists for the Company.
+    we_use_your_info_5: To carry out our obligations and enforce our rights arising from any contracts entered into between you and us.
+    we_use_your_info_6: To notify you about changes to our Website or any products or services we offer or provide though it.
+    we_use_your_info_7: In any other way we may describe when you provide the information.
+    we_use_your_info_8: For any other purpose with your consent.
+    disclosure: Disclosure of Your Information.
+    disclose_aggregated: We may disclose aggregated information about our users, and information that does not identify any individual, without restriction.
+    disclose_personal: "We may disclose personal information that we collect or you provide as described in this privacy policy:"
+    disclose_personal_1: To parties such as builders and independent sales representatives to enable them to follow-up with you on information you request.
+    disclose_personal_2: To our subsidiaries and affiliates.
+    disclose_personal_3: To contractors, service providers and other third parties we use to support our business.
+    disclose_personal_4: To a buyer or other successor in the event of a merger, divestiture, restructuring, reorganization, dissolution or other sale or transfer of some or all of Company’s assets, whether as a going concern or as part of bankruptcy, liquidation or similar proceeding, in which personal information held by Company about our Website users is among the assets transferred.
+    disclose_personal_5: To fulfill the purpose for which you provide it.
+    disclose_personal_6: For any other purpose disclosed by us when you provide the information.
+    disclose_personal_7: With your consent.
+    may_also_disclose: "We may also disclose your personal information:"
+    may_also_disclose_1: To comply with any court order, law or legal process, including to respond to any government or regulatory request.
+    may_also_disclose_2: To enforce or apply our Terms of Use and any other agreements.
+    may_also_disclose_3: If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of Company, our customers or others. This includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction.
+    choices: Choices About How We Use and Disclose Your Information.
+    choices_detail: "We strive to provide you with choices regarding the personal information you provide to us. We have created mechanisms to provide you with the following control over your information:"
+    tracking: Tracking Technologies and Advertising.
+    tracking_details: You can set your browser to refuse all or some browser cookies, or to alert you when cookies are being sent. If you disable or refuse cookies, please note that some parts of this site may then be inaccessible or not function properly.
+    promotional_offers: Promotional Offers from the Company.
+    promotional_opt_out_1: If you do not wish to have your information used by the Company to promote our own or third parties’ products or services, you can opt-out by sending us an e-mail stating your request to
+    promotional_opt_out_2: . If we have sent you a promotional e-mail, you may send us a return e-mail at
+    promotional_opt_out_3: asking to be omitted from future e-mail distributions.
+    accessing: Accessing and Correcting Your Information.
+    accessing_1: You may send us an e-mail at
+    accessing_2:  to request access to, correct or delete any personal information that you have provided to us. We may not accommodate a request to change or delete information if we believe the change or deletion would violate any law or legal requirement or cause the information to be incorrect.
+    children: Children Under the Age of 13.
+    children_detail: Our Website is not intended for children under 13 years of age. No one under age 13 may provide any information to the Website. We do not knowingly collect personal information from children under 13. If you are under 13, do not use or provide any information on this Website. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please contact us.
+    data_security: Data Security.
+    data_security_detail: Unfortunately, the transmission of information via the internet is not completely secure. Thus, we cannot guarantee the security of your personal information transmitted to our Website. Any transmission of personal information is at your own risk. We are not responsible for circumvention of any privacy settings or measures contained on the Website.
+    other_websites: Other Websites.
+    other_websites_detail: Our Website may contain links to and from other websites. We do not guarantee that any such websites will respect and protect your personal information in the same manner that we do. We recommend that you read the Privacy Policies of those other websites when you visit them for your own protection and benefit. We are not responsible for the content, products or services contained in or offered by any such other websites.
+    contact_user: Company’s Right to Contact User.
+    contact_user_detail: Company reserves the right to contact site visitors regarding changes to the privacy policy, or any other policies or agreements relevant to site visitors.
+    changes_to_policy: Changes to Our Privacy Policy.
+    changes_to_policy_detail: It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users’ personal information, we will notify you by e-mail to the e-mail address you provided and/or through a notice on the Website. The date the privacy policy was last revised is identified at the top of the page. You are responsible for ensuring we have an up-to-date active and deliverable e-mail address for you, and for periodically visiting our Website and this privacy policy to check for any changes.
+    contacting_us: Contacting Us.
+    contacting_us_1: "To ask questions or comment about this privacy policy and our privacy practices, contact us at:"
+    may_change: THIS PRIVACY STATEMENT MAY CHANGE - This privacy statement may change from time to time. Howard Hughes Corporation reserves the right to change it without notice to you, so you should review it periodically.
+    demographics: The Howard Hughes Corporation collects Demographic Information (Age and Gender) and does not share any information with any third party.
+    opt_out: Visitors can opt-out of Google Analytics for Display Advertising and customize Google Display Network ads using the Ads Settings.
+    merging: The Howard Hughes Corporation will not facilitate the merging of personally-identifiable information with non-personally identifiable information previously collected from Display Advertising features that is based on the DoubleClick cookie unless you have robust notice of, and the user's prior affirmative (i.e., opt-in) consent to, that merger.
+    google_opt_out: "To add the Google Opt out browser plug in download it here:"
+  disclaimer:
+    disclaimer_title: Disclaimer
+    warning: "WARNING: THE CALIFORNIA BUREAU OF REAL ESTATE HAS NOT INSPECTED, EXAMINED OR QUALIFIED THIS OFFERING. This website is not intended to be an offer to sell nor a solicitation of offers to buy real estate in Ward Village development to residents of Connecticut, Idaho, Illinois, New Jersey, New York, Oregon, Pennsylvania or South Carolina, or to residents of any other jurisdiction where prohibited by law."
+    new_york: "Notice to New York Residents  - The developer of Ward Village and the Anaha, Waiea, Gateway Towers, Ae‘o and Ke Kilohana condominium projects and its principals are not incorporated in, located in, or resident in the state of New York.  No offering is being made in or directed to any person or entity in the state of New York or to New York residents by or on behalf of the developer/offeror or anyone acting with the developer/offeror’s knowledge.  No such offering, or purchase or sale of real estate by or to residents of the state of New York, shall take place until all registration and filing requirements under the Martin Act and the Attorney General’s regulations are complied with, a written exemption is obtained pursuant to an application is granted pursuant to and in accordance with Cooperative Policy Statements #1 or #7, or a “No-Action” request is granted."
+    proposed_plan: Ward Village is a proposed master planned development in Honolulu, Hawaii that does not yet exist. This website and the information and materials contained herein, is intended to provide general information about the proposed plans for Ward Village and the Anaha, Waiea, Gateway Towers, Ae’o and Ke Kilohana condominium projects by their respective developers. These proposed plans are subject to change or cancellation (in whole or in part) at any time without notice. Land uses, public and private facilities, improvements, and plans described or depicted herein are conceptual only, subject to governmental approvals and market factors, and subject to change without notice. The use of amenities located on properties surrounding the development is not within the control of the developer and as such, is subject to change at any time. Nothing in these materials obligates any developer or any other entity to build any facilities or improvements depicted or described herein, and there is no guarantee that any illustrated or described proposed development will be implemented. No guarantee is made that the features and amenities depicted by artists' renderings or otherwise described or depicted will be built, or, if built, will be the same type, size, or nature as depicted or described herein. Square footage figures for each unit shown herein are approximations and no representation is made as to the accuracy of such figures. Certain unit interior features depicted in the brochure are only available if requested prior to completion of construction of the building and the unit.
+    media: Photographs, renderings and other visual depictions of private or public amenities or facilities contained in this brochure may not be located within the described developments and are provided for illustrative purpose only. Neither this brochure, the information and materials described herein, nor any communication made or given in connection with any of the foregoing, may be deemed to constitute a representation or warranty. Further, the foregoing should not be relied upon in deciding to purchase or lease an interest in the development. The right to use public or private facilities set forth in these materials, including, but not limited to, any golf course, or to access any retail establishment or entertainment venue is subject to the payment of additional fees and such additional terms and conditions as may be established by the owner of such facilities and is not included in the purchase of a unit within Anaha, Waiea or Gateway Towers.
+    developers: Ward Village is being developed by Victoria Ward, Limited. Anaha is being developed by 1108 Auahi, LLC.  Waiea is being developed by 1118 Ala Moana, LLC. Gateway Towers is being developed by 1100 Ala Moana, LLC and 1060 Ala Moana, LLC, Ae’o is being developed by 1001 Queen, LLC. Ke Kilohana is being developed by 988 Halekauwila, LLC. Victoria Ward, Limited, 1108 Auahi, LLC, 1118 Ala Moana, LLC, 1100 Ala Moana, LLC, 1060 Ala Moana, LLC, 1001 Queen, LLC and 988 Halekauwila, LLC are subsidiaries or affiliates of The Howard Hughes Corporation. The Howard Hughes Corporation is neither the owner nor the developer of any real property or amenity described or identified in this brochure unless otherwise stated. Exclusive Project Broker for Anaha, Waiea, Gateway Towers and Ae’o condominiums is Ward Village Properties, LLC. Copyright
+    equal_opportunity: . Equal Housing Opportunity. Exclusive Project Broker for Ke Kilohana is Locations, LLC. Copyright
+    equal_opportunity_2: . Equal Housing Opportunity.

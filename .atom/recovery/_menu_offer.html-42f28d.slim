@@ -1,0 +1,11 @@
+li.menu-item.menu--featured-offer
+  = link_to offer_path(offer), { class: 'menu-item__link js-smooth-scroll js-ga--top-nav-click', data: { 'js-ga-label': label } }
+    i class="illustration--#{offer.icon}-egg menu-item__icon"
+
+    .menu-item__link__center
+      span.type--b10-offer.type--gold #{offer.name}
+      .menu-content__contain
+        p.type--b11-offer.type--normal-case.type--eggshell.type--center = first_bullet(offer)
+
+    .menu-item__zoom-contain
+      = image_tag("icons/illustration--#{offer.icon}-bw.png", class: 'menu-item__zoom-contain__img-offer', alt: '' )

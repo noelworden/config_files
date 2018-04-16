@@ -1,0 +1,274 @@
+//  ======================================================================================================
+//
+//  Franchise::Pages#index
+//
+//  ======================================================================================================
+- body_class 'theme-franchise'
+- title 'Crunch Franchise | Perspire to Greatness'
+- meta_tag :description, 'Turn passion into profits. Become a part of one of the hottest brands in the fitness industry. Own a Crunch Fitness franchise.'
+
+.main.main--franchise.bkgd--snow
+
+  //  Jump Nav
+  //  ======================================================================================================
+  nav.franchise--jump-nav.js-jump-nav
+    = render partial: "jump_nav_item", locals: {title: "Overview", target: ".franchise__overview", targetingClass: 'jump-nav-item-0'}
+    = render partial: "jump_nav_item", locals: {title: "Why Invest", target: ".franchise__why-invest", targetingClass: 'jump-nav-item-1'}
+    = render partial: "jump_nav_item", locals: {title: "The Model", target: ".franchise__the-model", targetingClass: 'jump-nav-item-2'}
+    = render partial: "jump_nav_item", locals: {title: "Philosophy", target: ".franchise__philosophy", targetingClass: 'jump-nav-item-3'}
+    = render partial: "jump_nav_item", locals: {title: "Availability", target: ".franchise__availability", targetingClass: 'jump-nav-item-4'}
+    = render partial: "jump_nav_item", locals: {title: "Leadership", target: ".franchise__leadership", targetingClass: 'jump-nav-item-5'}
+    = render partial: "jump_nav_item", locals: {title: "Process", target: ".franchise__process", targetingClass: 'jump-nav-item-6'}
+    = link_to franchise_contact_path
+      = render partial: "jump_nav_item", locals: {title: "Contact", target: ".franchise__contact", targetingClass: 'jump-nav-item-7'}
+
+  //  Hero
+  //  ======================================================================================================
+  header.franchise--hero__header.franchise__overview.franchise__jump-point{data= {section: 0, 'ga-category': 'Franchise', 'ga-action': 'Homepage Section', 'ga-label': 'Overview'}}
+    .background-video--container
+      video.background-video { autoplay loop muted playsinline }
+        source src= asset_path('crunch--franchise-background-2.mp4')
+    .hero--title-copy
+      h1.type--b10.type--white.type--center Perspire To Greatness
+      p.type--d10.type--white.type--center Turn passion into profits. Become a part of one of the hottest brands in the fitness industry. Own a Crunch Fitness franchise.
+      = link_to franchise_contact_path, class: 'btn btn--white-border btn--center btn--margin-50 btn--narrow type--center'
+        span.type--d2.type--uppercase.type--white Contact Us
+
+  //  Statistics Bar
+  //  ======================================================================================================
+  section.section-standard.gradient--theme-custom--diagonal
+    .amenities-grid.franchise-grid--stats
+      .amenities-grid__item.franchise-grid__item
+        i.icon.icon-star-pin.type--white.icon--block.icon--med-lg.type--center
+        h4.type--white.type--e14.type--center A Solid Track Record
+        ul.franchise-grid--item-list
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center 250+ open locations
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center Commitments to open over 600+ franchise locations
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center 24 States & 5 Countries
+      .amenities-grid__item.franchise-grid__item
+        i.icon.icon-family.type--white.icon--block.icon--large.type--center
+        h4.type--white.type--e14.type--center Consumers Love Us
+        ul.franchise-grid--item-list
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center 1,000,000+ members.
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center
+            span 6,400+ median members per club
+            sup 1
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center The leader in the High Value / Low Price segment
+      .amenities-grid__item.franchise-grid__item
+        i.icon.icon-workout-essentials.type--white.icon--block.icon--large.type--center
+        h4.type--white.type--e14.type--center
+          span The Right Industry
+          sup 2
+        ul.franchise-grid--item-list
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center $25.8B industry
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center 57M members in the U.S.
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center Consistently Growing
+      .amenities-grid__item.franchise-grid__item
+        i.icon.icon-group-fitness.type--white.icon--block.icon--large.type--center
+        h4.type--white.type--e14.type--center
+          span The Right Opportunity
+          sup 2
+        ul.franchise-grid--item-list
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center 82% of Americans don’t belong to a gym
+          li.franchise-grid--item-list__item.type--white.type--d13.type--center 40% of health club users participate in Group Exercise.
+
+  //  Why Invest?
+  //  ======================================================================================================
+  section.section-standard.bkgd--snow.franchise__why-invest.franchise__jump-point{data= {section: 1, 'ga-category': 'Franchise', 'ga-action': 'Homepage Section', 'ga-label': 'Why Invest'}}
+    .franchise-grid--why-invest
+      .franchise-grid__why-invest-item.franchise-grid__why-invest-item--first
+        h2.section-standard__header__title.type--a1.type--center Why Invest with Crunch?
+        p.header__subhead--margin.type--c3.type--gray-dark.type--center
+          span Besides the opportunity for a gym-mazing return on investment, owning a Crunch franchise means joining a community of like-minded entrepreneurs, working with a team and system that is tops in the industry, getting in on the gym floor of the fastest growing full-size fitness brand
+          sup 3
+          span , and doing something with purpose: helping people build healthy lifestyles.
+        / p.header__subhead--margin.type--c3.type--gray-dark.type--center But don't ask us, lesten to what our franchisees have to say.
+      .franchise-grid__why-invest-item
+        = image_tag('franchise_logo', class: 'franchise-grid__why-invest-image')
+    .franchise-grid--why-invest.franchise-grid--why-invest--video
+      .franchise-grid__video
+        .video-contain
+          iframe src='https://player.vimeo.com/video/54462782?' frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"
+        .franchise-grid__video-caption
+          h3.type--a8.type--white Erin Pearson: "Unparalleled Support"
+      .franchise-grid__video
+        .video-contain
+          iframe src='https://player.vimeo.com/video/54462782?' frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"
+        / = image_tag('video-thumbnail-2', class: 'amenities-grid__image')
+        / .amenities-grid__info.bkgd--almost-black.type--center
+        /   .amenities-grid__info__intro
+        /     i.icon.type--white.icon-play
+        /     .amenities-grid__info__title-wrapper
+        /       h3.amenities-grid__info__title.type--a8.type--white Jace Cooper: "Solid Business Model"
+      / .amenities-grid__item.amenities-grid__thirds
+      /   = image_tag('video-thumbnail-3', class: 'amenities-grid__image')
+      /   .amenities-grid__info.bkgd--almost-black.type--center
+      /     .amenities-grid__info__intro
+      /       i.icon.type--white.icon-play
+      /       .amenities-grid__info__title-wrapper
+      /         h3.amenities-grid__info__title.type--a8.type--white Zara Smith: "A Growing Market"
+
+  //  Our Advantage + Timeline
+  //  ======================================================================================================
+  section.section-standard.bkgd--white.franchise__the-model.js-number-trigger.franchise__jump-point{data= {section: 2, 'ga-category': 'Franchise', 'ga-action': 'Homepage Section', 'ga-label': 'The Model'}}
+    .content-contain
+      header.section-standard__header--wide--padding.type--center
+        h2.section-standard__header__title.section-standard__header--wide--padding.type--a1 Our Advantage: The Crunch Model
+        p.header__subhead--margin.type--d3.type--gray-dark When we designed our franchise model, we were guided by years of experience. This approach is designed to maximize returns while being able to adapt to changing business conditions. Our results prove it.
+        .section-flex--advantage
+          .basic-flex.type--center
+            .basic-flex__item
+              span.type--e1.type--inline.js-animate-symbol $
+              h4.type--e1.type--inline.js-animate-number{data= {number: 1906305}} &nbsp;
+              p.basic-flex__item__copy.type--d5
+                p.type--inline Median Gross Sales Per Unit
+                sup 4
+              hr
+            .basic-flex__item
+              span.type--e1.type--inline.js-animate-symbol $
+              h4.type--e1.type--inline.js-animate-number{data= {number: 444449}} &nbsp;
+              p.basic-flex__item__copy.type--d5
+                p.type--inline Median Cash Operating Profit Per Unit
+                sup 4
+              hr
+            .basic-flex__item
+              h4.type--e1.js-animate-number{data= {number: 6440}} &nbsp;
+              p.basic-flex__item__copy.type--d5
+                p.type--inline Median Members Per Unit
+                sup 4
+        p.type--d3.type--gray-dark As a Crunch franchisee, you present your community an incredible value. From No Judgments®, to proprietary group fitness classes, to pressure-free enrollment, complimentary tanning, and HydroMassage®, to personal and small-group training, you’ll have more to offer than your competition, and all at an unbeatable price.
+
+    // Timeline
+    = render partial: "timeline"
+
+  // Carousel
+  //  ======================================================================================================
+  .franchise-photo-carousel.bkgd--snow
+    = render "shared/experience-switcher/franchise-photo-carousel", carousel_content: franchise_image_carousel
+
+
+  //  Our Philosophy
+  //  ======================================================================================================
+  section.section-standard.gradient--warm-vertical.franchise__philosophy.franchise__jump-point{data= {section: 3, 'ga-category': 'Franchise', 'ga-action': 'Homepage Section', 'ga-label': 'Philosophy'}}
+    .content-contain
+      header.section-standard__header--wide--padding.type--center
+        h3.section-standard__header__pre-title
+          hr.border--short.border--type.border--white
+          span.type--border-adorned.type--a6.type--white High Value. Low Price.
+          hr.border--short.border--type.border--white
+        h2.section-standard__header__title.type--a1.type--white Our Philosophy
+      .amenities-grid.franchise-grid--philosophy
+        .amenities-grid__item.franchise-grid--philosophy__item.type--center
+          .franchise-grid--philosophy__item-header
+            h4.type--e2.type--white.item-header--margin Stay Small to Grow Large
+          .franchise-grid--philosophy__item-copy
+            p.type--d3.type--white By focusing on a smaller community of franchisees who develop multiple Crunch gyms, we ensure consistent support and access to the Crunch team.
+        .amenities-grid__item.franchise-grid--philosophy__item.type--center
+          .franchise-grid--philosophy__item-header
+            h4.type--e2.type--white Flexible & Franchisee-Friendly
+          .franchise-grid--philosophy__item-copy
+            p.type--d3.type--white We’ve designed Crunch to work optimally in diverse markets, with clear operational standards and support from industry experts.
+        .amenities-grid__item.franchise-grid--philosophy__item.type--center
+          .franchise-grid--philosophy__item-header
+            h4.type--e2.type--white No Judgments&reg;
+          .franchise-grid--philosophy__item-copy
+            p.type--d3.type--white Some may call it a tagline, but for us, the originators of No Judgments, it’s a way of life. Since 1995, our unfiltered philosophy drives us to create a community and a gym for all.
+        .amenities-grid__item.franchise-grid--philosophy__item.type--center
+          .franchise-grid--philosophy__item-header
+            h4.type--e2.type--white Making Serious Fitness Fun
+          .franchise-grid--philosophy__item-copy
+            p.type--d3.type--white Let’s face it, working out is hard. We know that, which is why Crunch is designed to motivate, through a fun and engaging experience.
+
+  //  Break New Ground
+  //  ======================================================================================================
+  section.section-standard.bkgd--snow.franchise__availability.franchise__jump-point{data= {section: 4, 'ga-category': 'Franchise', 'ga-action': 'Homepage Section', 'ga-label': 'Availability'}}
+    .content-contain
+      header.section-standard__header--wide--padding.type--center
+        h3.section-standard__header__pre-title.type--gray-dark
+          hr.border--short.border--type.border--charcoal
+          span.type--border-adorned.type--a6 Franchise Availability
+          hr.border--short.border--type.border--charcoal
+        h2.section-standard__header__title.type--a1 Break New Ground
+        p.type--d3 The right brand, in the right industry, at the right time.  While we are growing fast, there are still great franchise territories are available in all 50 states, as well as internationally.  But don’t wait too long, we sell well over 100 franchises per year!  Give us a call to discuss where you would want your Crunch.
+      .section--map
+        = image_tag('map', class: 'franchise-map')
+      .section-flex--map
+        .basic-flex
+          .basic-flex__item
+            span.franchise-map__key__item.key__item--light.type--e6.type--charcoal.type--left Optimal Franchise Availability
+          .basic-flex__item
+            span.franchise-map__key__item.key__item--medium.type--e6.type--charcoal.type--left Franchise Availability
+          .basic-flex__item
+            span.franchise-map__key__item.key__item--dark.type--e6.type--charcoal.type--left Limited Franchise Availability
+    .content-contain--tight
+      = link_to 'Contact Us', franchise_contact_path, class: 'btn--center btn--wide btn--dark type--white type--e3 type--center'
+
+  hr.border--taller.gradient--blues-right
+
+  //  We've Got Your Back
+  //  ======================================================================================================
+  section.section-standard.bkgd--snow.franchise__leadership.franchise__jump-point{data= {section: 5, 'ga-category': 'Franchise', 'ga-action': 'Homepage Section', 'ga-label': 'Leadership'}}
+    .content-contain
+      header.section-standard__header--wide.type--center
+        h3.section-standard__header__pre-title.type--gray-dark
+          hr.border--short.border--type.border--charcoal
+          span.type--border-adorned.type--a6 Crunch Franchise Team
+          hr.border--short.border--type.border--charcoal
+        h2.section-standard__header__title.type--a1 We’ve Got Your Back
+        p.type--d3.type--gray-dark When you join Crunch as a franchisee, you don’t join a chain of gyms, you become part of a team. You’ll connect and learn from other franchisees and work directly with senior leaders and industry experts in their respective fields, all of whom are focused on your results.
+    .content-contain--tight
+      / .section--video-container
+      /   video poster= image_path('team-video-poster.jpg')
+      /     source src= asset_path('crunch-franchise--hero.mp4')
+      /   .video--play.type--center
+      /     i.icon.type--white.icon-play.video--play__icon
+      /     span.video--play__copy.type--d3.type--white Hear from our executive team
+      .type--center
+        h3.section-standard__header__pre-title.pre-title--padding.type--gray-dark
+          hr.border--short.border--type.border--charcoal
+          span.type--border-adorned.type--a6 Meet Our Team
+          hr.border--short.border--type.border--charcoal
+      .section--team
+        .amenities-grid
+          = render partial: 'team-bio-card'
+      = link_to 'Contact Us', franchise_contact_path, class: 'btn--center btn--wide btn--dark type--white type--e3 type--center'
+
+  //  The Process
+  //  ======================================================================================================
+  section.section-standard.gradient--cool-vertical.process__banner.franchise__process.franchise__jump-point{data= {section: 6, 'ga-category': 'Franchise', 'ga-action': 'Homepage Section', 'ga-label': 'Process'}}
+    .content-contain
+      header.process__banner--header.type--center
+        h3.section-standard__header__pre-title
+          hr.border--short.border--type.border--white
+          span.type--border-adorned.type--a6.type--white The Process
+          hr.border--short.border--type.border--white
+        h2.section-standard__header__title.type--a1.type--white As Easy as 1-2-3 Reps
+        p.header__subhead--margin.type--d3.type--white
+          span Your success is our success. That’s why we’ve made it our mission to give you the tools you’ll need to thrive
+          sup 5
+          span . One of those tools is the ongoing assistance we offer.
+
+  .franchise-process-carousel.bkgd--snow.js-number-trigger
+    = render partial: "process_panels", carousel_content: franchise_process_carousel
+
+  = link_to 'Contact Us', franchise_contact_path, class: 'btn--center btn--wide btn--dark type--white type--e3 type--center'
+
+  section.footnotes.content-contain.js-footer-trigger
+    .pricing-promo-text.type--d9.type--gray-dark
+      p
+        sup 1
+        span For clubs open 24 months or longer.
+      p
+        sup 2
+        span Data from IHRSA 2016 Profiles of Success
+      p
+        sup 3
+        span Based on 2016 year-over-year percentage growth of open units among full-size fitness facilities.
+      p
+        sup 4
+        span As published in item 19 of the Crunch Franchise 2017 Franchise Disclosure Document for clubs over 20,000 sq. ft open more than 24 months. Read Item 19 in its entirety for important defined terms, assumptions and qualifiers relating to these figures. A new franchisee’s results may differ from the represented performance. There is no assurance that you will do as well and you must accept that risk.
+      p
+        sup 5
+        span The results of any franchised business depend on many factors, including site selection, local economic conditions, your business acumen, management skill and experience.  Crunch Franchising, LLC does not guarantee or promise success, profitability or any particular level of return for any Crunch gym.  Each franchisee is responsible for obtaining its own financing. While we  may introduce you to lenders who have offered financing to Crunch franchisees the decision on who to lend to is made by the lender and being a Crunch franchisee is no guarantee or promise that you will obtain financing or any level of financing.
+      br
+      p This information is not intended as an offer to sell, or the solicitation of an offer to buy a franchise.  Certain states require that we register our franchise disclosure document (“FDD”) in those states. If you are a resident of any of those states or want to locate a franchise in one of those states, we will not offer you a franchise unless and until we have complied with applicable pre-sale and disclosure requirements in your state(s). Franchise offerings are made by our FDD only.

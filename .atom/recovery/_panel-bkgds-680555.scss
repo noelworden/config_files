@@ -1,0 +1,280 @@
+//  ======================================================================================================
+//
+//  Page Panel Background Images
+//
+//  ======================================================================================================
+div[class^="panel-bkgd--"] { background-repeat: no-repeat; }
+
+//  ==========================================================================
+//  Parallax Containers
+//  ==========================================================================
+.parallax {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translate3d(0,0,0);
+  width: 100%;
+
+  &--reverse {
+    .parallax-img {
+      @include breakpoint(lg) {
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
+
+  &--hero {
+    .parallax-img {
+      @include breakpoint(lg) {
+        bottom: -103px;
+        top: auto;
+      }
+    }
+  }
+
+  &--hero-reverse {
+    .parallax-img {
+      @include breakpoint(lg) {
+        bottom: 0;
+        top: auto;
+      }
+    }
+  }
+}
+
+//  ==========================================================================
+//  Parallax Images
+//  ==========================================================================
+.parallax-img {
+  backface-visibility: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 123%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+//  ==========================================================================
+//  Panel Backgrounds
+//  ==========================================================================
+.panel-bkgd {
+  @include breakpoint(lg) {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.panel-bkgd__img {
+  @include breakpoint(lg) {
+    top: 0;
+    height: 123%;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.panel-bkgd--generic {
+  background: $brown-dark image_url('bkgd--hotel-culture.jpg') center bottom no-repeat;
+  background-size: auto 100%;
+
+  @include breakpoint(md) { background-size: 100% auto; }
+}
+
+//  Eat + Drink Page
+//  ======================================================================================================
+// srcset-bg($name, $type, $position, $repeat, $size)
+.panel-bkgd--eat-1 { @include srcset-bg('bkgd--eat-1'); }
+.panel-bkgd--eat-2 { @include srcset-bg('bkgd--eat-2'); }
+.panel-bkgd--temple-1 { @include srcset-bg('bkgd--eat-temple-1'); }
+.panel-bkgd--temple-2 { @include srcset-bg('bkgd--eat-temple-2'); }
+.panel-bkgd--bar-room-1 { @include srcset-bg('bkgd--eat-bar-room-1'); }
+.panel-bkgd--alley-cat-1 { @include srcset-bg('bkgd--eat-bar-room-1'); }
+
+// CMS images
+.panel-bkgd--temple-menu,
+.panel-bkgd--bar-room-2,
+.panel-bkgd--bar-room-3   {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.panel-bkgd--bar-room-4  { @include srcset-bg('bkgd--eat-bar-room-4'); }
+.panel-bkgd--augustine-1 { @include srcset-bg('bkgd--eat-augustine-1'); }
+.panel-bkgd--augustine-2 { @include srcset-bg('bkgd--eat-augustine-2'); }
+.panel-bkgd--alley-cat-1 { @include srcset-bg('bkgd--eat-alley-cat-1'); }
+.panel-bkgd--cellar-lounge-2 { @include srcset-bg('bkgd--eat-cellar-lounge-2'); }
+
+//  Hotel Page
+//  ======================================================================================================
+.panel-bkgd--hotel {
+  background: image_url('bkgd--hotel.jpg') center center no-repeat;
+  background-size: cover;
+}
+.panel-bkgd--hotel-1 {
+  background: image_url('bkgd--hotel-1.jpg') center center no-repeat;
+  background-size: cover;
+}
+.panel-bkgd--hotel-2 {
+  background: image_url('bkgd--hotel-2.jpg') center center no-repeat;
+  background-size: cover;
+}
+.panel-bkgd--hotel-history {
+  background: $brown image_url('bkgd--hotel-history.png') center center no-repeat;
+  background-size: cover;
+}
+.panel-bkgd--architecture { @include srcset-bg('bkgd--hotel-architecture'); }
+
+.panel-bkgd--architecture-arrival-1 {
+  @include centered-bg();
+  background-image: image_url('bkgd--hotel-arrival-1-640.jpg');
+  @include breakpoint(md) { background-image: image_url('bkgd--hotel-arrival-1-900.jpg'); }
+  @include breakpoint(lg) { background-image: image_url('bkgd--hotel-arrival-1-1280.jpg'); }
+}
+.panel-bkgd--architecture-arrival-2 { @include srcset-bg('bkgd--hotel-arrival-2'); }
+.panel-bkgd--architecture-atrium-1  { @include srcset-bg('bkgd--hotel-atrium-1'); }
+.panel-bkgd--architecture-atrium-2  { @include srcset-bg('bkgd--hotel-atrium-2'); }
+
+.panel-bkgd--amenities {
+  background: image_url('bkgd--hotel-amenities.jpg') center center no-repeat;
+  background-size: cover;
+}
+.panel-bkgd--amenities-dining       {
+  background: image_url('bkgd--hotel-amenities-dining.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.panel-bkgd--amenities-in-room      { background: image_url('bkgd--hotel-amenities-in-room.jpg') center center no-repeat; background-size: cover; }
+.panel-bkgd--amenities-hotel        { background: image_url('bkgd--hotel-amenities-hotel.jpg') center center no-repeat; background-size: cover; }
+.panel-bkgd--art {
+  @include centered-bg();
+  background-image: image_url('bkgd--hotel-art-640.jpg');
+  @include breakpoint(md) { background-image: image_url('bkgd--hotel-art-1280.jpg'); }
+  @include breakpoint(lg) { background-image: image_url('bkgd--hotel-art-2560.jpg'); }
+}
+
+.panel-bkgd--art-collection-1 { @include srcset-bg('bkgd--hotel-art-collection-1'); }
+.panel-bkgd--art-collection-2 { @include srcset-bg('bkgd--hotel-art-collection-2'); }
+.panel-bkgd--art-artist-1 { background-position: center center; background-repeat: no-repeat; background-size: cover }
+.panel-bkgd--art-artist-2 { @include srcset-bg('bkgd--hotel-artist-2'); }
+//  Press Page
+//  ======================================================================================================
+.panel-bkgd--press-header { @include srcset-bg('bkgd--press-header'); }
+
+//  Events Page
+//  ======================================================================================================
+.panel-bkgd--events-1 {
+  @include centered-bg();
+  background-image: image_url('bkgd--events-1-320.jpg');
+  @include breakpoint(sm) { background-image: image_url('bkgd--events-1-1280.jpg'); }
+}
+.panel-bkgd--events-3 { @include srcset-bg('bkgd--events-3'); }
+.panel-bkgd--events-4 { @include srcset-bg('bkgd--events-4'); }
+.panel-bkgd--events-spaces { @include srcset-bg('bkgd--events-spaces'); }
+.panel-bkgd--events-vibe {
+  @include centered-bg();
+  background-image: image_url('bkgd--events-vibe-720.jpg');
+}
+
+.panel-bkgd--events-spaces-all                { background-size: cover; background-repeat: no-repeat; background-position: center center; }
+
+.panel-bkgd--weddings {
+  @include centered-bg();
+  background-image: image_url('bkgd--events-wedding-2560.jpg');
+}
+.panel-bkgd--weddings-1 { @include srcset-bg('bkgd--events-wedding-1'); }
+.panel-bkgd--weddings-2 { @include srcset-bg('bkgd--events-wedding-2'); }
+.panel-bkgd--weddings-3 { @include srcset-bg('bkgd--events-wedding-3'); }
+
+//  Offers Page
+//  ======================================================================================================
+.panel-bkgd--broom-bw        { background: image_url('icons/illustration--broom-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--key-bw          { background: image_url('icons/illustration--key-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--shoe-bw         { background: image_url('icons/illustration--shoe-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--machine-bw      { background: image_url('icons/illustration--machine-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--dryer-bw        { background: image_url('icons/illustration--dryer-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--sun-bw          { background: image_url('icons/illustration--sun-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--octopus-bw      { background: image_url('icons/illustration--octopus-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--watch-bw        { background: image_url('icons/illustration--watch-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--cloudy-bw       { background: image_url('icons/illustration--cloudy-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--rainy-bw        { background: image_url('icons/illustration--rainy-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--snowy-bw        { background: image_url('icons/illustration--snowy-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--overcast-bw     { background: image_url('icons/illustration--overcast-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--umbrella-bw     { background: image_url('icons/illustration--umbrella-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--hot-bw          { background: image_url('icons/illustration--hot-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--cold-bw         { background: image_url('icons/illustration--cold-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--car-bw          { background: image_url('icons/illustration--car-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--flowers-bw      { background: image_url('icons/illustration--flowers-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--lollypop-bw     { background: image_url('icons/illustration--lollypop-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--ornament-bw     { background: image_url('icons/illustration--ornament-bw.png') center center no-repeat; background-size: cover; }
+.panel-bkgd--snowflake-bw        { background: image_url('icons/illustration--snowflake-bw.png') center center no-repeat; background-size: cover; }
+
+//  Panel grid three overrides
+//  --------------------------------------------------------------------------
+.panel-bkgd--events-2 {
+  background: none;
+  @include breakpoint(lg) { background: image_url('bkgd--events-2.jpg') center center no-repeat; background-size: cover; }
+}
+
+//  Rooms Page
+//  overrides to move background images to different elements at breakpoints
+//  ==========================================================================
+.panel-bkgd--rooms-header {
+  .panel-block__group {
+    &:first-of-type {
+      background: image_url('bkgd--rooms-room-header.jpg') center center no-repeat; background-size: cover;
+      @include breakpoint(lg) { background: none; }
+    }
+
+    &:last-of-type {
+      background: image_url('bkgd--rooms-general-1.jpg') center center no-repeat; background-size: cover;
+      height: auto;
+      padding-bottom: 0;
+
+      @include breakpoint(lg) { background: none; }
+    }
+  }
+
+  @include breakpoint(lg) { background: image_url('bkgd--rooms-room-header.jpg') center center no-repeat; background-size: cover; }
+}
+
+.panel-bkgd--suites-header {
+  .panel-block__group {
+    &:first-of-type {
+      background: image_url('bkgd--rooms-suites-header.jpg') center center no-repeat; background-size: cover;
+      @include breakpoint(lg) { background: none; }
+    }
+
+    &:last-of-type {
+      background: image_url('bkgd--rooms-general-2.jpg') center center no-repeat; background-size: cover;
+      height: auto;
+      padding-bottom: 0;
+
+      @include breakpoint(lg) { background: none; }
+    }
+  }
+
+  @include breakpoint(lg) { background: image_url('bkgd--rooms-suites-header.jpg') center center no-repeat; background-size: cover; }
+}
+
+.panel-bkgd--rooms-img {
+  height: 0;
+  padding-bottom: 75%;
+
+  @include breakpoint(lg) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.panel-bkgd--landscape {
+  background: image_url('bkgd--rooms-backer.jpg') center center;
+  background-size: cover;
+
+  .panel-bkgd--rooms-img { background-size: auto 100%; }
+}

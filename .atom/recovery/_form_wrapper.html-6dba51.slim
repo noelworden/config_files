@@ -1,0 +1,129 @@
+javascript:
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1782744981994026');
+      fbq('track', 'Lead');
+noscript
+  img height="1" src="https://www.facebook.com/tr?id=1782744981994026&ev=PageView&noscript=1" style="display:none" width="1" /
+
+- campaign_id ||= "701i0000000buRR"
+- submit_text ||= t('register_interest.submit')
+.register-form-wrapper.bg--bg-grey-5.js-hide
+  .register-form-wrapper__hd.type--b1 = hdg.html_safe
+  p.register-form-wrapper__copy.type--e1 = sub_hdg.html_safe
+  = form_tag 'https://salesforce.ringlead.com/cgi-bin/4762/1/dedup.pl', class: 'register-form type--b3 js-register-form'
+    input type="hidden" name="oid" id="oid" value="00Di0000000HoFG"
+    input type="hidden" name="retURL" id="retURL" value="http://wardvillage.com/"
+    input type="hidden" name="Campaign_ID" id="Campaign_ID" value==campaign_id
+    input type="hidden" name="lead_source" id="lead_source" value="W2L: Ward Village"
+    input type="hidden" name="recordType" id="recordType" value="012i0000000mPgm"
+    input type="hidden" name="member_status" id="member_status" value="Requested Information"
+    input type="hidden" name="lang" id="lang" value="EN"
+    input type="hidden" id="00Ni000000GsQj4" name="00Ni000000GsQj4" value=""
+    input type="hidden" id="00Ni000000GsQjO" name="00Ni000000GsQjO" value=""
+    input type="hidden" id="00Ni000000GsQjJ" name="00Ni000000GsQjJ" value=""
+    input type="hidden" id="00Ni000000GsQjE" name="00Ni000000GsQjE" value=""
+    input type="hidden" id="00Ni000000GsQiz" name="00Ni000000GsQiz" value=""
+    input type="hidden" id="00Ni000000GsQjT" name="00Ni000000GsQjT" value=""
+    input type="hidden" id="00Ni000000GsQjY" name="00Ni000000GsQjY" value=""
+    input type="hidden" id="00Ni000000IH2q6" name="00Ni000000IH2q6" value=""
+    input type="hidden" id="00Ni000000IGWrM" name="00Ni000000IGWrM" value="1"
+    input type="hidden" name='captcha_settings' value='{"keyname":"WardVillagedotCom","fallback":"true","orgId":"00Di0000000HoFG","ts":""}'
+
+
+    .grid.grid--breakpoints.grid--flush-edges
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="first_name"
+          = t('register_interest.first_name')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          input.register-form__input type="text" id="first_name" maxlength="40" name="first_name"
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="last_name"
+          = t('register_interest.last_name')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          input.register-form__input type="text" id="last_name" maxlength="80" name="last_name"
+    .grid.grid--breakpoints.grid--flush-edges
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="email"
+          = t('register_interest.email')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          input.register-form__input type="email" id="email" maxlength="80" name="email"
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="phone"
+          = t('register_interest.phone')
+          span &#58;
+        span.register-form__input-wrapper
+          input.register-form__input type="tel" id="phone" maxlength="40" name="phone"
+    .grid.grid--breakpoints.grid--flush-edges
+      .grid__cell.unit-1-1
+        label.register-form__label for="street"
+          = t('register_interest.street_address')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          input.register-form__input type="text" id="street"
+    .grid.grid--breakpoints.grid--flush-edges
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="city"
+          = t('register_interest.city')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          input.register-form__input type="text" id="city"
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="00Ni000000FlJ6K"
+          = t('register_interest.country')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          select.register-form__input.register-form__input--select name="00Ni000000FlJ6K" id="00Ni000000FlJ6K"
+            = options_for_select([["United States", "US"],["Japan", "JP"],["Australia", "AU"],["Bermuda", "BM"],["Cambodia", "KH"],["Canada", "CA"],["China", "CN"],["Denmark", "DK"],["India", "IN"],["Italy", "IT"],["Malaysia", "MY"],["Mongolia", "MN"],["New Zealand", "NZ"],["Russian Federation", "RU"],["Saudi Arabia", "SA"],["Singapore", "SG"],["South Africa", "ZA"],["Taiwan", "TW"],["Thailand", "TH"],["Uganda", "UG"],["United Kingdom", "GB"],["Uruguay", "UY"],["Aland Islands", "AX"],["Albania", "AL"],["Algeria", "DZ"],["Andorra", "AD"],["Angola", "AO"],["Anguilla", "AI"],["Antarctica", "AQ"],["Antigua and Barbuda", "AG"],["Argentina", "AR"],["Armenia", "AM"],["Aruba", "AW"],["Austria", "AT"],["Azerbaijan", "AZ"],["Bahamas", "BS"],["Bahrain", "BH"],["Bangladesh", "BD"],["Barbados", "BB"],["Belarus", "BY"],["Belgium", "BE"],["Belize", "BZ"],["Benin", "BJ"],["Bhutan", "BT"],["Bolivia", "BO"],["Bonaire", "BQ"],["Bosnia and Herzegovina", "BA"],["Botswana", "BW"],["Bouvet Island", "BV"],["Brazil", "BR"],["British Indian Ocean Territory", "IO"],["Brunei Darussalam", "BN"],["Bulgaria", "BG"],["Burkina Faso", "BF"],["Burundi", "BI"],["Cameroon", "CM"],["Cape Verde", "CV"],["Cayman Islands", "KY"],["Central African Republic", "CF"],["Chad", "TD"],["Chile", "CL"],["Christmas Island", "CX"],["Cocos (Keeling) Islands", "CC"],["Colombia", "CO"],["Comoros", "KM"],["Congo", "CG"],["Cook Islands", "CK"],["Costa Rica", "CR"],["Cote d'Ivoire", "CI"],["Croatia", "HR"],["Cuba", "CU"],["Curaçao", "CW"],["Cyprus", "CY"],["Czech Republic", "CZ"],["Djibouti", "DJ"],["Dominica", "DM"],["Dominican Republic", "DO"],["Ecuador", "EC"],["Egypt", "EG"],["El Salvador", "SV"],["Equatorial Guinea", "GQ"],["Eritrea", "ER"],["Estonia", "EE"],["Ethiopia", "ET"],["Falkland Islands (Malvinas)", "FK"],["Faroe Islands", "FO"],["Fiji", "FJ"],["Finland", "FI"],["France", "FR"],["French Guiana", "GF"],["French Polynesia", "PF"],["French Southern Territories", "TF"],["Gabon", "GA"],["Gambia", "GM"],["Georgia", "GE"],["Germany", "DE"],["Ghana", "GH"],["Gibraltar", "GI"],["Greece", "GR"],["Greenland", "GL"],["Grenada", "GD"],["Guadeloupe", "GP"],["Guam", "GU"],["Guatemala", "GT"],["Guernsey", "GG"],["Guinea", "GN"],["| Guinea-Bissau", "GW"],["Guyana", "GY"],["Haiti", "HT"],["Heard Island and McDonald Islands", "HM"],["Holy See (Vatican City State)", "VA"],["Honduras", "HN"],["Hungary", "HU"],["Iceland", "IS"],["Indonesia", "ID"],["Iran", "IR"],["Iraq", "IQ"],["Ireland", "IE"],["Isle of Man", "IM"],["Israel", "IL"],["Jamaica", "JM"],["Jersey", "JE"],["Jordan", "JO"],["Kazakhstan", "KZ"],["Kenya", "KE"],["Kiribati", "KI"],["Korea", "KR"],["Kuwait", "KW"],["Kyrgyzstan", "KG"],["Lao People's Democratic Republic", "LA"],["Latvia", "LV"],["Lebanon", "LB"],["Lesotho", "LS"],["Liberia", "LR"],["Libyan Arab Jamahiriya", "LY"],["Liechtenstein", "LI"],["Lithuania", "LT"],["Luxembourg", "LU"],["Macao", "MO"],["Macedonia", "MK"],["Madagascar", "MG"],["Malawi", "MW"],["Maldives", "MV"],["Mali", "ML"],["Malta", "MT"],["Martinique", "MQ"],["Mauritania", "MR"],["Mauritius", "MU"],["Mayotte", "YT"],["Mexico", "MX"],["Moldova", "MD"],["Monaco", "MC"],["Montenegro", "ME"],["Montserrat", "MS"],["Morocco", "MA"],["Mozambique", "MZ"],["Myanmar", "MM"],["Namibia", "NA"],["Nauru", "NR"],["Nepal", "NP"],["Netherlands", "NL"],["New Caledonia", "NC"],["Nicaragua", "NI"],["Niger", "NE"],["Nigeria", "NG"],["Niue", "NU"],["Norfolk Island", "NF"],["Norway", "NO"],["Oman", "OM"],["Pakistan", "PK"],["Palestinian Territory", "PS"],["Panama", "PA"],["Papua New Guinea", "PG"],["Paraguay", "PY"],["Peru", "PE"],["Philippines", "PH"],["Pitcairn", "PN"],["Poland", "PL"],["Portugal", "PT"],["Qatar", "QA"],["Reunion", "RE"],["Romania", "RO"],["Rwanda", "RW"],["Saint BarthÈlemy", "BL"],["Saint Helena", "SH"],["Saint Kitts and Nevis", "KN"],["Saint Lucia", "LC"],["Saint Martin (French part)", "MF"],["Saint Pierre and Miquelon", "PM"],["Saint Vincent and the Grenadines", "VC"],["Samoa", "WS"],["San Marino", "SM"],["Sao Tome and Principe", "ST"],["Senegal", "SN"],["Serbia", "RS"],["Seychelles", "SC"],["Sierra Leone", "SL"],["Sint Maarten (Dutch part)", "SX"],["Slovakia", "SK"],["Slovenia", "SI"],["Solomon Islands", "SB"],["Somalia", "SO"],["South Georgia and the South Sandwich Islands", "GS"],["South Sudan", "SS"],["Spain", "ES"],["Sri Lanka", "LK"],["Sudan", "SD"],["Suriname", "SR"],["Svalbard and Jan Mayen", "SJ"],["Swaziland", "SZ"],["Sweden", "SE"],["Switzerland", "CH"],["Syrian Arab Republic", "SY"],["Tajikistan", "TJ"],["Tanzania", "TZ"],["Timor-Leste", "TL"],["Togo", "TG"],["Tokelau", "TK"],["Tonga", "TO"],["Trinidad and Tobago", "TT"],["Tunisia", "TN"],["Turkey", "TR"],["Turkmenistan", "TM"],["Turks and Caicos Islands", "TC"],["Tuvalu", "TV"],["Ukraine", "UA"],["United Arab Emirates", "AE"],["Uzbekistan", "UZ"],["Vanuatu", "VU"],["Venezuela", "VE"],["Vietnam", "VN"],["Virgin Islands", "VG"],["Wallis and Futuna", "WF"],["Western Sahara", "EH"],["Yemen", "YE"],["Zambia", "ZM"],["Zimbabwe", "ZW"]])
+          i.icon.icon-accordion-arrow
+    .grid.grid--breakpoints.grid--flush-edges
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="00Ni000000FlJ6F"
+          = t('register_interest.state')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          select.register-form__input.register-form__input--select.js-state-field name="00Ni000000FlJ6F" id="00Ni000000FlJ6F"
+          i.icon.icon-accordion-arrow
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="zip"
+          = t('register_interest.zip')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          input.register-form__input type="number" id="zip" maxlength="20" name="zip"
+    .grid.grid--breakpoints.grid--flush-edges
+      .grid__cell.unit-1-1.unit-1-2--md
+        label.register-form__label for="language"
+          = t('register_interest.language')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          select.register-form__input.register-form__input--select id="00Ni000000A20c4" name="00Ni000000A20c4" title="Preferred Language"
+            = options_for_select(["", "English", "Cantonese", "Japanese", "Korean", "Mandarin"])
+          i.icon.icon-accordion-arrow
+      .grid__cell.unit-1-1.unit-1-2--md.register-form__checkbox-field
+        // Using id with extra 'I' to avoid double IDs in inline form vs modal form on most pages
+        // see registration.js.coffee for alternative info
+        input.form-field__input--checkbox type="checkbox" id="00Ni000000HmD2II" name="00Ni000000HmD2II"
+        label.form-field__input--checkbox__label for="00Ni000000HmD2II" = t('register_interest.broker')
+    .grid.grid--breakpoints.grid--flush-edges
+      .grid__cell.unit-1-1
+        label.register-form__label for="00Ni000000D08UT"
+          = t('menu.info.where_hear')
+          span &#58;&#42;
+        span.register-form__input-wrapper
+          select.register-form__input.register-form__input--select title="Marketing Channels" name="00Ni000000D08UT" id="00Ni000000D08UT"
+            = options_for_select(["", t('menu.info.register_options.events'), t('menu.info.register_options.google'), t('menu.info.register_options.inflight'), t('menu.info.register_options.magazine'),t('menu.info.register_options.news'), t('menu.info.register_options.newspaper'), t('menu.info.register_options.online'), t('menu.info.register_options.broker'), t('menu.info.register_options.other'), t('menu.info.register_options.promotional'), t('menu.info.register_options.signage'), t('menu.info.register_options.social')])
+          i.icon.icon-accordion-arrow
+    p.register-form__textarea-label.type--b3 = t('register_interest.most_important')
+    textarea.register-form__textarea name="00Ni000000AfVlR" id="00Ni000000AfVlR"
+    / .g-recaptcha
+    /   #recaptcha2 data-turbolinks-permanent=""
+    button.register-form__submit.btn--yellow type="submit" id="submit-button"
+      span.type--g1 = submit_text
+    span &#42;
+    span = t('register_interest.required')

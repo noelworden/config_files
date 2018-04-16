@@ -1,0 +1,140 @@
+//  ======================================================================================================
+//
+//  Contact
+//
+//  ======================================================================================================
+- body_class 'theme-training'
+- title 'Contact Us | Crunch Franchise'
+- meta_tag :description, "So at this point, you're probably saying to yourself, " + '"' + "I'm ready! Let's do this!" + '"' + " Learn how you get started and what the process looks like."
+
+.main.main--franchise
+  //  Hero
+  //  ======================================================================================================
+  header.hero.theme-background-color-dark
+    .hero__img-wrapper.hero__img-wrapper--slimmest style="background: url('#{image_url('hero--contact-franchise.jpg')}') center center no-repeat; background-size: cover;"
+      = local_image_tag('hero--contact-franchise', 'jpg', [580, 768, 1024, 1280], class: 'hero__img is-visible-tablet', sizes: '100vw')
+    .content-contain
+      .hero__content__title-flush-bottom
+        h1.content__paragraph-padding.type--b2.type--white
+          span Contact
+
+  //  Info Side
+  //  ======================================================================================================
+  .contact-container.bkgd--white
+    section.contact-left
+      header.contact__section__left--padding
+        h2.type--a3.theme-color-primary So at this point, you're probably saying to yourself, "I'm ready! Let's do this!" How do you get started and what does the process look like?
+      .border--small-gray-dots-bottom
+
+      section.contact__section__left--padding
+        h3.contact-section__title.type--a3.theme-color-dark 1. Complete Our Request for Information
+        p.type--c3.type--gray-dark
+          span> Please complete our form on this page, or contact us by phone at
+          = link_to 'tel:8006697162', { class: 'theme-link--primary-to-black' }
+            span 800.669.7162.
+          span< A member of our Franchise Development Team will contact you to set up a time to discuss the Crunch opportunity with you.
+      .border--small-gray-dots-bottom
+
+      section.contact__section__left--padding
+        h3.contact-section__title.type--a3.theme-color-dark 2. Submit a Franchise Application
+        p.type--c3.type--gray-dark After your conversation with our development team, you'll receive instructions on how to complete our franchise application to determine your financial qualifications.
+      .border--small-gray-dots-bottom
+
+      section.contact__section__left--padding
+        h3.contact-section__title.type--a3.theme-color-dark 3. Participate in our Crunch Franchise Webinar
+        p.type--c3.type--gray-dark Once your franchise application has been approved, you'll have the opportunity to dive deeper into the entire process of opening and operating your own franchise via an online webinar.
+      .border--small-gray-dots-bottom
+
+      section.contact__section__left--padding
+        h3.contact-section__title.type--a3.theme-color-dark 4. Conduct Your Due Dilligence
+        p.type--c3.type--gray-dark Upon successful completion of our webinar, you can download and review our Franchise Disclosure Document (FDD), which provides a detailed investment breakdown, financial performance and fee structure. We will also have you speak with current franchisees and answer any questions you may have so you can complete your due diligence.
+      .border--small-gray-dots-bottom
+
+      section.contact__section__left--padding
+        h3.contact-section__title.type--a3.theme-color-dark 5. Meet Our Executive Team
+        p.type--c3.type--gray-dark The final step before making a decision is to meet with our executive team and tour an existing franchise location. After this meeting, you can make an informed decision on taking the next step. If everything looks like a fit and you decide to become a part of the Crunch Family, we'll draw up the Franchise Agreement.
+      .border--small-gray-dots-bottom
+
+      section.contact__section__left--padding
+        h3.contact-section__title.type--a3.theme-color-dark 6. Execute Your Franchise Agreement
+        p.type--c3.type--gray-dark Review and sign the agreement, and you'll be on your way. You will have joined the best and most dynamic brand in the industry - Crunch Fitness!
+
+    // Form Side
+    //  ======================================================================================================
+    section.contact-right.contact__section__right--padding.bkgd--snow
+      header.franchise-form__header
+        h2.type--a3 Get More Info
+        p.type--c5.type--gray-dark Fill out the information below to find out more about Crunch Franchise. All fields are required.
+
+      = form_tag '#', method: 'post', class: 'franchise-form js-pardot-form', novalidate: 'novalidate', autocomplete: 'on', data: { 'ga-category': 'Franchise', 'ga-action': 'Form Submission', 'ga-label': 'Contact' }
+        .input-group
+          label.input-label.type--a6 for="first_name" First Name
+          input.input-field.first_name.js-form-required name="pardot[first_name]" autocomplete="given-name" type="text" required="true" placeholder="Applicant First Name"
+
+        .input-group
+          label.input-label.type--a6 for="last_name" Last Name
+          input.input-field.last_name.js-form-required name="pardot[last_name]" autocomplete="family-name" type="text" required="true" placeholder="Applicant Last Name"
+
+        .input-group
+          label.input-label.type--a6 for="phone" Preferred Phone Number
+          input.input-field.phone.js-form-required.js-form-phone name="pardot[phone]" autocomplete="tel" type="text" required="true" placeholder="123 456 7890"
+
+        .input-group
+          label.input-label.type--a6 for="email_address" Email Address
+          input.input-field.email_address.js-form-email.js-form-required name="pardot[email_address]" autocomplete="email" type="text" required="true" placeholder="example@email.com"
+
+        .input-group
+          label.input-label.type--a6 for="zip" Postal Code
+          input.input-field.zip.js-form-required name="pardot[zip]" autocomplete="postal-code" type="text" required="true" placeholder="ex. 12345"
+
+        .input-group
+          label.input-label.type--a6 for="location" Location
+          input.input-field.location.js-form-required name="pardot[location]" type="text" required="true" placeholder="State / Province"
+
+        .input-group
+          label.input-label.type--a6 for="country" Country of Interest
+          select.select-field.how_hear.js-custom-select.js-form-required name="pardot[country]" required="true"
+            option value="0" Select One
+            option value="direct_mail" Direct Mail
+            option value="email" Email
+            option value="entrepreneur_magazine" Entrepreneur Magazine
+            option value="existing_crunch_location" Existing Crunch Location
+            option value="franchise_times" Franchise Times
+            option value="newspaper_article" Newspaper Article
+
+        .input-group
+          label.input-label.type--a6 for="how_hear" How'd You Hear of Us?
+          select.select-field.how_hear.js-custom-select.js-form-required name="pardot[how_hear]" required="true"
+            option value="0" Select One
+            option value="direct_mail" Direct Mail
+            option value="email" Email
+            option value="entrepreneur_magazine" Entrepreneur Magazine
+            option value="existing_crunch_location" Existing Crunch Location
+            option value="franchise_times" Franchise Times
+            option value="newspaper_article" Newspaper Article
+            option value="online" Online
+            option value="online_google" Online: Google
+            option value="other_magazine_article" Other Magazine Article
+            option value="radio" Radio
+            option value="the_new_yorker" The New Yorker
+            option value="the_wall_street_journal" The Wall Street Journal
+            option value="trade_show" Trade Show
+            option value="usa_today" USA Today
+            option value="word_of_mouht" Word of Mouth
+
+        .input-group
+          label.input-label.type--a6 for="net_worth" Net Worth
+          input.input-field.net_worth.js-form-required.js-form-worth name="pardot[net_worth]" required="true" placeholder="$1 Million minimum required"
+
+        .input-group
+          label.input-label.type--a6 for="capital" Liquid Capital
+          input.input-field.capital.js-form-required.js-form-capital name="pardot[capital]" required="true" placeholder="$400k minimum required"
+
+        .checkbox-group
+          input.checkbox-field.form__custom-checkbox name="understand_terms" required="true" type="checkbox"
+          label.input-label.type--c5.type--charcoal.form__custom-checkbox-label for="understand_terms" I have read, understand, and meet the financial requirements.
+
+        .input-group
+          button.form__submit-button.btn--center.btn--wide.type--white.type--e3.type--center.js-form-submit name="submit" type="submit" Submit
+
+      = render 'form_messages'

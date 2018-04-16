@@ -1,0 +1,145 @@
+source 'https://rubygems.org'
+
+gem 'rails', '4.2.9'
+
+# Database
+gem 'mysql2', '~> 0.3.18'
+
+# Assets
+gem 'sass-rails', '~> 5.0'
+gem 'compass-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
+# gem 'therubyracer', platforms: :ruby
+gem 'oj'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'slim-rails'
+gem 'bootstrap-sass'
+gem 'draper'
+gem 'font-awesome-rails'
+gem 'jquery-ui-rails'
+gem 'underscore-rails'
+gem 'jquery-turbolinks'
+gem 'select2-rails'
+gem 'redactor-dragonfly', github: 'canvasnyc/redactor-dragonfly'
+gem 'gretel'
+gem 'instagram'
+gem 'non-stupid-digest-assets'
+
+# Slugs
+gem 'friendly_id'
+
+# Routing
+gem 'routing-filter'
+
+# File Uploading
+gem 'dragonfly'
+gem 'dragonfly-s3_data_store'
+
+# Forms
+gem 'simple_form'
+gem 'kaminari'
+gem 'nested_form'
+gem 'acts_as_list'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+
+# Static Pages
+gem 'high_voltage'
+
+# API
+gem 'jbuilder', '~> 2.0'
+gem 'active_model_serializers'
+
+# Documentation
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'annotate'
+
+# Auditing
+gem 'paper_trail'
+
+# Robots.txt
+gem 'roboto'
+
+# Jobs
+gem 'delayed_job_active_record'
+gem 'whenever'
+gem 'daemons'
+
+gem 'sitemap_generator'
+
+# Server
+gem 'puma'
+gem 'dalli'
+gem 'kgio'
+gem 'rack-cache', :require => 'rack/cache'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-timeout'
+gem 'rack-rewrite'
+gem 'rack-canonical-host'
+
+# Monitoring
+gem 'newrelic_rpm'
+
+# Environment
+gem 'figaro'
+
+# Error Tracking
+gem 'honeybadger'
+
+# Authentication
+gem 'devise'
+
+# i18n
+gem 'globalize'
+
+gem 'faker'
+
+# Search
+gem 'searchkick'
+gem 'typhoeus'
+
+gem 'chronic'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+  gem 'guard-rspec', require: false
+  gem 'guard-cucumber'
+  gem 'guard-brakeman'
+  gem 'guard-livereload', require: false
+  gem 'terminal-notifier-guard'
+  gem 'rb-fsevent'
+  gem 'quiet_assets'
+  gem 'letter_opener'
+  gem 'web-console', '~> 2.0'
+  gem 'bullet'
+end
+
+group :development, :test do
+  gem 'byebug'
+  gem 'rb-readline' # fix for byebug on Mac OSX Sierra
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'spring-commands-cucumber'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'timecop'
+end
+
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'launchy'
+  gem 'poltergeist'
+  gem 'shoulda-matchers'
+  gem 'email_spec'
+  gem 'codeclimate-test-reporter'
+end

@@ -1,0 +1,62 @@
+//  ======================================================================================================
+//
+//  Resource Detail
+//
+//  ======================================================================================================
+- body_class 'menu-persistent-bg'
+- title "#{@resource.title}"
+- meta_tag :description, strip_html_from_meta_tag(@resource.description)
+- meta_tag :ogimage, @resource.image_url(:xl)
+
+main.main.bkgd--white
+  // Resource Article
+  // =====================================================================================================
+  article.detail.bkgd--data-pattern
+    .content-contain.content-contain--960-no-padding
+      .detail-box.bkgd--white
+        .detail-box__img
+          = shrine_image_set_tag(@resource.image, sizes: '100vw', alt: '')
+        .detail-box__caption.detail-box__social-group
+          .detail-box__caption__tag
+            p.type--d9.type--grey-medium = @resource.tag
+
+          = render "shared/social-share/social-share", article: @resource.title, summary: truncate_html(strip_tags(@resource.description))
+
+        header.detail-box__title
+          h4.type--e1.type--blue-grey = @resource.title
+        .detail-box__description
+          .detail-box__description__p.redactor.redactor--super-redactor = @resource.description.html_safe
+
+        // Resrouce Article Buttons
+        - if @resource.pdf_url.present? && @resource.external_link_url.empty?
+          .detail-box__buttons.detail-box__buttons--two
+            .detail-box__button.detail-box__button__left
+              = link_to @resource.pdf_url, { target: '_blank', class: 'btn btn--mobile-full-width gtm-download-click', data: { 'js-ga-label': @resource.slug.titleize } } do |link|
+                span.type--d5.type--white Download
+                i.icon.icon--after.icon-global-link-download-icon.type--white
+        - else
+          .detail-box__buttons.detail-box__buttons--two
+            .detail-box__button.detail-box__button__left
+              - if @resource.external_link_url.present?
+                = link_to "http://#{@resource.external_link_url}", { target: '_blank', class: 'btn btn--fluid' } do |link|
+                  span.type--d5.type--white = @resource.external_link_text
+
+            .detail-box__button.detail-box__button__right
+              - if @resource.pdf_url.present?
+                = link_to "#{@resource.pdf_url}", { target: '_blank', class: 'btn btn--mobile-full-width gtm-download-click', data: { 'js-ga-label': @resource.slug.titleize } } do |link|
+                  span.type--d5.type--white Download
+                  i.icon.icon--after.icon-global-link-download-icon.type--white
+
+        // Optional iframe display
+        - if @resource.form_embed_code.present?
+          .detail-box__iframe-wrapper.js-pardot-iframe data-js-embed-code== @resource.form_embed_code
+
+  = render 'shared/details/resource_detail_resources', selectors: [@more_resources[0], @more_resources[1], @more_resources[2], @more_resources[3]],
+                                                       links: [resource_path(selectors[0].slug), resource_path(selectors[1].slug), resource_path(selectors[2].slug), resource_path(selectors[3].slug))],
+                                                       tags: [@more_resources[0].tag, @more_resources[2].tag, @more_resources[3].tag, @more_resources[4].tag]
+
+//  Footer
+//  ======================================================================================================
+.pre-footer.is-hidden-desktop
+  = render "shared/footer/login-contact"
+= render "shared/footer/footer"

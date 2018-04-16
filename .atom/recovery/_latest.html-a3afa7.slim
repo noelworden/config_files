@@ -1,0 +1,36 @@
+aside.content-latest.js-latest-section
+  .content-box.content-box--latest.bkgd--blue-dark--60
+    hr.hr.hr--full-width.hr--thin.hr--no-margins.bkgd--blue-medium
+    header.content-box__header
+      h3.type--b3.type--center.type--white Latest from Dataminr
+    hr.hr.hr--full-width.hr--thin.hr--no-margins.bkgd--blue-medium
+
+    .content-contain.content-contain--desktop-only
+      .content-box__items.content-box__items--two
+        .content-box__item
+          .content-box__item__interior--padded
+            = link_to nav_featured_content_path(0), { class: 'content-box__item__interior__img-link', target: '_blank' } do |link|
+              = shrine_image_set_tag(@featured_content[0].image, sizes: '', alt: '')
+            .content-box__item__interior__content
+              p.type--d9.type--white = primary_tag(0)
+              = link_to featured_content_path(0), { class: 'content-box__item__link link-blue', target: :_blank } do |link|
+                span.type--e5.type--white = @featured_content[0].title
+                i.icon.icon--after.icon-global-link-arrow.type--blue-bright
+              - if @featured_content[0].class == Event
+                p.content-box__item__detail.type--d9.type--white
+                  = @featured_content[0].time_date
+
+        .content-box__item
+          .content-box__item__interior--padded
+            = link_to nav_featured_content_path(1), { class: 'content-box__item__interior__img-link', target: '_blank' } do |link|
+              = shrine_image_set_tag(@featured_content[1].image, sizes: '', alt: '')
+            .content-box__item__interior__content
+              p.type--d9.type--white = primary_tag(1)
+              = link_to featured_content_path(1), { class: 'content-box__item__link link-blue', target: :_blank } do |link|
+                span.type--e5.type--white = @featured_content[1].title
+                i.icon.icon--after.icon-global-link-arrow.type--blue-bright
+              - if @featured_content[1].class == Event
+                p.content-box__item__detail.type--d9.type--white
+                  = @featured_content[1].time_date
+
+    hr.hr.hr--full-width.hr--thin.hr--no-margins.bkgd--blue-medium

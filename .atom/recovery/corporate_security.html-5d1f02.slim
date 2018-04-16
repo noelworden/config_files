@@ -1,0 +1,475 @@
+//  ======================================================================================================
+//
+//  Corporate Security Vertical
+//
+//  ======================================================================================================
+- body_class 'corporate_security'
+- title 'Dataminr for Corporate Security'
+- meta_tag :description, 'Dataminr for Corporate Security provides the earliest possible notice of threats to personnel, facilities, operations, and interests around the world.'
+
+main.main.bkgd--white
+  //  Header
+  //  ======================================================================================================
+  header.header.header--primary.header--primary--hero.header--primary--overflow-hidden.bkgd--data-pattern-dark
+    .content-contain.content-contain--desktop-only.see-how-header.js-see-how-header
+      .header--primary-group.see-how-original.js-header-group
+        .header--primary__interior
+          h1.header--primary__interior__title.type--a2.type--white Corporate Security
+          p.header--primary__interior__intro.type--e3.type--white Corporations depend on Dataminr for Corporate Security to receive the earliest possible warning of real-time threats to personnel, facilities, operations, and interests around the world, so security and enterprise risk management teams can quickly prepare the most effective response.
+          btn.header--primary__interior__btn.btn.btn--secondary.btn--center.js-see-how-button.gtm-see-how data-js-ga-label="Corporate Security"
+            span.type--d5.type--white See How
+
+        .headline-carousel-group
+          h2.headline-carousel-group__title.type--a5.type--white.type--center Recent Alerts
+          .headline-carousel.js-headline-carousel.owl-carousel
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+
+      // See How
+      = render 'shared/vertical-see-how/vertical-see-how'
+
+    .see-how-bg.js-header-group
+      = image_tag('globe--faded-crop.png', class: 'header--primary__globe-static is-visible-desktop', alt: 'Globe')
+      = image_tag('globe--half-with-glow.png', class: 'header--primary__globe-static is-hidden--mobile-desktop', alt: 'Globe')
+
+    //  Latest From Dataminr
+    //  ======================================================================================================
+    = render 'shared/details/latest'
+
+  //  Vertical Scroll Feature
+  //  ======================================================================================================
+  section.feature-group.js-features.bkgd--white
+
+    // Sidebar nav (desktop)
+    // ======================================================================================================
+    nav.feature-sidebar.js-feature-sidebar.bkgd--blue-medium.is-visible-desktop
+      btn.feature-sidebar__item.bkgd--blue-medium.js-feature-sidebar-button.is-active
+        .feature-sidebar__item__btn
+          i.icon.icon-vertical-plus.icon--small.type--blue-grey
+          span.feature-sidebar__item__btn__copy.type--e4.type--blue-grey.type--uppercase Protect People and Assets
+
+        .feature__header.feature-sidebar__item__main
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Protect
+              span.type--c2.type--white People and Assets
+            p.feature__header__interior__p.type--f3.type--white Coordinate Strategic Response
+
+      btn.feature-sidebar__item.bkgd--blue-medium.js-feature-sidebar-button
+        .feature-sidebar__item__btn
+          i.icon.icon-vertical-plus.icon--small.type--blue-grey
+          span.feature-sidebar__item__btn__copy.type--e4.type--blue-grey.type--uppercase Respond with Speed and Agility
+
+        .feature__header.feature-sidebar__item__main
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--c2 type--white type--block" Respond
+              span.type--a2.type--white with Speed and Agility
+            p.feature__header__interior__p.type--f3.type--white Stay Up to Date as Events Unfold
+
+      btn.feature-sidebar__item.bkgd--blue-medium.js-feature-sidebar-button
+        .feature-sidebar__item__btn
+          i.icon.icon-vertical-plus.icon--small.type--blue-grey
+          span.feature-sidebar__item__btn__copy.type--e4.type--blue-grey.type--uppercase Execute Security Responses Faster
+
+        .feature__header.feature-sidebar__item__main
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--c2 type--white type--block" Execute Security
+              span.type--a2.type--white Responses Faster
+            p.feature__header__interior__p.type--f3.type--white Quickly Determine Critical Priorities
+
+    // Article 1
+    // ======================================================================================================
+    article.feature.js-feature
+      header.feature__header.bkgd--blue-medium.is-hidden-desktop
+        .content-contain
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Protect
+              span.type--c2.type--white People and Assets
+            p.type--f3.type--white Coordinate Strategic Response
+
+      // Article 1: Case Study
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Case Study: #{@vertical_studies[0].name}
+            h3.type--c4.type--blue-dark = @vertical_studies[0].headline
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = shrine_image_set_tag(@vertical_studies[0].image, sizes: [:xs, :sm, :md, :lg, :xl], alt: '')
+
+          .feature__content__main
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey = @vertical_studies[0].description
+            - if @vertical_studies[0].case_study_url.present?
+              = link_to "/#{@vertical_studies[0].case_study_url}", { target: '_blank', class: 'btn btn--mobile-full-width' } do |link|
+                span.type--d5.type--white See full case study
+
+      // Article 1: Features
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Features
+            h3.type--c4.type--blue-dark Identify Emerging Threats Faster
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--left--short
+            = local_image_tag('solutions/corporate-security/corp-sec--01-features', 'png', ['250', '320', '580', '768', '1024', '1280', '1400'], sizes: '(min-width: 768px) 50vw, 100vw', class: 'img--full-width')
+
+          .feature__content__main.feature__content__main--left
+            h4.type--e2.type--blue-grey Give security operations more time to coordinate.
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey Early alerts, delivered directly to GSOCs, give corporate security teams more time to assess needs and follow the crisis management and risk management protocols required to protect people, facilities, and interests around the world.
+
+      // Article 1: From Our Customers
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 From Our Customers
+            h3.type--c4.type--blue-dark Stay Ahead of Rapidly Unfolding Incidents
+            hr.hr.hr--thin.bkgd--grey-light
+
+          .feature__content__main
+            blockquote.blockquote.blockquote--big
+              p.type--f2.type--blue-grey During the Fort Lauderdale airport shooting, a Dataminr client learned about the incident 25 minutes ahead of news reports, enabling an earlier response.
+              cite.blockquote__cite
+                p.blockquote__cite__p.type--d7.type--inline-block.type--blue-grey Dataminr Case Study
+
+    // Article 2
+    // ======================================================================================================
+    article.feature.js-feature.bkgd--data-background
+      header.feature__header.bkgd--blue-medium.is-hidden-desktop
+        .content-contain
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--c2 type--white type--block" Respond
+              span.type--a2.type--white with Speed and Agility
+            p.type--f3.type--white Stay Up to Date as Events Unfold
+
+      // Article 2: Case Study
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Case Study: #{@vertical_studies[1].name}
+            h3.type--c4.type--blue-dark = @vertical_studies[1].headline
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = shrine_image_set_tag(@vertical_studies[1].image, sizes: [:xs, :sm, :md, :lg, :xl], alt: '')
+
+          .feature__content__main
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey = @vertical_studies[1].description
+            - if @vertical_studies[1].case_study_url.present?
+              = link_to "/#{@vertical_studies[1].case_study_url}", { target: '_blank', class: 'btn btn--mobile-full-width' } do |link|
+                span.type--d5.type--white See full case study
+
+      // Article 2: Features
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Features
+            h3.type--c4.type--blue-dark Keep Pace with Evolving Real-Time Events
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = local_image_tag('solutions/corporate-security/corp-sec--02-features', 'png', ['250', '320', '580', '768', '1024', '1280', '1400'], sizes: '(min-width: 768px) 50vw, 100vw', class: 'img--full-width')
+
+          .feature__content__main
+            h4.type--e2.type--blue-grey Be alerted to new developments with a single click.
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey The Track Story feature enables Chief Security Officers, watch officers, and GSOC teams to receive updates from breaking events with one-click simplicity. Automatic updates enhance ongoing real-time awareness for enterprise risk management.
+
+      // Article 2: From Our Customers
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 From Our Customers
+            h3.type--c4.type--blue-dark Ensure Business Continuity
+            hr.hr.hr--thin.bkgd--grey-light
+
+          .feature__content__main
+            blockquote.blockquote.blockquote--big
+              p.type--f2.type--blue-grey
+                | [U]sing social media feeds like Twitter and other public sources is now becoming part of the risk mitigation planning for...financial, corporate and critical infrastructure security.
+              cite.blockquote__cite
+                p.blockquote__cite__p.type--d7.type--inline-block.type--blue-grey Security Info Watch
+
+    // Article 3
+    // ======================================================================================================
+    article.feature.js-feature
+      header.feature__header.bkgd--blue-medium.is-hidden-desktop
+        .content-contain
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--c2 type--white type--block" Execute Security
+              span.type--a2.type--white Responses Faster
+            p.type--f3.type--white Quickly Determine Critical Priorities
+
+      // Article 3: Case Study
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Case Study: #{@vertical_studies[2].name}
+            h3.type--c4.type--blue-dark = @vertical_studies[2].headline
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = shrine_image_set_tag(@vertical_studies[2].image, sizes: [:xs, :sm, :md, :lg, :xl, '100vw'], alt: '')
+
+          .feature__content__main
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey = @vertical_studies[2].description
+            - if @vertical_studies[2].case_study_url.present?
+              = link_to "/#{@vertical_studies[2].case_study_url}", { target: '_blank', class: 'btn btn--mobile-full-width' } do |link|
+                span.type--d5.type--white See full case study
+
+      // Article 3: Features
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Features
+            h3.type--c4.type--blue-dark Integrate Alerts into Workflow
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--short
+            = local_image_tag('solutions/corporate-security/corp-sec--03-features', 'png', ['320', '580', '768', '1024', '1280'], sizes: '100vw', class: 'img--full-width')
+
+          .feature__content__main
+            h4.type--e2.type--blue-grey Help security teams make faster decisions.
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey Dataminr proactively delivers a select number of highly relevant alerts, eliminating the need for corporate security teams to manually monitor social media. Alerts can appear in a web dashboard, mobile app, email, or they can be integrated with risk management tools and other applications.
+
+      // Article 3: From Our Customers
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 From Our Customers
+            h3.type--c4.type--blue-dark Increase Operational Risk Management
+            hr.hr.hr--thin.bkgd--grey-light
+
+          .feature__content__main
+            blockquote.blockquote.blockquote--big
+              p.type--f2.type--blue-grey Dataminr provided breaking news alerts from people witnessing the truck attack in Nice, France. These accounts posted to social media helped clients construct a more complete picture, so they could take action to protect personnel and assets.
+              cite.blockquote__cite
+                p.blockquote__cite__p.type--d7.type--inline-block.type--blue-grey Dataminr Case Study
+
+
+  //  Designed For
+  //  ======================================================================================================
+  / section.section.bkgd--data-pattern.js-feature-next-module
+  /   header.header--primary.header--primary--is-in-front
+  /     .content-contain
+  /       .header--primary__interior
+  /         h2.type--b1.type--blue-dark Designed for Corporate Security
+  /
+  /   //  Horizontal Drawers
+  /   //  ======================================================================================================
+  /   .horizontal-tabs.content-contain
+  /
+  /     // Tabs for desktop
+  /     // ======================
+  /     .is-visible-desktop
+  /       .horizontal-tab-activation
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--difference"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--experience"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--scope"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--capabilities"
+  /       .horizontal-tab-content__group.js-horizontal-content-group
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--difference"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--experience"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--scope"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--capabilities"
+  /
+  /     // Tabs for mobile
+  /     // ======================
+  /     .is-hidden-desktop
+  /       // The Difference
+  /       // ======================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--difference"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--difference"
+  /
+  /       // The Experience
+  /       // ===================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--experience"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--experience"
+  /
+  /       // The Scope
+  /       // ===================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--scope"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--scope"
+  /
+  /       // The Capabilities
+  /       // ===================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-button--capabilities"
+  /         = render "shared/vertical-tabs/corporate-security/horizontal-tab-content--capabilities"
+  /
+  //  Partnership
+  //  ======================================================================================================
+  section.section.section--logos.bkgd--data-pattern.js-feature-next-module
+    .content-contain.content-contain--960-with-margins
+      header.header__hr-title-group.type--center
+        h3.header__hr-title.type--d5.type--blue-dark.type--inline-block Partnerships
+
+      .section-logos-wrap
+        .section-logos
+          .section-logos__single-item
+            = link_to 'https://www.securityexecutivecouncil.com/', target: '_blank'
+              = local_image_tag('client-logos/logo--sec', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'SEC logo')
+          .section-copy
+            p.type--e4.type--blue-grey The Security Executive Council (SEC) and Dataminr are partnered to drive forward the SEC’s mission of influencing the security practice and evoking positive change.
+
+        = link_to 'http://info.dataminr.com/l/182232/2017-04-05/jccc4', { target: '_blank', class: 'btn btn--300-max-width btn--center' } do |link|
+          span.type--block.type--d5.type--white Become a partner
+
+  //  Contact Us
+  //  ======================================================================================================
+  // NOTE: When adding Designed For back in, remove js-feature-next-module class below
+  section.section.bkgd--contact-us--corp-security
+    .content-contain
+      .section-center.type--center
+        .section-center__interior.bkgd--white
+          h2.section-center__title
+            span> class="type--c4 type--blue-medium-new type--uppercase" Contact
+            span.type--b1--alternate.type--blue-medium.type--uppercase Us
+          p.type--f4.type--blue-grey Learn more about our technology and how you can stay one step ahead as events unfold.
+        button.btn.btn--full-width.js-open-modal.gtm-click data-modal="modal-request-info" data-js-ga-label="Corporate Security Contact Module"
+          span.type--d5.type--white Request more info
+          i.icon.icon--small.icon--after.icon-global-link-arrow.type--white
+
+  //  Workflow Integration
+  //  ======================================================================================================
+  / section.section.section--more-padding.bkgd--data-pattern
+  /   header.header--primary
+  /     .content-contain
+  /       .header--primary__interior
+  /         h2.header--primary__interior__title.type--b1.type--blue-dark Workflow Integration
+  /         p.header--primary__interior__intro.type--e3.type--blue-grey Dataminr for Corporate Security is designed for flexible delivery, so alerts always appear exactly where you need them.
+  /
+  /   .content-contain
+  /     .content-box
+  /       hr.hr.hr--full-width.hr--thick.hr--no-margins.bkgd--blue-medium
+  /       header.content-box__header.bkgd--data-background
+  /         h3.type--b4.type--center Choose Your Channel
+  /
+  /       .content-box__items.content-box__items--two-three
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-mobile.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium Mobile
+  /             p.type--e7.type--blue-grey Download our mobile app for iOS or Android.
+  /
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-email.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium Email
+  /             p.type--e7.type--blue-grey Receive notifications in your inbox.
+  /
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-notification.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium Desktop
+  /             p.type--e7.type--blue-grey See pop-up alerts in the tools you already use.
+
+  //  More Resources
+  //  ======================================================================================================
+  = render 'shared/details/resources', selectors: [@featured_content[2], @featured_content[3], @featured_content[4], @featured_content[5]],
+                                       links: [featured_content_path(@featured_content, @featured_content, 2), featured_content_path(@featured_content, 3), featured_content_path(@featured_content, 4), featured_content_path(@featured_content, 5)],
+                                       tags: [primary_tag(2), primary_tag(3), primary_tag(4), primary_tag(5)]
+
+  //  ======================================================================================================
+  //  FAQ
+  //  ======================================================================================================
+  / hr.hr--thin.hr--full-width.hr--no-margins.bkgd--blue-grey--15
+  / section.bkgd--white
+  /   .bkgd--data-background--50
+  /     header.header--primary
+  /       .content-contain
+  /         .header--primary__interior.header--primary__interior--tight
+  /           h2.type--b2.type--blue-dark Frequently Asked Questions
+  /
+  /     .content-contain
+  /       dl.faq
+  /         .faq-column
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium What makes Dataminr unique?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft Our platform is the only one of its kind with access to all publicly available Tweets in real time and the algorithmic innovation required to analyze all 500 million daily Tweets.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium What about other social media sites?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft While Twitter is the go-to network for breaking news and event coverage, our platform ingests content from many other public sources to ensure we deliver only the most relevant alerts.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium What will I use this for?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft Ultimately, to make better decisions in your efforts to protect people, facilities, assets, and infrastructure. Dataminr’s corporate security clients use the platform to detect events earlier, support executive protection, enhance analysis processes, understand the flow of emerging events, and conduct crisis management.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium Is this a surveillance tool?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft No. Dataminr analyzes only the public Twitter stream. Alerts are generated using only those Tweets that users have already chosen to share publicly.
+  /
+  /
+  /         .faq-column
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium What do you mean by actionable insight?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft An alert is only useful if it helps your team understand what to do next. Dataminr alerts are designed to maximize the amount and depth of information your team receives, including critical contextual details and rich media.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium Why is social media data relevant?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft Social media is a viable, continuous, global source for real-time news about the events that concern corporate security operations. Eyewitness reports posted to social media, and to Twitter specifically, provide valuable color and context, especially during a crisis.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium Can I trust social media data?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft While it’s true individual Tweets are not vetted, social media is an inherently self-correcting mechanism. A suspicious Tweet can quickly be exposed as false by a lack of corroborating evidence. The Dataminr platform understands these dynamics deeply to help ensure accurate alerting.
+
+//  Footer
+//  ======================================================================================================
+.pre-footer.is-hidden-desktop
+  = render "shared/footer/login-contact"
+= render "shared/footer/footer"

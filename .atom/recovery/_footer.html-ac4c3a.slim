@@ -1,0 +1,61 @@
+//  ==========================================================================
+//
+//  Footer Include
+//
+//  ==========================================================================
+
+footer.footer
+  .footer-group.content-contain
+    .footer--left
+      p.footer__list-item.footer__list__first.type--c2
+        span> &copy;
+        = Time.zone.now.year
+      ul.footer__list
+        li.footer__list-item
+          = link_to blog_path(tag: 'Press'), { class: "footer__list-item__link link--underline js-internal-link" } do |link|
+            span Press
+        li.footer__list-item
+          = link_to blog_path, { class: "footer__list-item__link link--underline js-internal-link" } do |link|
+            span Blog
+        li.footer__list-item
+          = link_to privacy_policy_path, { class: "footer__list-item__link link--underline js-internal-link" } do |link|
+            span Privacy Policy
+        li.footer__list-item
+          = link_to legal_path, { class: "footer__list-item__link link--underline js-internal-link" } do |link|
+            span Legal
+        li.footer__list-item
+          // Nested list for social
+          ul.footer__list--social
+            li.footer__list-item--social
+              = link_to 'http://www.facebook.com/181FremontSF/', { class: "footer__list-item--social__link", target: "_blank", title: "Facebook" } do |link|
+                i.icon.icon-facebook
+            li.footer__list-item--social
+              = link_to 'http://www.instagram.com/181fremont/', { class: "footer__list-item--social__link", target: "_blank", title: "Instagram" } do |link|
+                i.icon.icon-instagram
+            li.footer__list-item--social
+              = link_to 'http://twitter.com/181fremont/', { class: "footer__list-item--social__link", target: "_blank", title: "Twitter" } do |link|
+                i.icon.icon-twitter
+
+      hr.footer__divider.is-hidden-tablet
+
+      .footer__info
+        ul.footer__info__list.type--c2
+          li.footer__info__list-item Presentation Suite
+          li.footer__info__list-item
+            = link_to 'https://www.google.com/maps/place/181+Fremont+Street,+181+Fremont+St,+San+Francisco,+CA+94105/@37.7897941,-122.4015458,15.5z/data=!4m5!3m4!1s0x80858064a431e12b:0x664db63a8bfdbe78!8m2!3d37.7897941!4d-122.3953553', { class: 'link--underline', target: '_blank' } do |link|
+              span 101 California Street, 42<sup>nd</sup> Floor
+        ul.footer__info__list.type--c2
+          li.footer__info__list-item By Appointment Only
+          li.footer__info__list-item
+            span< class="is-visible-tablet--inline" 415.282.0888
+            = link_to 'tel:1-415-282-0888', { class: 'link--underline is-hidden-tablet' } do |link|
+              span 415.282.0888
+
+    .footer--right
+      ul.footer__logos
+        li.footer__logos__list-item
+          = link_to 'http://www.themarkcompany.com/', { class: '', target: '_blank' } do |link|
+            = image_tag('logo--the-mark-company.svg', alt: 'The Mark Company logo', width: '100')
+        li.footer__logos__list-item
+          = link_to 'http://www.jaypaul.com/', { class: '', target: '_blank' } do |link|
+            = image_tag('logo--jay-paul.png', alt: 'Jay Paul logo', width: '53')

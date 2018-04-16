@@ -1,0 +1,114 @@
+// ======================================================================================================
+//
+// Main: Core styles for splash page
+//
+// ======================================================================================================
+
+// --------------------------------------------------
+// Backgrounds
+// --------------------------------------------------
+.bkgd--main{
+  background-image: url('/images/skion--bg-image.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1 0 auto;
+}
+
+.bkgd--footer {
+  background-color: #85754E;
+}
+
+// --------------------------------------------------
+// Sections
+// --------------------------------------------------
+.section-info {
+  padding-top: 25px;
+}
+
+.section-logo {
+  margin: 15px auto 50px auto;
+  max-width: 165px;
+
+  @include breakpoint(sm) {
+    margin: 65px auto 75px auto;
+    max-width: 265px;
+  }
+
+  @include breakpoint(md) {
+    margin: 65px auto 60px auto;
+    max-width: 300px;
+  }
+}
+
+.section-copy {
+  margin: 0 8%;
+  padding-bottom: 55px;
+
+  @include breakpoint(sm) {
+    margin: 0 17.5%;
+    padding-bottom: 300px
+  }
+
+  @include breakpoint(md) {
+    margin: 0 auto;
+    max-width: 500px;
+    padding-bottom: 70px;
+  }
+}
+
+// --------------------------------------------------
+// Content
+// --------------------------------------------------
+.contact-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 10%;
+
+  @include breakpoint(md) {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+  .contact-grid__item {
+    margin-bottom: 20px;
+    text-align: center;
+
+    &:nth-of-type(1) { width: 100% }
+    &:nth-of-type(2) { flex: 1; }
+    &:nth-of-type(3) { flex: 1; }
+
+    @include breakpoint(sm) {
+      &:nth-of-type(1) {
+        flex: 1;
+        flex-basis: auto;
+        text-align: right
+        width: 31%;
+      }
+
+      &:nth-of-type(2) { flex: 1;
+        flex-basis: auto;
+      }
+
+      &:nth-of-type(3) { flex: 1;
+        flex-basis: auto;
+        text-align: left
+      }
+    }
+  }
+}
+
+.contact-info {
+  opacity: 0.5;
+}
+
+.copy-title {
+  margin-bottom: 5px;
+}
+
+.footer-text {
+  margin: 0 7%;
+  padding: 20px 0;
+}

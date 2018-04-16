@@ -1,0 +1,54 @@
+//  ==========================================================================
+//
+//  Backgrounds
+//
+//  ==========================================================================
+.bkgd--header {
+  background: url('/images/bkgd--01-welcome.png') center center no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+}
+
+.bkgd--manifesto-one          { @include bk-image('bkgd--02-manifesto-one.png'); }
+.bkgd--manifesto-two          { @include bk-image('bkgd--02-manifesto-two.png'); }
+.bkgd--agencies-one           { @include bk-image('bkgd--03-agencies-one.png'); }
+.bkgd--agencies-two           { @include bk-image('bkgd--03-agencies-two.png'); }
+.bkgd--collaboration-one      { @include bk-image('bkgd--04-collaboration-one.png'); }
+.bkgd--collaboration-two      { @include bk-image('bkgd--04-collaboration-two.png'); }
+.bkgd--collaboration-three    { @include bk-image('bkgd--04-collaboration-three.png'); }
+.bkgd--culturally-attuned-one { @include bk-image('bkgd--05-culturally-attuned-one.png'); }
+.bkgd--culturally-attuned-two { @include bk-image('bkgd--05-culturally-attuned-two.png'); }
+
+//  ==========================================================================
+//  Internships Bkgds
+//  ==========================================================================
+.bkgd--internship-welcome     { @include bk-image('internships/bkgd--01-internship-welcome.png'); }
+.bkgd--internship-video       { @include bk-image('internships/bkgd--02-video.png'); }
+.bkgd--internship-why-united  { @include bk-image('internships/bkgd--03-why-united.png'); }
+
+.bkgd--internship-openings {
+  @include breakpoint(md) {
+    position: relative;
+
+    &:after {
+      background: url('/images/internships/bkgd--04-openings.png') center top no-repeat;
+      background-blend-mode: color-burn;
+      background-size: 100% auto;
+      content: '';
+      height: 200%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+.bkgd--internship-qa { @include bk-image('internships/bkgd--05-q-and-a.png'); }
+
+//  ==========================================================================
+//  Color Backgrounds
+//  ==========================================================================
+.bkgd--navy      { background: $navy; }
+.bkgd--navy-dark { background: $navy-dark; }
+.bkgd--white     { background: $white; }

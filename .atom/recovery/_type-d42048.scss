@@ -1,0 +1,447 @@
+//  ======================================================================================================
+//
+//  Typography
+//
+//  ======================================================================================================
+// --------------------------------------------------
+// Font Families
+// --------------------------------------------------
+%condensed-light { font-family: $font-condensed-light; }
+%light-oblique   { font-family: $font-light-oblique; }
+%condensed-bold  { font-family: $font-condensed-bold; }
+%bold            { font-family: $font-bold; }
+%regular         { font-family: $font-roman; }
+
+// --------------------------------------------------
+// Font Styles
+// --------------------------------------------------
+%lowercase         { text-transform: lowercase; }
+%uppercase         { text-transform: uppercase; }
+%titlecase         { text-transform: capitalize; }
+
+.type--uppercase   { @extend %uppercase;      }
+.type--lowercase   { @extend %lowercase;      }
+.type--titlecase   { @extend %titlecase;      }
+.type--mixed-case  { text-transform: inherit; }
+.type--center      { text-align: center;      }
+.type--right       { text-align: right;       }
+.type--left        { text-align: left;        }
+.type--inline      { display: inline-block;   }
+
+.type--center--mobile {
+  text-align: center;
+  @include breakpoint(md) { text-align: left; }
+}
+
+.type--center--desktop {
+  text-align: left;
+  @include breakpoint(md) { text-align: center; }
+}
+
+// --------------------------------------------------
+// Font Colors
+// --------------------------------------------------
+.type--gray       { color: $gray; }
+.type--light-gray { color: $light-gray; }
+.type--default    { color: $default-txt-color; }
+.type--blue       { color: $blue; }
+.type--green      { color: $green; }
+.type--white      { color: $white; }
+.type--dark-gray  { color: $dark-gray }
+
+// --------------------------------------------------
+// A's / Light Condensed
+// --------------------------------------------------
+.type--a1,
+.type--a2,
+.type--a3,
+.type--a4,
+.type--a5,
+.type--a6,
+.type--a7,
+.type--a8,
+.type--a9 {
+  @extend %condensed-light;
+}
+
+.type--a4,
+.type--a6 {
+  @extend %uppercase;
+}
+
+// Page & section headers
+.type--a1 {
+  color: $white;
+  @include font-size(31);
+  line-height: 3rem;
+  letter-spacing: 0.02rem;
+
+  @include breakpoint(md) {
+    @include font-size(41);
+    line-height: 4.6rem;
+    letter-spacing: 0.01rem;
+  }
+}
+
+.type--a2 {
+  @include font-size(26);
+  line-height: 2.65rem;
+  letter-spacing: 0.03rem;
+
+  @include breakpoint(md) {
+    @include font-size(34);
+    line-height: 3.6rem;
+    letter-spacing: 0.04rem;
+  }
+}
+
+// Lower level display text
+.type--a3 {
+  @include font-size(21);
+  line-height: 2.45rem;
+  letter-spacing: 0.04rem;
+
+  @include breakpoint(md) {
+    @include font-size(31);
+    line-height: 3.2rem;
+    letter-spacing: 0.02rem;
+  }
+}
+
+// Labels & text on card links
+.type--a4 {
+  color: $gray;
+  @include font-size(16);
+  line-height: 1.8rem;
+  letter-spacing: 0.04rem;
+
+  @include breakpoint(md) {
+    @include font-size(23);
+    line-height: 2.85rem;
+    letter-spacing: 0.03rem;
+  }
+}
+
+// Subhead labels
+.type--a5 {
+  color: $white;
+  @include font-size(16);
+  line-height: 1.8rem;
+  letter-spacing: 0.04rem;
+
+  @include breakpoint(md) {
+    @include font-size(23);
+    line-height: 2.65rem;
+  }
+}
+
+// Display labels & text on card links
+.type--a6 {
+  @include font-size(14);
+  line-height: 2.1rem;
+  letter-spacing: 0.07rem;
+
+  @include breakpoint(md) {
+    @include font-size(21);
+    line-height: 1.6rem;
+  }
+}
+
+.type--a7 {
+  @include font-size(14);
+  line-height: 1.6rem;
+  letter-spacing: 0.07rem;
+
+  @include breakpoint(md) {
+    @include font-size(21);
+    line-height: 2.45rem;
+    letter-spacing: 0.04rem;
+  }
+}
+
+// Header body text,
+// display labels & text on card links
+.type--a8 {
+  @include font-size(11);
+  line-height: 1.5rem;
+  letter-spacing: 0.04rem;
+
+  @include breakpoint(md) {
+    @include font-size(14);
+    line-height: 1.8rem;
+  }
+}
+
+// List text
+.type--a9 {
+  color: $gray;
+  @include font-size(11);
+  line-height: 1.45rem;
+  letter-spacing: 0.04rem;
+}
+
+// --------------------------------------------------
+// B's / Light Oblique
+// --------------------------------------------------
+
+// Quote text
+.type--b1 {
+  @extend %light-oblique;
+  color: $gray;
+  @include font-size(16);
+  line-height: 2.1rem;
+  letter-spacing: 0.05rem;
+
+  @include breakpoint(md) {
+    @include font-size(26);
+    line-height: 3.2rem;
+  }
+}
+.type--b2 {
+  @extend %light-oblique;
+  color: $gray;
+  @include font-size(12);
+  line-height: 1.8rem;
+  letter-spacing: 0.025rem;
+
+  @include breakpoint(md) {
+    @include font-size(21);
+    line-height: 2.8rem;
+  }
+}
+
+// --------------------------------------------------
+// C's / Bold Condensed
+// --------------------------------------------------
+
+.type--c1,
+.type--c2,
+.type--c3,
+.type--c4,
+.type--c5,
+.type--c6 {
+  @extend %condensed-bold;
+}
+
+.type--c1,
+.type--c2,
+.type--c4 {
+  @extend %uppercase;
+}
+
+// Display facts
+.type--c1 {
+  color: $white;
+  @include font-size(41);
+  line-height: 4.6rem;
+  letter-spacing: 0.02rem;
+
+  @include breakpoint(md) {
+    @include font-size(66);
+    line-height: 5.2rem;
+    letter-spacing: 0rem;
+  }
+}
+
+// Page headers & section headers
+.type--c2 {
+  @include font-size(22);
+  line-height: 2.65rem;
+  letter-spacing: 0rem;
+
+  @include breakpoint(md) {
+    @include font-size(32);
+    line-height: 3.6rem;
+  }
+}
+
+// Section headers
+.type--c3 {
+  color: $blue;
+  @include font-size(18);
+  line-height: 1.7rem;
+  letter-spacing: 0.01rem;
+
+  @include breakpoint(md) {
+    @include font-size(25);
+    line-height: 2.45rem;
+  }
+}
+
+.type--c4 {
+  color: $blue;
+  @include font-size(14);
+  line-height: 1.6rem;
+  letter-spacing: 0.03rem;
+
+  @include breakpoint(md) {
+    @include font-size(21);
+    line-height: 2.1rem;
+    letter-spacing: 0rem;
+  }
+}
+
+// Text links & label links
+.type--c5 {
+  @include font-size(12);
+  line-height: 1.6rem;
+  letter-spacing: 0.01rem;
+
+  @include breakpoint(md) {
+    @include font-size(14);
+    line-height: 2rem;
+    letter-spacing: 0.02rem;
+  }
+}
+
+// Nav links
+.type--c6 {
+  @extend %uppercase;
+  @include font-size(9);
+  line-height: 1.45rem;
+  letter-spacing: 0.012rem;
+}
+.error--type--c6 {
+  @extend %uppercase;
+  @include font-size(7);
+  line-height: 1.45rem;
+  letter-spacing: 0.012rem;
+}
+
+// --------------------------------------------------
+// D's / Regular
+// --------------------------------------------------
+
+.type--d1,
+.type--d2,
+.type--d3,
+.type--d4,
+.type--d5 {
+  @extend %regular;
+}
+
+// Lower level headline
+.type--d1 {
+  color: $gray;
+  @include font-size(21);
+  line-height: 2.45rem;
+  letter-spacing: 0.05rem;
+
+  @include breakpoint(md) {
+    @include font-size(29);
+    line-height: 3.2rem;
+  }
+}
+
+// New headers
+.type--d2 {
+  color: $gray;
+  @include font-size(14);
+  line-height: 1.8rem;
+  letter-spacing: 0.03rem;
+
+  @include breakpoint(md) {
+    @include font-size(20);
+    line-height: 2.45rem;
+  }
+}
+
+// News body text
+.type--d3 {
+  color: $dark-gray;
+  @include font-size(14);
+  line-height: 2.25rem;
+  letter-spacing: 0.03rem;
+}
+
+// Main body text
+.type--d4,
+.type--d4 p {
+  @include font-size(9);
+  line-height: 1.55rem;
+  letter-spacing: 0.03rem;
+
+  @include breakpoint(md) {
+    line-height: 1.3rem;
+    letter-spacing: 0rem;
+  }
+}
+
+// Secondary body text
+.type--d5 {
+  @include font-size(8);
+  line-height: 1.55rem;
+  letter-spacing: 0.05rem;
+
+  @include breakpoint(md) {
+    @include font-size(9);
+    line-height: 1.2rem;
+  }
+}
+
+// Text field labels
+.type--d6 {
+  @extend %uppercase;
+  color: $white;
+  @include font-size(8);
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+// --------------------------------------------------
+// E's / Bold
+// --------------------------------------------------
+
+.type--e1,
+.type--e2,
+.type--e3 {
+  @extend %bold;
+  @extend %uppercase;
+}
+
+// Button text
+.type--e1 {
+  @include font-size(8);
+  line-height: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+// Labels & text links
+.type--e2 {
+  @include font-size(9);
+  line-height: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+// Labels
+.type--e3 {
+  color: $white;
+  @include font-size(8);
+  line-height: 1rem;
+}
+
+// --------------------------------------------------
+// F / Helvetica quote
+// --------------------------------------------------
+
+.type--f1 {
+  color: $white;
+  font-family: $font-helvetica;
+  @include font-size(60);
+  line-height: 2rem;
+}
+
+// --------------------------------------------------
+// Shopcore Font
+// --------------------------------------------------
+
+.type--shopcore {
+  color: $white;
+  font-family: $font-shopcore;
+  @include font-size(24);
+  letter-spacing: 0.035rem;
+
+  @include breakpoint(lg) {
+    @include font-size(35);
+  }
+}

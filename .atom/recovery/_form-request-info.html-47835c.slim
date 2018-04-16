@@ -1,0 +1,96 @@
+//  ======================================================================================================
+//
+//  Pardot Form (shared across site)
+//
+//  ======================================================================================================
+.form__field-group.form__field-group--select-arrow.form__field-group--select-arrow-secondary.type--left.input-group
+  label.label--absolute.type--d5.type--blue-bright for="solution" Select Your Solution:
+  select.select.select--secondary.js-select.type--d5.type--blue-bright id="solution" name="pardot[solution]"
+    option value="Corporate Security" Corporate Security
+    option value="Finance" Finance
+    option value="Public Sector" Public Sector
+    option value="News" News
+    option value="Communications" PR / Communications
+
+.form__field-group.form__field-group--split
+  .input-group.js-ga--request-start
+    input.input-field.type--d5 class="first_name js-form-required" id="first_name-#{ formId }" name="first_name" type="text"
+    label.input-label.type--d5 for="first_name-#{ formId }" First Name *
+
+  .input-group
+    input.input-field.type--d5 class="last_name js-form-required" id="last_name-#{ formId }" name="pardot[last_name]" type="text"
+    label.input-label.type--d5 for="last_name-#{ formId }" Last Name *
+
+.form__field-group.form__field-group--split
+  .input-group
+    input.input-field.type--d5 class="work_email js-form-required js-form-email" id="work_email-#{ formId }" name="pardot[work_email]" type="email"
+    label.input-label.type--d5 for="work_email-#{ formId }" Work Email *
+
+  .input-group
+    input.input-field.type--d5 class="phone js-form-required" id="phone-#{ formId }" name="pardot[phone]" type="tel"
+    label.input-label.type--d5 for="phone-#{ formId }" Phone *
+
+.form__field-group.form__field-group--split
+  .input-group
+    input.input-field.type--d5 class="company js-form-required" id="company-#{ formId }" name="pardot[company]" type="text"
+    label.input-label.type--d5 for="company-#{ formId }" Company *
+
+  .input-group
+    input.input-field.type--d5 class= "title" id="title-#{ formId }" name="pardot[title]" type="text"
+    label.input-label.type--d5 for="title-#{ formId }" Title
+
+.form__field-group
+  .input-group.input-group--textarea
+    textarea.input-field.input-field--textarea.type--d5 class= "message" name="pardot[message]" id="message-#{ formId }" type="text"
+    label.input-label.type--d5 for="message-#{ formId }" Message
+
+fieldset.form__field-group-fieldset.is-temporarily-hidden.js-demo
+  .form__field-group
+    .input-group
+      .input-group__interior--inline
+        .input-group__interior__inline-option
+          legend.input-field__checkbox-legend.type--white.type--d5 for="newsletter-#{ formId }-demo" Schedule a demo?
+
+        // yes
+        .input-group__interior__inline-option
+          input.input-field__checkbox.type--d5.js-schedule-demo data-response="demo-yes" id="newsletter-#{ formId }-schedule-demo-yes" name="newsletter-#{ formId }-schedule-demo" type="radio" checked="checked"
+          label.input-field__checkbox-label.input-field__checkbox-label--radio.type--d5 for="newsletter-#{ formId }-schedule-demo-yes" Yes
+
+        // no
+        .input-group__interior__inline-option
+          input.input-field__checkbox.type--d5.js-schedule-demo data-response="demo-no" id="newsletter-#{ formId }-schedule-demo-no" name="newsletter-#{ formId }-schedule-demo" type="radio"
+          label.input-field__checkbox-label.input-field__checkbox-label--radio.type--d5 for="newsletter-#{ formId }-schedule-demo-no" No
+
+// Hidden field for News vertical
+fieldset.form__field-group-fieldset.is-temporarily-hidden.js-subscribe-newsletter--news
+  .form__field-group
+    .input-group
+      .input-group__interior--inline
+        input.input-field__checkbox.js-newsletter-signup data-response="newsletter-yes" class="newsletter" id="newsletter-#{ formId }-news" name="pardot[newsletter_news]" type="checkbox"
+        label.input-field__checkbox-label.type--d5 for="newsletter-#{ formId }-news" Subscribe to the Dataminr for News monthly newsletter
+
+// Hidden field for Corp Sec vertical
+fieldset.form__field-group-fieldset.is-temporarily-hidden.js-subscribe-newsletter--corporate-security
+  .form__field-group
+    .input-group
+      .input-group__interior--inline
+        input.input-field__checkbox.js-newsletter-signup data-response="newsletter-yes" class="newsletter" id="newsletter-#{ formId }-corporate-security" name="pardot[newsletter_corporate_security]" type="checkbox"
+        label.input-field__checkbox-label.type--d5 for="newsletter-#{ formId }-corporate-security" Subscribe to the Dataminr for Corporate Security monthly newsletter
+
+// Hidden field for Finance vertical
+fieldset.form__field-group-fieldset.is-temporarily-hidden.js-subscribe-newsletter--finance
+  .form__field-group
+    .input-group
+      .input-group__interior--inline
+        input.input-field__checkbox.js-newsletter-signup data-response="newsletter-yes" class="newsletter" id="newsletter-#{ formId }-finance" name="pardot[newsletter_finance]" type="checkbox"
+        label.input-field__checkbox-label.type--d5 for="newsletter-#{ formId }-finance" Subscribe to the Dataminr for Finance monthly newsletter
+
+// Hidden field for Communications vertical
+fieldset.form__field-group-fieldset.is-temporarily-hidden.js-subscribe-newsletter--communications
+  .form__field-group
+    .input-group
+      .input-group__interior--inline
+        input.input-field__checkbox.js-newsletter-signup data-response="newsletter-yes" class="newsletter" id="newsletter-#{ formId }-communications" name="pardot[newsletter_communications]" type="checkbox"
+        label.input-field__checkbox-label.type--d5 for="newsletter-#{ formId }-communications" Subscribe to the Dataminr for Communications monthly newsletter
+
+input.btn.btn--full-width.form__submit.type--d7.type--white.js-ga-modal-submit type="submit" value="Submit"

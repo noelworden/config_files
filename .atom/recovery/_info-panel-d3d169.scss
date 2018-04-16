@@ -1,0 +1,153 @@
+//  ==========================================================================
+// Orange-red banner at top
+//  ==========================================================================
+.franchise-grid--stats {
+
+  div:nth-child(-n+2) {
+    padding-bottom: 40px;
+  }
+
+  @include breakpoint(lg) {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+  }
+}
+
+.franchise-grid__item {
+  background: transparent;
+  cursor: default;
+  padding: 0 10px;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include breakpoint(md) {
+    flex: 1 0 auto;
+    min-width: calc(50% - 6px);
+    max-width: calc(50% - 6px);
+    width: 40%;
+  }
+
+  @include breakpoint(lg) {
+    padding: 0 30px;
+    min-width: calc(25% - 10px);
+    max-width: calc(25% - 10px);
+    width: 20%;
+  }
+}
+
+.franchise-grid--why-invest {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @include breakpoint(lg) {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+  }
+}
+
+.franchise-grid__why-invest-item {
+  background: transparent;
+  padding: 0 10px;
+  margin-bottom: 40px;
+  // align-items: stretch;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+
+  @include breakpoint(md) {
+    flex: 1 0 auto;
+    width: 40%
+  }
+}
+
+.franchise-grid__why-invest-image {
+  margin: 0 auto;
+  max-width: 220px;
+}
+
+.franchise-grid--item-list {
+  margin-top: 20px;
+}
+
+.franchise-grid--item-list__item {
+  padding: 6px 0;
+}
+
+.franchise-grid--item-list__item:first-of-type {
+  padding-top: 0;
+  padding-bottom: 6px;
+}
+
+.franchise-grid--item-list__item:last-of-type {
+  padding-top: 6px;
+  padding-bottom: 0;
+}
+
+//  ==========================================================================
+// Our Philosophy
+//  ==========================================================================
+.franchise-grid--philosophy__item {
+  cursor: default;
+  max-width: 100%;
+  padding: 10px 10px 30px 10px;
+  width: 100%;
+
+  @include breakpoint(md) {
+    max-width: calc(50% - 10px);
+    min-width: calc(50% - 10px);
+    padding: 30px;
+    width: 40%;
+  }
+
+  @include breakpoint(lg) {
+    max-width: calc(25% - 10px);
+    min-width: calc(25% - 10px);
+    padding: 0 30px;
+    width: calc(25% - 10px);
+  }
+}
+
+.franchise-grid--philosophy__item-header {
+  @include breakpoint(md) {
+    align-items: flex-end;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  @include breakpoint(lg) {
+    height: 140px;
+  }
+}
+
+.franchise-grid--philosophy__item-copy {
+  align-items: flex-start;
+  display: flex;
+}
+
+.item-header--margin {
+  width: 60%;
+  margin: 0 auto;
+
+  @include breakpoint(lg) {
+    width: 100%;
+  }
+}
+
+.franchise__philosophy {
+  .amenities-grid__item {
+    background: transparent;
+  }
+
+  // This is to fix a weird Safari bug where when you scroll through the carousel, sometimes the selection color appears for like, no reason.
+  ::selection {
+    background: transparent;
+  }
+}

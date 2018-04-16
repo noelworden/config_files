@@ -1,0 +1,107 @@
+//  ======================================================================================================
+//
+//  Homepage
+//
+//  ======================================================================================================
+- body_class 'theme-home'
+- title 'Crunch Fitness | No Judgments'
+- meta_tag :description, 'Crunch is a gym that believes in making serious exercise fun by fusing fitness and entertainment and pioneering a philosophy of No Judgments.'
+
+.main
+  //  Hero
+  //  ==========================================================================
+  header.promo--hero
+    = image_tag('logo--loader.gif', class: 'promo--hero__loader', alt: 'Crunch logo loader')
+    .promo--hero__spacer
+    - if @club
+      = render "shared/hubspot/hubspot", hubspot_id: @club.homepage_cta_id
+    - else
+      = render "shared/hubspot/hubspot", hubspot_id: 'd48f685c-75ba-4881-a16c-2a2b5d10459a'
+
+  //  Locator Strip
+  //  ==========================================================================
+  - if @club_name.present?
+    section.locator-strip.gradient--theme-custom--horizontal
+      = render "shared/locations-module/locator-strip", club_name: @club_name, club_id: @club_slug, club_type: @club_type
+
+  //  Crunchism Carousel
+  //  ==========================================================================
+  section.section-standard.bkgd--white
+    .content-contain
+      header.section-standard__header.type--center
+        h3.section-standard__header__pre-title
+          hr.border--short.border--type.border--charcoal
+          span.type--border-adorned.type--a6 Crunchism #1
+          hr.border--short.border--type.border--charcoal
+        h2.section-standard__header__title.type--a1 Our Gym is Your Gym
+        p.type--d3 Kick your feet up! With a gym designed around you, we think you’ll love it here.
+
+    //  Carousel for desktop
+    //  ==========================================================================
+    .content-contain
+      = render "shared/experience-switcher/experience-switcher-desktop", carousel_content: home_carousel
+
+    //  Carousel for mobile/tablet
+    //  ==========================================================================
+    = render "shared/experience-switcher/experience-switcher-mobile", carousel_content: home_carousel
+
+  //  No Judgments
+  //  ==========================================================================
+  section.section-standard.bkgd--white
+    .content-contain
+      header.section-standard__header.type--center
+        h3.section-standard__header__pre-title
+          hr.border--short.border--type.border--charcoal
+          span.type--border-adorned.type--a6 Crunchism #2
+          hr.border--short.border--type.border--charcoal
+        h2.section-standard__header__title.type--a1 No Judgments are the Best Kind
+        p.type--d3 Differences are encouraged. Quirks are welcomed.
+
+    .content-contain.content-contain--1024
+      .no-judgments--light-bkgd
+        = render "shared/no-judgments/no-judgments", no_judgments_theme: 'light'
+
+  //  Amenities Grid
+  //  ==========================================================================
+  section.section-standard.bkgd--white
+    .content-contain
+      header.section-standard__header.type--center
+        h3.section-standard__header__pre-title
+          hr.border--short.border--type.border--charcoal
+          span.type--border-adorned.type--a6 Crunchism #3
+          hr.border--short.border--type.border--charcoal
+        h2.section-standard__header__title.type--a1 Energy is Contagious
+        p.type--d3 Believe in the power of a motivating group fitness community.
+
+        .section-standard__header__link.type--block
+          = link_to classes_path, { class: 'theme-link--secondary-to-black' } do |link|
+            span.type--e5.theme-color-secondary Check Out Our Group Fitness Classes
+
+      .amenities-grid.amenities-grid--classes
+        = render "shared/amenities-grid/amenities-grid-items", grid_type: 'home', grid_content: home_grid
+
+  //  Video Module
+  //  ==========================================================================
+  section.section-standard.bkgd--white
+    .content-contain
+      header.section-standard__header.type--center
+        h3.section-standard__header__pre-title
+          hr.border--short.border--type.border--charcoal
+          span.type--border-adorned.type--a6 Crunchism #4
+          hr.border--short.border--type.border--charcoal
+        h2.section-standard__header__title.type--a1 Goals are Made to be Crushed
+        p.type--d3 Train with our experts to drive your results.
+
+        .section-standard__header__link.type--block
+          = link_to training_path, { class: 'theme-link--primary-to-black' } do |link|
+            span.type--e5.theme-color-primary Learn More About Our Individual and Small Group Training Programs
+
+      = render "shared/video/video-module", video_url: 'https://player.vimeo.com/video/54462782?color=f99919&title=0&byline=0&portrait=0'
+
+  //  Locator Strip
+  //  ==========================================================================
+  - if @club_name.present?
+    section.locator-strip.gradient--theme-custom--horizontal
+      = render "shared/locations-module/locator-strip-bottom", club_name: @club_name, club_id: @club_slug, club_type: @club_type
+
+= render "shared/marketing_pixel/marketing_pixel"

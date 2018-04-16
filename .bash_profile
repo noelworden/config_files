@@ -1,3 +1,5 @@
+default_username='nworden'
+
 export PS1="$GREEN"stayfrosty"$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -38,6 +40,9 @@ alias resource='source ~/.bash_profile'
 alias bfr="cd personal/food-rescue-robot"
 #####CANVAS######
 
+# cd anagramagic
+alias anagram="cd personal/anagramagic"
+
 #cd woods-bagot
 alias wb="cd canvas/woods-bagot"
 
@@ -56,6 +61,9 @@ alias beekman="cd canvas/beekman"
 #cd Stribling
 alias strib="cd canvas/Stribling"
 
+#cd Site
+alias site="cd canvas/DDR"
+
 #cd crunch-member
 alias cmember="cd canvas/crunch-member"
 
@@ -64,6 +72,9 @@ alias cclass="cd canvas/crunch-class"
 
 #cd crunch-club
 alias cclub="cd canvas/crunch-club"
+
+#cd crunch-web
+alias cweb="cd canvas/crunch-web"
 
 #cd canvas-united
 alias united="cd canvas/canvas-united"
@@ -111,6 +122,9 @@ alias hard='git reset HEAD --hard'
 #heroku
 alias heroku!="git push heroku master"
 
+#git push
+alias push='git push'
+
 #git push origin
 alias gpush="git push --set-upstream origin"
 
@@ -134,8 +148,17 @@ alias dboom="rake db:drop db:create db:migrate db:test:prepare db:seed"
 
 alias dbup="rake db:create db:migrate db:seed"
 
-# rails webrick server
+#######################
+#server
+#rails webrick server
 alias brick="rails s webrick"
+
+#find open processes
+#lsof -i tcp:
+alias open3000="lsof -i tcp:3000"
+
+#lsof -i tcp:
+alias open4567="lsof -i tcp:4567"
 
 # open bash-profile
 alias bashpro='vim ~/.bash_profile'
@@ -143,12 +166,22 @@ alias bashpro='vim ~/.bash_profile'
 # git autocomplete
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
+
+  # Add git completion to aliases
+  __git_complete g __git_main
+  __git_complete gc _git_checkout
+  __git_complete gm __git_merge
+  __git_complete gp _git_pull
 fi
+
+
 
 # gem versions
 alias ruby19='rvm use ruby-1.9.3-p392'
 
 export PATH="/usr/local/bin:$PATH"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

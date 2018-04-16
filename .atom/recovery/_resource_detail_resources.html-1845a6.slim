@@ -1,0 +1,46 @@
+//  ==========================================================================
+//
+//  More Resources Module for the Resource Detail Page
+//
+//  ==========================================================================
+aside.section--more-bottom-pad.bkgd--data-pattern
+  .content-contain.content-contain--960-with-margins
+    .resource-grid
+      .resource-grid-hero.bkgd--white--50.type--center
+        h2.resource-grid-hero__title.type--b3.type--blue-dark More Resources
+        = link_to resource_path, { class: 'link-dim' } do |link|
+          span.type--d7.type--blue-bright.type--uppercase View all resources
+          i.icon.icon--after.icon-global-link-arrow.type--blue-bright
+
+      .content-grid.content-grid--no-borders.content-grid--one-two-four
+        .content-grid__item.bkgd--white
+          = link_to resource_path(locals[:links][0]), { class: 'content-grid__item__link link-dim', target: :_blank } do |link|
+            .content-grid__item__bg-img style="background: url('#{@more_resources[0].image_url(:md)}') center center no-repeat; background-size: cover; "
+          p.type--d9.type--grey-medium = @more_resources[0].tag
+          = link_to resource_path(locals[:links][0]), { class: 'content-box__item__link link-blue', target: :_blank } do |link|
+            span.type--e3.type--blue-dark = @more_resources[0].title
+            i.icon.icon--after.icon-global-link-arrow.type--blue-bright
+
+        .content-grid__item.bkgd--white
+          = link_to resource_path(locals[:links][1]), { class: 'content-grid__item__link link-dim', target: :_blank } do |link|
+            .content-grid__item__bg-img style="background: url('#{@more_resources[1].image_url(:md)}') center center no-repeat; background-size: cover; "
+          p.type--d9.type--grey-medium = @more_resources[1].tag
+          = link_to resource_path(locals[:links][1]), { class: 'content-box__item__link link-blue', target: :_blank } do |link|
+            span.type--e3.type--blue-dark = @more_resources[1].title
+            i.icon.icon--after.icon-global-link-arrow.type--blue-bright
+
+        .content-grid__item.bkgd--white
+          = link_to resource_path(locals[:links][2]), { class: 'content-grid__item__link link-dim', target: :_blank } do |link|
+            .content-grid__item__bg-img style="background: url('#{@more_resources[2].image_url(:md)}') center center no-repeat; background-size: cover; "
+          p.type--d9.type--grey-medium = @more_resources[2].tag
+          = link_to resource_path(locals[:links][2]), { class: 'content-box__item__link link-blue', target: :_blank } do |link|
+            span.type--e3.type--blue-dark = @more_resources[2].title
+            i.icon.icon--after.icon-global-link-arrow.type--blue-bright
+
+        .content-grid__item.bkgd--white
+          = link_to resource_path(locals[:links][3]), { class: 'content-grid__item__link link-dim', target: :_blank } do |link|
+            .content-grid__item__bg-img style="background: url('#{@more_resources[3].image_url(:md)}') center center no-repeat; background-size: cover; "
+          p.type--d9.type--grey-medium = @more_resources[3].tag
+          = link_to resource_path(locals[:links][3]), { class: 'content-box__item__link link-blue', target: :_blank } do |link|
+            span.type--e3.type--blue-dark = @more_resources[3].title
+            i.icon.icon--after.icon-global-link-arrow.type--blue-bright

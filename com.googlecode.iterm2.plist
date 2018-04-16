@@ -60,24 +60,16 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>909 4 400 129 0 0 1440 877 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>-1030 281 620 392 -1440 -83 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>387 365 1016 512 0 0 1440 877 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-	<string>99 293 592 584 0 0 1440 877 </string>
+	<string>356 379 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1440 873 0 0 1440 877 </string>
+	<string>0 300 717 877 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 27 1440 850 0 0 1440 877 </string>
+	<string>962 27 955 1150 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 27 1440 850 0 0 1440 877 </string>
+	<string>1 4 717 873 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>0 317 717 860 0 0 1920 1177 </string>
-	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1 30 1439 843 0 0 1920 1177 </string>
+	<string>0 304 1440 873 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -677,13 +669,13 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/noelworden</string>
+			<string>/Users/nworden</string>
 		</dict>
 	</array>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>D36BCC41-AA17-4B40-AB34-9A41378C7757</string>
+	<string>B8B3D91E-D49B-459C-9A27-4F6679ECE10C</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -691,7 +683,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>511116987.16882598</real>
+	<real>537809314.35078299</real>
 	<key>PerformDNSLookups</key>
 	<false/>
 	<key>PointerActions</key>
@@ -728,23 +720,21 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/noelworden</string>
+	<string>/Users/nworden</string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=7</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=59</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-17T20:45:12Z</date>
+	<date>2018-03-05T19:54:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TraditionalVisualBell</key>
 	<true/>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1506138240</real>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>

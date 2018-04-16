@@ -1,0 +1,144 @@
+//  ==========================================================================
+//
+//  Type Styles
+//
+//  ==========================================================================
+//  ==========================================================================
+//  Font Families
+//  ==========================================================================
+%font--avenir {
+  font-family: $font-avenir;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+%font-garamond-regular {
+  font-family: $font-garamond;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%font-garamond-italic {
+  font-family: $font-garamond;
+  font-style: italic;
+  font-weight: lighter;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+//  ==========================================================================
+//  Case & Alignment
+//  ==========================================================================
+%uppercase   { text-transform: uppercase; }
+%lowercase   { text-transform: lowercase; }
+%mixedcase   { text-transform: none;      }
+%center-text { text-align: center; }
+%right-text  { text-align: right;  }
+%left-text   { text-align: left;   }
+
+.type--uppercase { @extend %uppercase; }
+.type--lowercase { @extend %lowercase; }
+.type--mixed     { @extend %mixedcase; }
+.type--center    { @extend %center-text; }
+.type--right     { @extend %right-text;  }
+.type--left      { @extend %left-text;   }
+
+//  ==========================================================================
+//  Font Mods
+//  ==========================================================================
+%uppercase   { text-transform: uppercase;  }
+%lowercase   { text-transform: lowercase;  }
+%underline   { text-decoration: underline; }
+%center-text { text-align: center;         }
+%right-text  { text-align: right;          }
+%left-text   { text-align: left;           }
+
+//  ==========================================================================
+//  A's / Typeface Name
+//  ==========================================================================
+.type--a1,
+.type--a2 {
+  @extend %font--avenir;
+  color: $white;
+}
+
+.type--a1 {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+
+  @include breakpoint(sm) {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.type--a2 {
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.15em;
+
+  // @include breakpoint(sm) {
+  //   font-size: 13px;
+  //   line-height: 17px;
+  // }
+
+  @include breakpoint(md) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.type--b1 {
+  @extend %font-garamond-regular;
+  color: $white;
+}
+
+.type--b1 {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+
+  @include breakpoint(sm) {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+  }
+
+  @include breakpoint(md) {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.type--c1 {
+  @extend %font-garamond-italic;
+  color: $white;
+}
+
+.type--c1 {
+  font-size: 12px;
+  line-height: 26px;
+  letter-spacing: 0.10em;
+
+  // @include breakpoint(sm) {
+  //   font-size: 1px;
+  //   line-height: 27px;
+  // }
+
+  @include breakpoint(md) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+//  ==========================================================================
+//  Font Colors
+//  ==========================================================================
+.type--white { color: $white; }

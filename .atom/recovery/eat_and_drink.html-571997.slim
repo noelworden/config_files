@@ -1,0 +1,86 @@
+//  ======================================================================================================
+//
+//  Eat + Drink
+//
+//  ======================================================================================================
+- title 'Downtown Manhattan FiDi Restaurants | The Beekman - Eat & Drink | Lower Manhattan Dining Near World Trade Center'
+- meta_tag :description, 'At The Beekman in the NYC Financial District, there is a selection of dining options and cocktail bars to meet all of your requests. Enjoy cuisine and drinks at our Downtown Manhattan hotel at any of our on-site restaurants steps from the World Trade Center.'
+
+.page-wrapper-shell
+  .page-wrapper
+    main.page-main.booking-push.js-booking-push
+
+      //  Hero Panel
+      //  ======================================================================================================
+      header.panel.panel--title.panel--title--eat-and-drink
+        .panel-block.panel-bkgd--eat-1
+        .panel-block.panel-bkgd--eat-2
+
+          .panel-content--hero.waterfall.js-waterfall
+            h1.panel-content--hero__header.type--a1
+              span class="text-animation text-animation--eat-and-drink"
+              span.is-visually-hidden Eat and Drink
+
+            h2.panel-content--hero__title.waterfall__item.waterfall__item--in-up.type--c1 We’ve gathered the greats –
+            p.waterfall__item.waterfall__item--in-up.type--b5.type--eggshell restaurateur and chef Tom Colicchio and restaurateur Keith McNally – the renowned creators of world class dining experiences. Allow their restaurants to surprise, indulge, and nourish you at The Beekman.
+
+      //  Temple Court Panels
+      //  ======================================================================================================
+      = render "shared/eat_drink_sections/temple_court"
+
+      //  The Bar Room Panels
+      //  ======================================================================================================
+      = render "shared/eat_drink_sections/the_bar_room"
+
+      //  Augustine
+      //  ======================================================================================================
+      article.panel-article id="augustine"
+
+        // Info panel
+        .panel.panel--reverse.panel--reverse-row
+          .panel-block.panel-bkgd--augustine-1
+          .panel-block.panel-bkgd--augustine-2
+            .panel-content.waterfall.js-waterfall
+              h2.waterfall__item.waterfall__item--in-up.type--b1.type--center Augustine
+              h3.waterfall__item.waterfall__item--in-up.type--c1.type--center Keith McNally
+              hr.panel-divider.waterfall__item.waterfall__item--in-up
+              p.waterfall__item.waterfall__item--in-up.type--center
+                | Entrance at 5 Beekman Street
+                br
+                | 212.375.0010
+              p.waterfall__item.waterfall__item--in-up.p--drop-cap
+                span.first-letter K
+                | eith McNally’s Augustine is a Brasserie-style restaurant: open from breakfast through supper, it caters equally to a mid-morning coffee as well as a celebratory dinner. The menu includes a combination of lighter dishes as well as French classics, with a special Rotisserie and Grillades section of meats, fish and poultry. Keith McNally’s first restaurant was The Odeon in 1980. Since then he’s opened Café Luxembourg, Nell’s, Lucky Strike, Pravda, Balthazar, Balthazar Bakery, Pastis, Schiller’s, Morandi, Minetta Tavern, and Cherche Midi, as well as Balthazar in London.
+              p.waterfall__item.waterfall__item--in-up
+                | For more info and restaurant hours, please visit
+                span< = link_to 'augustineny.com', "http://augustineny.com", target: "_blank"
+                span .
+
+
+      //  Cellar Lounge
+      //  ======================================================================================================
+      article.panel-article id="the-alley-cat"
+
+        // Info panel
+        .panel
+          .panel-block.panel-bkgd--alley-cat-1
+          .panel-block.panel-bkgd--cellar-lounge-2
+            .panel-content.waterfall.js-waterfall
+              h2.waterfall__item.waterfall__item--in-up.type--b1.type--center The Alley Cat
+              h3.waterfall__item.waterfall__item--in-up.type--c1.type--center Amateur Theatre
+
+              hr.panel-divider.waterfall__item.waterfall__item--in-up
+              p.waterfall__item.waterfall__item--in-up.type--center
+                | Entrance at 10 Theatre Alley
+                br
+                | 212.461.4300
+              p.waterfall__item.waterfall__item--in-up.p--drop-cap
+                span.first-letter T
+                | his once-hidden cellar and century-old mechanical room has been transformed into an intimate lounge that echoes both the eclectic individuality of Tokyo’s secret bars and the classic American cocktail club. New York’s iconic late-night impresario, Serge Becker, known for establishments like The Box, La Esquina, and Miss Lily’s, lends his energizing and theatrical charisma to this atmospheric haven, where musicians and renowned DJs drop by to share their talents.
+              p.waterfall__item.waterfall__item--in-up Whether you’re after a pre-meal aperitif, a light dinner and drinks, or a sneaky nightcap, precision bartenders are on hand to ensure the most pleasurable libations. Honkaku shōchū, craft Japanese beer, boutique sake, and a library of Japanese whiskey add to an array of cultish concoctions on offer. For those culinary minded and hungry folk, the menu offers classic and modern reinterpretations of Japanese Izakaya comfort food.
+
+      // Include footer
+      = render "shared/footer"
+
+// Include gallery modal
+= render "shared/gallery_modal"

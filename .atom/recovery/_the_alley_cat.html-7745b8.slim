@@ -1,0 +1,34 @@
+article.panel-article id="the-alley-cat"
+  // Info panel
+  .panel.panel--grid
+    .panel-block.panel-block--trigger.panel-block--zoom.js-modal-trigger data-js-gallery="#{@right_gallery.join(', ')}"
+      .panel-block--zoom__item.panel-bkgd--bar-room-2 style="background-image: url(#{@right_gallery.first})"
+    .panel-block.panel-block--bar-room.panel-bkgd--bar-room-1
+      .panel-content.waterfall.js-waterfall
+        h2.waterfall__item.waterfall__item--in-up.type--b1.type--center The Alley Cat
+        h3.waterfall__item.waterfall__item--in-up.type--c1.type--center Amateur Theatre
+        hr.panel-divider.waterfall__item.waterfall__item--in-up
+        p.waterfall__item.waterfall__item--in-up.type--center
+          | Entrance at 10 Theatre Alley
+          br
+          | 212.461.4300
+          / p.waterfall__item.waterfall__item--in-up.p--drop-cap
+          /   span.first-letter T
+          /   | his once-hidden cellar and century-old mechanical room has been transformed into an intimate lounge that echoes both the eclectic individuality of Tokyo’s secret bars and the classic American cocktail club. New York’s iconic late-night impresario, Serge Becker, known for establishments like The Box, La Esquina, and Miss Lily’s, lends his energizing and theatrical charisma to this atmospheric haven, where musicians and renowned DJs drop by to share their talents.
+
+    .panel-block.panel-block--bar-room-3.panel-bkgd--bar-room-4
+      .panel-content.waterfall.js-waterfall
+        p.waterfall__item.waterfall__item--in-up.p--drop-cap
+          span.first-letter T
+          | he Bar Room at Tom Colicchio’s Temple Court is located beneath The Beekman’s stunning, nine-story Victorian era atrium and offers a singular New York setting to enjoy a list of handcrafted cocktails alongside an all-day menu. With plush lounge seating and a distinctly old New York feel, The Bar Room at Temple Court is a new entry in New York City’s canon of destination bars.
+        p.waterfall__item.waterfall__item--in-up
+          | Brunch Menu: 12:00pm - 3:00pm
+          br
+          | All Day Menu: 3:00pm - 11:00pm
+        p.waterfall__item.waterfall__item--in-up
+          - @bar_room_pdf.each do |pdf|
+            = link_to pdf.name.titleize, pdf.pdf_url.remote_url, { class: 'link--gold type--b7', target: "_blank" }
+            br
+
+    .panel-block.is-desktop-visible.panel-block--trigger.panel-block--zoom.js-modal-trigger data-js-gallery="#{@left_gallery.join(', ')}"
+      .panel-block--zoom__item.panel-bkgd--bar-room-3 style="background-image: url(#{@left_gallery.first})"

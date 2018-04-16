@@ -1,0 +1,954 @@
+//  ==========================================================================
+//
+//  Panel Wrapper Modifiers / for special panel layouts
+//
+//  ==========================================================================
+//  Base Panel
+//  For standard full-viewport blocks
+//  ==========================================================================
+.panel {
+  border-bottom: 1px solid $gold;
+
+  @include breakpoint(lg) {
+    height: calc(100vh - #{$nav-height - 1px}); // 103 is $nav-height
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  @include breakpoint-height(750px) { height: 700px; }
+
+  //  Normal height panel
+  //  --------------------------------------------------------------------------
+  &--auto-height {
+    border-bottom: 1px solid $gold;
+    position: relative;
+
+    @include breakpoint(lg) {
+      border-bottom: 1px solid $gold;
+      float: left;
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  //  Full page panel where hero image on mobile shouldn't be so tall
+  //  --------------------------------------------------------------------------
+  &--full-page {
+    .panel-block:first-of-type {
+      padding-bottom: 50%;
+      @include breakpoint(lg) { padding-bottom: 0; }
+    }
+  }
+
+  //  No padding on panel
+  //  --------------------------------------------------------------------------
+  &--no-pad { padding: 0; }
+
+  //  Hotel page 'History' module overrides
+  //  --------------------------------------------------------------------------
+  &--history {
+    padding: 35px 15px;
+    @include breakpoint(lg) { padding: 75px; }
+  }
+
+  //  Rooms page module overrides
+  //  --------------------------------------------------------------------------
+  &--rooms {
+    overflow: visible;
+
+    @include breakpoint(lg) { min-height: 690px; }
+
+    .panel-block--33w,
+    .panel-block--66w {
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel-block--66w { overflow: hidden; }
+  }
+
+  &.panel--min-height { min-height: 750px; }
+
+  .panel__view-btn {
+    display: block;
+    margin: 10px auto 0;
+
+    @include breakpoint(lg) { margin: 15px 0 0; }
+  }
+
+  .panel__request-link {
+    margin-top: 20px;
+    @include breakpoint(lg) { margin-top: 25px; }
+  }
+
+  &--offer-show {
+    .panel-block {
+      display: block;
+      padding-bottom: 0;
+      min-height: 300px;
+      &:first-child { height: $mobile-50vh !important; }
+      &:last-child { min-height: $mobile-50vh; }
+    }
+
+    @include breakpoint(lg) {
+      display: flex;
+      display: -webkit-flex;
+      align-items: stretch;
+      align-content: center;
+      border-bottom: 1px solid $gold;
+      min-height: $desk-100vh !important;
+
+      .panel-block {
+        display: inline-block;
+        width: 50%;
+        position: relative;
+
+        &:first-child,
+        &:last-child {
+          min-height: 0;
+          height: auto !important;
+          float: none;
+        }
+
+        &:last-child { padding: 30px 0; }
+      }
+
+      .panel-content--hero {
+        margin: 0 auto;
+        position: relative;
+      }
+    }
+  }
+
+  &--alley-cat {
+    @include breakpoint(lg) {
+      height: 1500px;
+    }
+  }
+}
+
+//  ==========================================================================
+//  Panel Hero
+//  Use on page heroes when image should stretch behind both panel blocks on lg
+//  ==========================================================================
+.panel--hero {
+  .panel-block {
+    &:first-of-type {
+      @include breakpoint(lg) {
+        border-right: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    &:last-of-type {
+      @include breakpoint(lg) {
+        border-left: 1px solid $gold;
+        position: absolute;
+        right: 0;
+      }
+
+      &:before {
+        @include breakpoint(lg) { background: rgba( $brown-dark, 0.9); }
+      }
+    }
+  }
+}
+
+//  ==========================================================================
+//  Panel Section Intro
+//  Panel to be used on full-width section intro blocks
+//  ==========================================================================
+.panel--intro {
+  background: none;
+
+  @include breakpoint(lg) { background: inherit; }
+
+  .panel-block {
+    padding-bottom: 50%;
+
+    &:first-of-type {
+      @include breakpoint(lg) { border-right: 0; }
+
+      &:before {
+        background-image: linear-gradient(to top, rgba($brown-darkest, 0.8) 0%, rgba($brown-darkest, 0) 100%);
+        bottom: 0;
+        content: '';
+        height: 80%;
+        position: absolute;
+        width: 100%;
+
+        @include breakpoint(lg) { content: none; }
+      }
+    }
+  }
+}
+
+//  ==========================================================================
+//  Panel With Title
+//  Use on panels with type--a1 script to create image darkening for better visibility on mobile
+//  ==========================================================================
+.panel--title {
+  position: relative;
+  z-index: 1;
+
+  .panel-block {
+    &:first-of-type {
+      &:before {
+        background-image: linear-gradient(to top, rgba($brown-darkest, 0.8) 0%, rgba($brown-darkest, 0) 100%);
+        bottom: 0;
+        content: '';
+        height: 40%;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        @include breakpoint(lg) { content: none; }
+      }
+    }
+  }
+
+  .text-animation {
+    display: block;
+    margin: 0 auto;
+  }
+
+  //  Hotel Page A1 Type Positioning
+  //  ==========================================================================
+  &--hotel {
+    .panel-content--hero__header {
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: -100px;
+
+      @include breakpoint(md) { top: -130px; }
+
+      @include breakpoint(lg) {
+        position: static;
+        margin: 0 0 -50px 0;
+
+        .text-animation {  margin-left: -130px; }
+      }
+    }
+  }
+
+  &--architecture {
+    .panel-content--hero {
+      @include breakpoint(lg) { margin: 0 0 0 42%; }
+    }
+    .panel-content--hero__header {
+      left: -35px;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: -170px;
+
+      @include breakpoint(md) {
+        top: -295px;
+      }
+
+      @include breakpoint(lg) {
+        position: static;
+        margin-left: -25px;
+      }
+
+      .type--block {
+        margin: -20px 0 20px 125px;
+        @include breakpoint(lg) { margin: -56px 0 20px 230px; }
+      }
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to top left, rgba($brown-darkest, 0.8) 0%, rgba($brown-darkest, 0) 70%);;
+
+      @include breakpoint(lg) { content: ''; }
+    }
+  }
+
+  &--amenities {
+    .panel-content--hero__header {
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: -82px;
+
+      @include breakpoint(md) { top: -135px; }
+      @include breakpoint(lg) { position: static; }
+    }
+
+    .panel-content--hero__group {
+      @include breakpoint(lg) {
+        margin-left: 165px;
+        margin-top: -35px;
+        width: 380px;
+      }
+    }
+  }
+
+  &--art {
+    .panel-content--hero__header {
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: -82px;
+
+      @include breakpoint(md) { top: -135px; }
+
+      @include breakpoint(lg) {
+        position: static;
+        margin-bottom: 20px;
+        margin-left: 165px;
+      }
+    }
+  }
+
+  //  Eat + Drink Page A1 Type Positioning
+  //  ==========================================================================
+  &--eat-and-drink {
+    .panel-content--hero__header {
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: -144px;
+
+      @include breakpoint(md) { top: -191px; }
+
+      @include breakpoint(lg) {
+        position: static;
+        margin-left: -190px;
+      }
+
+      .type--block {
+        margin-top: -40px;
+        margin-left: 185px;
+
+        @include breakpoint(lg) {
+          margin-top: -110px;
+          margin-left: 180px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  //  Events Page A1 Type Positioning
+  //  ==========================================================================
+  &--events {
+    .panel-content--hero__header {
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: -92px;
+
+      @include breakpoint(md) { top: -138px; }
+
+      @include breakpoint(lg) {
+        position: static;
+        margin-left: -142px;
+
+        .text-animation { margin: 0; }
+      }
+    }
+  }
+
+  &--spaces {
+    .panel-content--hero__header {
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      top: -82px;
+
+      @include breakpoint(md) { top: -132px; }
+
+      @include breakpoint(lg) {
+        position: static;
+        margin-bottom: -25px;
+        margin-left: -175px;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &--weddings {
+    .panel-block:first-of-type {
+      padding-bottom: 27%;
+      padding-top: 27%;
+
+      &:before { content: none; }
+
+      @include breakpoint(lg) {
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+    }
+
+    .panel-content--hero__header {
+      bottom: -30px;
+      left: 0;
+      position: absolute;
+      right: auto;
+    }
+  }
+
+  //  Rooms Page A1 Type Positioning
+  //  ==========================================================================
+  &--rooms {
+    .panel-block {
+      height: auto;
+      padding-bottom: 0;
+
+      @include breakpoint(lg) { height: 100%; }
+
+      &:first-of-type:before,
+      &:last-of-type:before {
+        content: none;
+
+        @include breakpoint(lg) {
+          background: $brown-dark;
+          content: '';
+          opacity: 0.75;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          transition: opacity $default-single-animation;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+
+      &:hover {
+        &:before { opacity: 0.9; }
+      }
+    }
+
+
+    .panel-block__group {
+      @include breakpoint(lg) {
+        border-right: 0;
+      }
+
+      & + .panel-block__group {
+        @include breakpoint(lg) {
+          opacity: 1;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .panel-content--hero__header {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      margin: 0 auto;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+
+      @include breakpoint(lg) {
+        position: static;
+        transform: translateY(0);
+        margin-bottom: -20px;
+      }
+    }
+  }
+
+  &--neighborhood {
+    height: calc(100vh - #{$mobile-nav-height - 1px});
+    overflow: hidden;
+
+    @include breakpoint(lg) {
+      height: calc(100vh - #{$nav-height - 1px});
+      width: 50%;
+    }
+
+    .scroll-indicator { z-index: 1; }
+
+    .panel-block {
+      width: 100%;
+      height: 100%;
+
+      &:first-of-type {
+        border-right: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      &:last-of-type {
+        height: 100%;
+        border-left: 0;
+      }
+
+      .panel-content--hero {
+        left: 0;
+        max-width: 450px;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-align: left;
+        top: 45%;
+        transform: translateY(-50%);
+        width: 80%;
+        overflow: visible;
+        margin: 0 auto;
+
+        @include breakpoint(lg) { left: -50px; }
+        @include breakpoint(xl) { left: -110px; }
+
+        .panel-content--hero__header {
+          text-align: center;
+          margin: -20px 0 15px;
+
+          @include breakpoint(md) {
+            text-align: left;
+            margin: -30px 0 0 -40px;
+            @include font-size(175);
+          }
+
+          @include breakpoint(lg) { margin: -30px 0 20px 0; }
+          @include breakpoint(xl) { margin: -30px 0 -30px 0; }
+        }
+
+        .panel-content--hero__title,
+        p {
+          @include breakpoint(md) { margin: 0 -50px 0 110px; }
+          @include breakpoint(lg) { margin: 0 -50px 0 70px; }
+          @include breakpoint(xl) { margin: 0px -120px 0 160px; }
+        }
+      }
+    }
+  }
+}
+
+// hover effects that are not on touch devices
+.no-touch {
+  .panel--title--rooms .panel-block {
+    .panel-block__interior {
+      // 5 * 75 = 375
+      @include breakpoint(lg) {
+        transition: transform $default-single-animation;
+        transition-delay: 375ms + 100ms;
+        transform: translate3d(0, -20%, 0);
+
+        .list--standard__item {
+          opacity: 0;
+          transform: translateY(15px);
+          transition: opacity $default-single-animation, transform $default-single-animation;
+        }
+
+        @for $i from 1 through 6 {
+          .list--standard__item:nth-child(#{$i}) {
+            transition-delay: 375ms / $i + 100ms;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      @include breakpoint(lg) {
+        .panel-block__interior {
+          transform: translate3d(0, -50%, 0);
+          transition-delay: 0s;
+
+          .list--standard__item {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          @for $i from 1 through 6 {
+            .list--standard__item:nth-child(#{$i}) {
+              transition-delay: $i * 75ms + 100ms;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//  ==========================================================================
+//  Panel Grid
+//  Panel for grid of four images, two blocks on each row at half height
+//  ==========================================================================
+.panel--grid {
+  @include breakpoint(lg) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .panel-block {
+    padding-bottom: 50%;
+
+    @include breakpoint(lg) {
+      height: 50%;
+      padding-bottom: 0;
+    }
+
+    // Override order & borders
+    &:nth-of-type(1) { @include breakpoint(lg) { order: 2; border-bottom: 1px solid $gold; border-right: 0; } }
+    &:nth-of-type(2) { @include breakpoint(lg) { order: 1; border-bottom: 1px solid $gold; } }
+    &:nth-of-type(3) { @include breakpoint(lg) { order: 4; border-right: 0; } }
+    &:nth-of-type(4) { @include breakpoint(lg) { order: 3; border-right: 1px solid $gold; } }
+    &:last-of-type   { @include breakpoint(lg) { height: 50%; } }
+
+    // Add overlay to proper elements given reordering
+    // &:nth-of-type(1),
+    &:nth-of-type(1) {
+      height: auto;
+      padding-bottom: 0;
+      position: relative;
+
+      @include breakpoint(lg) { height: 50%; }
+
+      &:before {
+        background: rgba($brown-dark, 0.9);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+
+    &--alley-cat {
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:last-of-type {
+        { &:before { content: none; } }
+      }
+
+      &:nth-of-type(1) {
+        background: rgba($brown-dark, 0.9);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+    // Clear overlay from last panel
+    // &:nth-of-type(4) { &:before { content: none; } }
+  }
+}
+
+//  ==========================================================================
+//  Panel Grid Three
+//  Panel for grid of three images, left image full height, two stacked images at 50% height on right
+//  ==========================================================================
+.panel--grid-three {
+  @include breakpoint(lg) { display: block; }
+
+  .panel-block {
+    &:first-of-type {
+      @include breakpoint(lg) {
+        border-right: 0;
+        border-bottom: 1px solid $gold;
+        float: right;
+        height: 50%;
+      }
+    }
+
+    &:nth-of-type(2) {
+      border-bottom: 0;
+      height: auto;
+      padding-bottom: 0;
+
+      @include breakpoint(lg) {
+        border-bottom: 1px solid $gold;
+        border-right: 1px solid $gold;
+        float: left;
+        height: 100%;
+      }
+
+      &:before {
+        background: rgba($brown-dark, 0.8);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+
+    &:last-of-type {
+      @include breakpoint(lg) {
+        border-right: 0;
+        height: 50%;
+      }
+
+      .panel-content {
+        // padding-top: 0;
+        @include breakpoint(lg) { padding-top: 40px; }
+      }
+    }
+
+    &--dark {
+      &:first-of-type,
+      &:nth-of-type(2),
+      &:last-of-type {
+        &:before { background: rgba($brown-dark, 0.9); }
+      }
+    }
+  }
+}
+
+//  ==========================================================================
+//  Panel People Bios / Temple Court Page
+//  Panel for grid of six images, three blocks on each row at half height with hover
+//  ==========================================================================
+.panel--people {
+  .panel-block {
+    height: auto;
+    padding-bottom: 0;
+
+    &:last-of-type:before { content: none; }
+
+    @include breakpoint(lg) {
+      height: 50%;
+      position: relative;
+      z-index: 4;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        &:after {
+          background: $gold;
+          bottom: 0;
+          content: '';
+          height: 1px;
+          left: 0;
+          position: absolute;
+          width: 100%;
+          z-index: 2;
+        }
+      }
+
+      &:nth-of-type(3n + 3) { border-right: 0; }
+      &:last-of-type        { height: 50%; }
+
+      &:hover { .panel-detail { transform: translateY(0); } }
+    }
+  }
+
+  .panel-content {
+    height: 0;
+    margin: 0 auto;
+    padding-bottom: 50%;
+    width: 100%;
+
+    @include breakpoint(lg) {
+      height: 100%;
+      padding-bottom: 0;
+      max-width: 100%;
+    }
+  }
+
+  .panel-content__bottom {
+    display: none;
+
+    @include breakpoint(lg) {
+      background-image: linear-gradient(to top, rgba($brown-darkest, 0.8) 0%, rgba($brown-darkest, 0) 100%);
+      bottom: 0;
+      display: block;
+      padding: 30px 0 20px 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .panel-detail {
+    background: rgba($brown-dark, 0.99);
+    height: auto;
+    width: 100%;
+
+    @include breakpoint(lg) {
+      bottom: 0;
+      height: 100%;
+      position: absolute;
+      transform: translateY(100%);
+      transition: $default-animation;
+      z-index: 3;
+    }
+  }
+}
+
+//  ==========================================================================
+//  Panel Amenities / Hotel Page
+//  Panel for three full-height images with half slide hover effect
+//  ==========================================================================
+.panel--amenities {
+  .panel-block {
+    height: 100%;
+    padding-bottom: 0;
+
+    &:first-of-type {
+      border-top: 1px solid $gold;
+      @include breakpoint(lg) { border-top: 0; }
+    }
+
+    &:last-of-type:before { z-index: 0; }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $brown-dark;
+      opacity: 0;
+      transition: opacity $default-single-animation;
+    }
+
+    &.panel-block--dark-bg:before { opacity: 0.8; }
+  }
+
+  .panel-block--33w .panel-content--table {
+    // width: 100%;
+
+    @include breakpoint(lg) {
+      display: table;
+      height: 50%;
+      margin-top: 0;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: $default-animation;
+      width: 100%;
+
+      > * {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .panel-content {
+    @include breakpoint(lg) { text-align: center; }
+  }
+
+  .panel-detail {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint(lg) {
+      top: 100%;
+      position: absolute;
+      transform: translateY(0);
+      transition: transform 0.3s $snappy-ease-in-out;
+    }
+  }
+
+
+  .list--simple {
+    padding: 0 20px 30px;
+
+    @include breakpoint(lg) {
+      padding: 40px;
+    }
+  }
+
+  .list--simple__item {
+    margin-bottom: 10px;
+    padding: 0;
+    @include breakpoint(lg) { margin-bottom: 25px; }
+
+    &:last-of-type { margin-bottom: 0; }
+  }
+
+  .panel-block:hover {
+    @include breakpoint(lg) {
+      &:before { opacity: 0.6; }
+      &.panel-block--dark-bg:before { opacity: 0.8; }
+      .panel-detail  { transform: translateY(-100%); }
+      .panel-content { transform: translateY(-100%); }
+    }
+  }
+}
+
+//  ==========================================================================
+//  Panel reverse
+//  For reverse ordering of blocks at breakpoints
+//  ==========================================================================
+.panel--reverse {
+  @include breakpoint(lg) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    // Reorder the squares
+    .panel-block {
+      display: flex;
+
+      &:first-of-type { order: 2; }
+      &:last-of-type  { order: 1; }
+    }
+
+    // Control row layout and proper borders
+    &.panel--reverse-row {
+      flex-direction: row;
+
+      .panel-block:first-of-type { border-right: 0; }
+      .panel-block:last-of-type  { border-right: 1px solid $gold; }
+    }
+
+    // Control column layout and proper borders
+    &.panel--reverse-column {
+      flex-direction: column;
+
+      .panel-block:first-of-type { border-bottom: 0; }
+      .panel-block:last-of-type  { border-bottom: 1px solid $gold; }
+    }
+  }
+}
+
+.panel--menu {
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+    height: auto;
+
+    .panel-block--66w {
+      flex: 0 0 60%;
+      float: none;
+      align-self: stretch;
+      height: auto;
+    }
+
+    .panel-block--40w {
+      flex: 0 0 40%;
+      float: none;
+    }
+
+    .panel-content {
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      transform: none !important;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+//  ======================================================================================================
+//
+//  Rooms
+//
+//  ======================================================================================================
+- title 'Lower Manhattan Hotel Rooms & Suites | The Beekman - Rooms | Manhattan Luxury Hotel Suites'
+- meta_tag :description, "The Beekman's variety of hotel rooms and suites ensure that all guests are comfortable at our Lower Manhattan hotel. Guests can enjoy city views, chic living areas, and luxurious furnishings in their rooms."
+
+- codes = { superior_queen: "CR1Q", superior_king: "CR1K", deluxe_king: "CP1K", premium_king: "CE1K", double_queen: "CE2D", studio_suite: "CS1K", junior_suite: "CJ1K", deluxe_corner_suite: "DC1K", corner_suite: "CC1K", thompson_suite: "TS1K", turret_penthouses: "PENT" }
+- booking_link = "https://gc.synxis.com/rez.aspx?Chain=15564&BRAND=TM&hotel=65169&template=RBE&shell=RBE&filter=BAR&start=availresults&room="
+
+- rooms_floorplans = { superior_queen: "https://models.geocv.com/view/914beekman", superior_king: "https://models.geocv.com/view/917beekman", deluxe_king: "https://models.geocv.com/view/733beekman", premium_king: "https://models.geocv.com/view/803beekman", double_queen: "https://models.geocv.com/view/728beekman" }
+- suites_floorplans = { studio_suite: "https://models.geocv.com/view/511beekman", thompson_suite: "https://models.geocv.com/view/805beekman", corner_suite: "https://models.geocv.com/view/601beekman", deluxe_corner_suite: "https://models.geocv.com/view/605beekman" }
+/ - rooms_floorplans = { superior_queen: "https://models.geocv.com/view/beekmanhotel", superior_king: "https://models.geocv.com/view/beekmanhotel", deluxe_king: "https://models.geocv.com/view/beekmanhotel", premium_king: "https://models.geocv.com/view/beekmanhotel", double_queen: "https://models.geocv.com/view/beekmanhotel" }
+/ - suites_floorplans = { studio_suite: "https://models.geocv.com/view/beekmanhotel", junior_suite: "https://models.geocv.com/view/beekmanhotel", deluxe_corner_suite: "https://models.geocv.com/view/beekmanhotel", corner_suite: "https://models.geocv.com/view/beekmanhotel", thompson_suite: "https://models.geocv.com/view/beekmanhotel", turret_penthouses: "https://models.geocv.com/view/beekmanhotel" }
+
+.page-wrapper.booking-push.js-booking-push
+  main.page-main
+
+    //  Hero Panel
+    //  ======================================================================================================
+    header.panel.panel--title.panel--title--rooms
+      .panel-block.panel-bkgd--rooms-header
+        .panel-block__interior
+          .panel-block__group.panel-block__group--overlay
+            h1.panel-content--hero__header.type--a1.type--center
+              span class="text-animation text-animation--rooms"
+              span.is-visually-hidden Rooms
+
+          .panel-block__group.panel-block__group--contained
+            ul.list--standard.type--center
+              - @rooms.each do |room|
+                li.list--standard__item
+                  = link_to rooms_path(anchor: room.name.parameterize), { class: 'list--standard__item__link type--b5 link--gold js-smooth-scroll' } do |link|
+                    span= room.name
+
+      .panel-block.panel-bkgd--suites-header
+        .panel-block__interior
+          .panel-block__group.panel-block__group--overlay
+            h1.panel-content--hero__header.type--a1.type--center
+              span class="text-animation text-animation--suites"
+              span.is-visually-hidden Suites
+
+          .panel-block__group.panel-block__group--contained
+            ul.list--standard.type--center
+              - @suites.each do |suite|
+                li.list--standard__item
+                  = link_to rooms_path(anchor: suite.name.parameterize), { class: 'list--standard__item__link type--b5 link--gold js-smooth-scroll' } do |link|
+                    span= suite.name
+
+    //  Rooms
+    //  ======================================================================================================
+    section.rooms-section id="rooms"
+      - nested_rooms = @rooms
+      - @rooms.each_with_index do |room, index|
+        article.panel-article.panel-article--room id="#{room.name.parameterize}"
+          .panel.panel--rooms
+            - if index === 0
+              //  Rooms Fixed Header
+              //  ======================================================================================================
+              .room-suite-header.rooms-header.js-rooms-header.js-menu.is-desktop-visible
+                button.type--a2.type--gold.type--title-z
+                  span.text--spacing-250.text--size-85 R
+                  span.text--spacing-20 o
+                  span o
+                  span.text--spacing-50 m
+                  span.text--spacing70 s
+                i.icon.icon-down-arrow.type--gold
+
+                ul.list--simple.room-suite-header__list
+                  - nested_rooms.each do |rm|
+                    li.list--simple__item
+                      = link_to rooms_path(anchor: rm.name.parameterize), { class: 'list--simple__item__link type--b3 type--brown-dark type--uppercase js-smooth-scroll' } do |link|
+                        span= rm.name
+            .panel-block--66w.panel-block--zoom.panel-block--trigger.js-modal-trigger data-js-gallery="#{room.id}"
+              .panel-bkgd--rooms-img.panel-block--zoom__item.panel-bkgd--rooms-bkgd style="background: url(#{room.room_images.first.image.remote_url}) center center no-repeat; background-size: cover;"
+
+            .panel-block--40w.bkgd--brown-dark
+              .panel-content.panel-content--rooms.waterfall.js-waterfall
+                h3.waterfall__item.waterfall__item--in-up.type--b1.type--center--mobile = room.name.split(" ").join(" <br class='is-desktop-visible'>").html_safe
+                .waterfall__item.waterfall__item--in-up.type--center--mobile.type--rooms-p = room.description.html_safe
+                ul.waterfall__item.waterfall__item--in-up.list--inline.list--inline--center-mobile.link--eggshell
+                  li.list--inline__item__room-link
+                    button.panel__view-btn.waterfall__item.waterfall__item--in-up.link--eggshell.type--b6.js-modal-trigger data-js-gallery="#{room.id}" type="button" View Gallery
+
+                  - if room.room_floor_plans.present?
+                    li.list--inline__item__room-link
+                        span.type--b6.type--uppercase &#124;
+                    li.list--inline__item__room-link
+                      button.panel__view-btn.waterfall__item.waterfall__item--in-up.link--eggshell.type--b6.js-modal-trigger data-js-gallery="#{room.id}" data-js-gallery-type="room_floor_plans" type="button" View Floor Plan
+
+                  - floorplan_url = rooms_floorplans[room.name.parameterize.underscore.to_sym]
+                  - if floorplan_url.present?
+                    li.list--inline__item__room-link
+                      span.type--b6.type--uppercase &#124;
+                    li.list--inline__item__room-link
+                      button.panel__view-btn.waterfall__item.waterfall__item--in-up.link--eggshell.type--b6.js-modal-floorplan-trigger data-js-floorplan-url="#{floorplan_url}" type="button" View 3-D Tour
+                = link_to "#{booking_link}#{codes[room.name.parameterize.underscore.to_sym]}", { class: 'waterfall__item waterfall__item--in-up btn--solid-border js-ga--room-book', target: "_blank", data: { 'js-ga-label': room.name } } do |link|
+                  span.type--b6.type--uppercase Book Now
+
+              button.panel-bottom.link--gold.type--b6.js-view-amenities
+                span View All Amenities
+                i.icon.icon-right-arrow.is-desktop-visible
+                i.icon.icon-plus.is-desktop-hidden
+
+            .panel-sidebar.js-amenities-panel
+              h3.panel-sidebar__title.type--b6.type--uppercase.type--brown-dark All Amenities
+              button.panel-sidebar__close.icon.icon-x.type--brown-dark.js-amenities-close.is-desktop-visible
+              ul.redactor-list.type--b7.type--brown-dark
+                = room.amenities.html_safe
+
+
+    //  Suites
+    //  ======================================================================================================
+    section.rooms-section id="suites"
+      a name="suites"
+
+      //  Suites: Studio Suite
+      //  ======================================================================================================
+      - nested_suites = @suites
+      - @suites.each_with_index do |suite, index|
+        article.panel-article.panel-article--suite id="#{suite.name.parameterize}"
+          .panel.panel--rooms
+            - if index === 0
+              //  Suites Fixed Header
+              //  ======================================================================================================
+              .room-suite-header.suite-header.js-suites-header.js-menu.is-desktop-visible
+                button.room-suite-header__suite-btn.type--a2.type--gold.type--title-z
+                  span.text--size-85.text--space-before S
+                  span.text--spacing-50 u
+                  span.text--spacing-20 i
+                  span.text--spacing-70 t
+                  span.text--spacing-50 e
+                  span.text--spacing70 s
+                  i.icon.icon-down-arrow.type--gold
+
+                ul.list--simple.room-suite-header__list
+                  - nested_suites.each do |ste|
+                    li.list--simple__item
+                      = link_to rooms_path(anchor: ste.name.parameterize), { class: 'list--simple__item__link type--b3 type--brown-dark type--uppercase js-smooth-scroll' } do |link|
+                        span= ste.name
+
+            .panel-block--66w.panel-block--zoom.panel-block--trigger.js-modal-trigger data-js-gallery="#{suite.id}"
+              .panel-bkgd--rooms-img.panel-block--zoom__item.panel-bkgd--rooms-bkgd style="background: url(#{suite.room_images.first.image.remote_url}) center center no-repeat; background-size: cover;"
+
+            .panel-block--40w.bkgd--brown-dark
+              .panel-content.panel-content--rooms.waterfall.js-waterfall
+                h3.waterfall__item.waterfall__item--in-up.type--b1.type--center--mobile= suite.name.split(" ").join(" <br class='is-desktop-visible'>").html_safe
+                .waterfall__item.waterfall__item--in-up.type--center--mobile = suite.description.html_safe
+                ul.waterfall__item.waterfall__item--in-up.list--inline.list--inline--center-mobile.link--eggshell
+                  li.list--inline__item__room-link
+                    button.panel__view-btn.waterfall__item.waterfall__item--in-up.link--eggshell.type--b6.js-modal-trigger data-js-gallery="#{suite.id}" type="button" View Gallery
+
+                  - if suite.room_floor_plans.present?
+                    li.list--inline__item__room-link
+                      span.type--b6.type--uppercase &#124;
+                    li.list--inline__item__room-link
+                      button.panel__view-btn.waterfall__item.waterfall__item--in-up.link--eggshell.type--b6.js-modal-trigger data-js-gallery="#{suite.id}" data-js-gallery-type="room_floor_plans" type="button" View Floor Plan
+
+                  - floorplan_url = suites_floorplans[suite.name.parameterize.underscore.to_sym]
+                  - if floorplan_url.present?
+                    li.list--inline__item__room-link
+                      span.type--b6.type--uppercase &#124;
+                    li.list--inline__item__room-link
+                      button.panel__view-btn.waterfall__item.waterfall__item--in-up.link--eggshell.type--b6.js-modal-floorplan-trigger data-js-floorplan-url="#{floorplan_url}" type="button" View 3-D Tour
+                = link_to "#{booking_link}#{codes[suite.name.parameterize.underscore.to_sym]}", { class: 'waterfall__item waterfall__item--in-up btn--solid-border js-ga--room-book', target: "_blank", data: { 'js-ga-label': suite.name } } do |link|
+                  span.type--b6.type--uppercase Book Now
+
+              button.panel-bottom.link--gold.type--b6.js-view-amenities
+                i.icon.icon-left-arrow.is-desktop-visible
+                i.icon.icon-plus.is-desktop-hidden
+                span View All Amenities
+
+            .panel-sidebar.js-amenities-panel
+              h3.panel-sidebar__title.type--b6.type--uppercase.type--brown-dark All Amenities
+              button.panel-sidebar__close.icon.icon-x.type--brown-dark.js-amenities-close.is-desktop-visible
+              ul.redactor-list.type--b7.type--brown-dark
+                = suite.amenities.html_safe
+
+    //  Offer Grid
+    //  ======================================================================================================
+
+    section.panel-article.page-grid.page-grid--offers-module.page-grid--offers-module--no-featured id="offers"
+      - @offers.each do |offer|
+        = render "shared/offer", offer: offer
+  section.panel-article
+    .page-offers--link
+      .view-all--link
+        = link_to offers_path, { class: 'link--gold' } do |link|
+          span.offers--padding.type--b6.type--gold View All Offers
+          i.icon.icon-right-arrow
+
+    // Include footer
+    = render "shared/footer"
+
+// Include gallery & floorplan modals
+= render "shared/gallery_modal"
+= render "shared/floorplan_modal"

@@ -1,0 +1,24 @@
+Applications/
+Creative Cloud Files/
+Desktop/
+Downloads/
+Library/
+_Batch_Saves/
+canvas/
+personal/
+config_files/
+install.sh
+
+.*
+
+!.git-completion.bash
+!/.vim
+!/.atom
+!.bash_profile
+!.bashrc
+!.customgitmsg.txt
+!.gitconfig
+!.profile
+!.tmux.conf
+!.vimrc
+!com.googlecode.iterm2.plist

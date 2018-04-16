@@ -1,0 +1,496 @@
+//  ======================================================================================================
+//
+//  News Vertical
+//
+//  ======================================================================================================
+- body_class 'news'
+- title 'Dataminr for News'
+- meta_tag :description, 'Dataminr for News delivers the earliest tips for breaking news, off-the-radar content, and pre-viral stories directly into journalists\' workflow.'
+
+main.main.bkgd--white
+  //  Header
+  //  ======================================================================================================
+  header.header.header--primary.header--primary--hero.header--primary--overflow-hidden.bkgd--data-pattern-dark
+    .content-contain.content-contain--desktop-only.see-how-header.js-see-how-header
+      .header--primary-group.see-how-original.js-header-group
+        .header--primary__interior
+          h1.header--primary__interior__title.type--a2.type--white News
+          p.header--primary__interior__intro.type--e3.type--white Journalists in more than 400 newsrooms around the world rely on Dataminr to deliver the earliest tips to breaking news and pre-viral stories into their workflow.
+          btn.header--primary__interior__btn.btn.btn--secondary.btn--center.btn--mobile-full-width.js-see-how-button.gtm-see-how data-js-ga-label="News"
+            span.type--d5.type--white See How
+
+        .headline-carousel-group
+          h2.headline-carousel-group__title.type--a5.type--white.type--center Recent Alerts
+          .headline-carousel.js-headline-carousel.owl-carousel
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+            .headline__slide.bkgd--blue-dark
+
+      // See How
+      = render 'shared/vertical-see-how/vertical-see-how'
+
+    .see-how-bg.js-header-group
+      = image_tag('globe--faded-crop.png', class: 'header--primary__globe-static is-visible-desktop', alt: 'Globe')
+      = image_tag('globe--half-with-glow.png', class: 'header--primary__globe-static is-hidden--mobile-desktop', alt: 'Globe')
+
+    //  Latest From Dataminr
+    //  ======================================================================================================
+    = render 'shared/details/latest'
+
+  //  Vertical Scroll Feature
+  //  ======================================================================================================
+  section.feature-group.js-features.bkgd--white
+
+    // Sidebar nav (desktop)
+    // ======================================================================================================
+    nav.feature-sidebar.js-feature-sidebar.bkgd--blue-medium.is-visible-desktop
+      btn.feature-sidebar__item.bkgd--blue-medium.js-feature-sidebar-button.is-active
+        .feature-sidebar__item__btn
+          i.icon.icon-vertical-plus.icon--small.type--blue-grey
+          span.feature-sidebar__item__btn__copy.type--e4.type--blue-grey.type--uppercase Stay Ahead of Breaking Stories
+
+        .feature__header.feature-sidebar__item__main
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Stay Ahead
+              span.type--c2.type--white of Breaking Stories
+            p.feature__header__interior__p.type--f3.type--white Get Alerted When Critical Incidents Begin
+
+      btn.feature-sidebar__item.bkgd--blue-medium.js-feature-sidebar-button
+        .feature-sidebar__item__btn
+          i.icon.icon-vertical-plus.icon--small.type--blue-grey
+          span.feature-sidebar__item__btn__copy.type--e4.type--blue-grey.type--uppercase Discover Stories Before They Trend
+
+        .feature__header.feature-sidebar__item__main
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Discover Stories
+              span.type--c2.type--white Before They Trend
+            p.feature__header__interior__p.type--f3.type--white Find Fresh Ideas Earlier
+
+      btn.feature-sidebar__item.bkgd--blue-medium.js-feature-sidebar-button
+        .feature-sidebar__item__btn
+          i.icon.icon-vertical-plus.icon--small.type--blue-grey
+          span.feature-sidebar__item__btn__copy.type--e4.type--blue-grey.type--uppercase Separate News From Noise
+
+        .feature__header.feature-sidebar__item__main
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Separate News
+              span.type--c2.type--white From Noise
+            p.feature__header__interior__p.type--f3.type--white View Alerts Directly in Workflow
+
+    // Article 1
+    // ======================================================================================================
+    article.feature.js-feature
+      header.feature__header.bkgd--blue-medium.is-hidden-desktop
+        .content-contain
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Stay Ahead
+              span.type--c2.type--white of Breaking Stories
+            p.type--f3.type--white Get Alerted When Critical Incidents Begin
+
+      // Article 1: Case Study
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Case Study: #{@vertical_studies[0].name}
+            h3.type--c4.type--blue-dark = @vertical_studies[0].headline
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = shrine_image_set_tag(@vertical_studies[0].image, sizes: [:xs, :sm, :md, :lg, :xl], alt: '')
+
+          .feature__content__main
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey = @vertical_studies[0].description
+            - if @vertical_studies[0].case_study_url.present?
+              = link_to "/#{@vertical_studies[0].case_study_url}", { target: '_blank', class: 'btn btn--mobile-full-width' } do |link|
+                span.type--d5.type--white See full case study
+
+      // Article 1: Features
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Features
+            h3.type--c4.type--blue-dark Find the Story Sooner
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--laptop
+            = local_image_tag('solutions/news/news--01-features', 'png', ['320', '580', '768', '1024', '1272'], sizes: '100vw', class: 'img--full-width')
+
+          .feature__content__main
+            h4.type--e2.type--blue-grey Get critical details from sources on the ground.
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey The ability to process all public Tweets in real time enables Dataminr to discover and deliver the earliest alerts about sports, politics, and other compelling stories. Early alerts give journalists a head start on covering the stories that matter most to their audience, from science and technology to entertainment and fashion.
+
+      // Article 1: From Our Customers
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 From Our Customers
+            h3.type--c4.type--blue-dark Drive Speed and Efficiency
+            hr.hr.hr--thin.bkgd--grey-light
+
+          .feature__content__main
+            blockquote.blockquote.blockquote--big
+              p.type--f2.type--blue-grey Dataminr acts as a really fast, really important tip sheet for us. It's an essential tool that helps us make sense of half a billion Tweets a day, filtering what’s very likely to be important to our newsroom.
+              cite.blockquote__cite
+                / = local_image_tag('client-logos/logo--radio-france', 'png', ['40', '60'], sizes: '20vw', class: 'blockquote__cite__logo blockquote__cite__logo--max-50 type--inline-block', alt: 'Radio France logo')
+                p.blockquote__cite__p.type--d7.type--inline-block.type--blue-grey Mary Nahorniak, Deputy Managing Editor of Digital, USA TODAY
+
+    // Article 2
+    // ======================================================================================================
+    article.feature.js-feature.bkgd--data-background
+      header.feature__header.bkgd--blue-medium.is-hidden-desktop
+        .content-contain
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Discover Stories
+              span.type--c2.type--white Before They Trend
+            p.type--f3.type--white Find Fresh Ideas Earlier
+
+      // Article 2: Case Study
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Case Study: #{@vertical_studies[1].name}
+            h3.type--c4.type--blue-dark = @vertical_studies[1].headline
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = shrine_image_set_tag(@vertical_studies[1].image, sizes: [:xs, :sm, :md, :lg, :xl], alt: '')
+
+          .feature__content__main
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey = @vertical_studies[1].description
+            - if @vertical_studies[1].case_study_url.present?
+              = link_to "/#{@vertical_studies[1].case_study_url}", { target: '_blank', class: 'btn btn--mobile-full-width' } do |link|
+                span.type--d5.type--white See full case study
+
+      // Article 2: Features
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Features
+            h3.type--c4.type--blue-dark Maintain Your Head Start
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = local_image_tag('solutions/news/news--02-features', 'png', ['250', '320', '580', '768', '1024', '1280', '1400'], sizes: '(min-width: 768px) 50vw, 100vw', class: 'img--full-width')
+
+          .feature__content__main
+            h4.type--e2.type--blue-grey Stay in front of fast-moving events.
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey With a single click, the Track Story feature enables reporters and editors to receive emerging details as breaking news unfolds. Automatic real-time updates help newsrooms maintain an edge on pre-viral stories and alert readers as changes happen.
+
+      // Article 2: From Our Customers
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 From Our Customers
+            h3.type--c4.type--blue-dark Drive Insightful Reporting
+            hr.hr.hr--thin.bkgd--grey-light
+
+          .feature__content__main
+            blockquote.blockquote.blockquote--big
+              p.type--f2.type--blue-grey Dataminr has alerted us to a number of major news events ahead of other sources, including the bombing of the Brussels airport and the 14 July Nice attack. Enabling us to start our newsgathering process earlier allows us to focus on the best ways to tell the story.
+              cite.blockquote__cite
+                p.blockquote__cite__p.type--d7.type--inline-block.type--blue-grey Laurent Frisch, Head of Digital, Radio France
+
+    // Article 3
+    // ======================================================================================================
+    article.feature.js-feature
+      header.feature__header.bkgd--blue-medium.is-hidden-desktop
+        .content-contain
+          .feature__header__interior
+            h2.feature__header__interior__title.type--uppercase
+              span> class="type--a2 type--white type--block" Separate News
+              span.type--c2.type--white From Noise
+            p.type--f3.type--white View Alerts Directly in Workflow
+
+      // Article 3: Case Study
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Case Study: #{@vertical_studies[2].name}
+            h3.type--c4.type--blue-dark = @vertical_studies[2].headline
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--16-9
+            = shrine_image_set_tag(@vertical_studies[2].image, sizes: [:xs, :sm, :md, :lg, :xl], alt: '')
+
+          .feature__content__main
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey = @vertical_studies[2].description
+            - if @vertical_studies[2].case_study_url.present?
+              = link_to "/#{@vertical_studies[2].case_study_url}", { target: '_blank', class: 'btn btn--mobile-full-width' } do |link|
+                span.type--d5.type--white See full case study
+
+      // Article 3: Features
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 Features
+            h3.type--c4.type--blue-dark Receive Alerts Seamlessly
+            hr.hr.hr--thin.bkgd--grey-light
+
+          figure.feature__content__figure.feature__content__figure--desktop
+            = local_image_tag('solutions/news/news--03-features', 'png', ['320', '580', '768', '1024', '1272'], sizes: '100vw', class: 'img--full-width')
+
+          .feature__content__main
+            h4.type--e2.type--blue-grey Alerts arrive directly within trusted tools.
+            hr.hr.hr--left.hr--30.bkgd--blue-grey
+            p.feature__content__p.type--e4.type--blue-grey Fast-paced newsrooms depend on efficient workflow that supports timely, informed editorial decisions. Dataminr offers flexible delivery, so journalists can receive alerts seamlessly through a web-based dashboard, email, mobile app, Slack, TweetDeck or API integration.
+
+      // Article 3: From Our Customers
+      section.feature__content.section
+        .content-contain
+          .feature__content__intro
+            hr.hr.hr--thin.hr--no-margin-top.bkgd--grey-light
+            p.type--d7.type--blue-grey--50 From Our Customers
+            h3.type--c4.type--blue-dark Designed for Collaboration
+            hr.hr.hr--thin.bkgd--grey-light
+
+          .feature__content__main
+            blockquote.blockquote.blockquote--big
+              p.type--f2.type--blue-grey Dataminr’s Slack integration is indispensable for us at The Huffington Post. We’ve created channels for different news events and coverage areas, and are able to discuss alerts as they flow in. It’s a great way to collaborate in real time with HuffPost’s hundreds of journalists around the world.
+              cite.blockquote__cite
+                p.blockquote__cite__p.type--d7.type--inline-block.type--blue-grey Ethan Klapper, Global Social Media Editor at The Huffington Post
+
+  //  Designed For
+  //  ======================================================================================================
+  / section.section.bkgd--data-pattern.js-feature-next-module
+  /   header.header--primary.header--primary--is-in-front
+  /     .content-contain
+  /       .header--primary__interior
+  /         h2.type--b1.type--blue-dark Designed for News
+  /
+  /   //  Horizontal Drawers
+  /   //  ======================================================================================================
+  /   .horizontal-tabs.content-contain
+  /
+  /     // Tabs for desktop
+  /     // ======================
+  /     .is-visible-desktop
+  /       .horizontal-tab-activation
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--difference"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--experience"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--scope"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--capabilities"
+  /       .horizontal-tab-content__group.js-horizontal-content-group
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--difference"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--experience"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--scope"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--capabilities"
+  /
+  /     // Tabs for mobile
+  /     // ======================
+  /     .is-hidden-desktop
+  /       // The Difference
+  /       // ======================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--difference"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--difference"
+  /
+  /       // The Experience
+  /       // ===================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--experience"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--experience"
+  /
+  /       // The Scope
+  /       // ===================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--scope"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--scope"
+  /
+  /       // The Capabilities
+  /       // ===================
+  /       .horizontal-tab__group
+  /         = render "shared/vertical-tabs/news/horizontal-tab-button--capabilities"
+  /         = render "shared/vertical-tabs/news/horizontal-tab-content--capabilities"
+
+  //  Logos
+  //  ======================================================================================================
+  // NOTE: When added other sections back in, change bkgd of this section back to bkgd--white
+  section.section.section--logos.section--logos--padding-btm.bkgd--data-pattern.js-feature-next-module
+    // Technology
+    article.content-contain.content-contain--960-with-margins.content-contain--padding-top-30
+      header.header__hr-title-group.type--center
+        h3.header__hr-title.type--d5.type--blue-dark.type--inline-block Dataminr technology is trusted by
+
+      ul.section-logos.section-logos--tight
+        li.section-logos__item
+          = local_image_tag('client-logos/logo--cnn', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'CNN logo')
+        li.section-logos__item
+          = local_image_tag('client-logos/logo--the-telegraph', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'The Telegraph logo')
+        li.section-logos__item
+          = local_image_tag('client-logos/logo--franceinfo', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'Franceinfo logo')
+        li.section-logos__item
+          = local_image_tag('client-logos/logo--the-sun', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'Aljazeera logo')
+        li.section-logos__item
+          = local_image_tag('client-logos/logo--mashable', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'Mashable logo')
+        li.section-logos__item
+          = local_image_tag('client-logos/logo--now-this', 'png', ['140', '280'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img section-logos__item__img--now-this', alt: 'Now This logo')
+
+    .content-contain.content-contain--960-with-margins
+      hr.hr.hr--thick.hr--full-width.bkgd--blue-medium.section-logos-hr
+
+    // Partnerships
+    article.content-contain.content-contain--960-with-margins
+      header.header__hr-title-group.type--center
+        h3.header__hr-title.type--d5.type--blue-dark.type--inline-block Partnerships
+
+      .section-logos-wrap
+        ul.section-logos.section-logos--max-60
+          li.section-logos__item
+            = local_image_tag('client-logos/logo--cnn', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'CNN logo')
+          li.section-logos__item
+            = local_image_tag('client-logos/logo--slack', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'Slack logo')
+          li.section-logos__item
+            = local_image_tag('client-logos/logo--first-draft', 'png', ['180', '320'], sizes: '(min-width: 1024px) 20vw, (min-width: 768px) 25vw, 33vw', class: 'section-logos__item__img', alt: 'First Draft logo')
+
+        = link_to 'http://info.dataminr.com/partnerships', { target: '_blank', class: 'btn btn--300-max-width btn--center' } do |link|
+          span.type--block.type--d5.type--white Become a partner
+
+  //  Contact Us
+  //  ======================================================================================================
+  // NOTE: When adding Designed For back in, remove js-feature-next-module class below
+  section.section.bkgd--contact-us--news.js-feature-next-module
+    .content-contain
+      .section-center.type--center
+        .section-center__interior.bkgd--white
+          h2.section-center__title
+            span> class="type--c4 type--blue-medium-new type--uppercase" Contact
+            span.type--b1--alternate.type--blue-medium.type--uppercase Us
+          p.type--f4.type--blue-grey Learn more about our technology and how you can stay one step ahead as events unfold.
+        button.btn.btn--full-width.js-open-modal.gtm-click data-modal="modal-request-info" data-js-ga-label="News Contact Module"
+          span.type--d5.type--white Request more info
+          i.icon.icon--small.icon--after.icon-global-link-arrow.type--white
+
+  //  Workflow Integration
+  //  ======================================================================================================
+  / section.section.section--more-padding.bkgd--data-pattern
+  /   header.header--primary
+  /     .content-contain
+  /       .header--primary__interior
+  /         h2.header--primary__interior__title.type--b1.type--blue-dark Workflow Integration
+  /         p.header--primary__interior__intro.type--e3.type--blue-grey Dataminr for News is designed for flexible delivery, so alerts always appear exactly where you need them.
+  /
+  /   .content-contain
+  /     .content-box
+  /       hr.hr.hr--full-width.hr--thick.hr--no-margins.bkgd--blue-medium
+  /       header.content-box__header.bkgd--data-background
+  /         h3.type--b4.type--center Choose Your Channel
+  /
+  /       .content-box__items.content-box__items--two-three
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-mobile.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium Mobile
+  /             p.type--e7.type--blue-grey Download our mobile app for iOS or Android.
+  /
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-features-tweetdeck-integration.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium TweetDeck
+  /             p.type--e7.type--blue-grey View alerts in the TweetDeck dashboard.
+  /
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-email.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium Email
+  /             p.type--e7.type--blue-grey Receive notifications in your inbox.
+  /
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-slack.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium Slack App
+  /             p.type--e7.type--blue-grey Our integration delivers alerts into a dedicated Slack channel.
+  /
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-notification.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium Desktop
+  /             p.type--e7.type--blue-grey See pop-up alerts in the tools you already use.
+  /
+  /         .content-box__item.bkgd--white.type--center
+  /           .content-box__item__interior.content-box__item__interior--padded
+  /             i.content-box__item__icon.icon.icon--xl.icon-api.type--blue-bright
+  /             h4.content-box__item__title.type--d8.type--blue-medium API
+  /             p.type--e7.type--blue-grey Integrate with proprietary applications.
+
+  //  More Resources
+  //  ======================================================================================================
+  = render 'shared/details/resources', resources: @featured_content[2..5]
+
+  //  ======================================================================================================
+  //  FAQ
+  //  ======================================================================================================
+  / hr.hr--thin.hr--full-width.hr--no-margins.bkgd--blue-grey--15
+  / section.bkgd--white
+  /   .bkgd--data-background--50
+  /     header.header--primary
+  /       .content-contain
+  /         .header--primary__interior.header--primary__interior--tight
+  /           h2.type--b2.type--blue-dark Frequently Asked Questions
+  /
+  /     .content-contain
+  /       dl.faq
+  /         .faq-column
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium What makes Dataminr unique?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft Our platform is the only one of its kind with access to all publicly available Tweets in real time and the algorithmic innovation required to analyze all 500 million daily Tweets.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium How is the Dataminr for News platform sold?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft Dataminr for News is sold on an enterprise-wide basis, enabling journalists and media professionals across the newsroom to receive personalized alerts.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium How are Dataminr alerts personalized?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft During account setup, users select the topics and regions they cover, the frequency of alerts, and their preferred channels for delivery.
+  /
+  /         .faq-column
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium How do journalists receive alerts?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft While some users prefer our web-based dashboard, others like to receive alerts directly in their workflow. Delivery options include email, mobile push notifications via iOS and Android apps, Slack, TweetDeck and the News API. Dataminr for News is a platform partner of Slack Enterprise Grid, and the only third-party solution provider to natively integrate with TweetDeck.
+  /
+  /           .faq-group
+  /             dt.js-faq
+  /               i.faq-group__icon.is-visible-mobile--inline-block
+  /                 .faq-group__icon__one
+  /                 .faq-group__icon__two
+  /               span.faq-group__question.type--d4.type--blue-medium Does Dataminr for News translate Tweets?
+  /             dd.type--e6.type--blue-grey.is-hidden-mobile--soft By default, the platform translates Tweets from any Twitter-supported language into English. An individual user who speaks other languages can opt out of default translation in settings.
+
+//  Footer
+//  ======================================================================================================
+= render "shared/footer/footer"

@@ -1,0 +1,116 @@
+/! ---------------------------------------------------------------------------!
+/!   Site Designed and Developed by CANVAS United - http://canvasunited.com   !
+/! ---------------------------------------------------------------------------!
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    meta name="description" content="#{yield_meta_tag(:description, 'Ward Village is Hololulu\'s newest contemporary village: a cosmopolitan setting embracing Hawaiian culture with the perfect mix of urban and island living.')}"
+
+    meta name="twitter:card" content="#{yield_meta_tag(:twittercard, 'summary_large_image')}"
+    meta name='twitter:player' content="#{yield_meta_tag(:twitterplayer)}"
+    meta name='twitter:player:width' content="#{yield_meta_tag(:twitterplayerwidth)}"
+    meta name='twitter:player:height' content="#{yield_meta_tag(:twitterplayerheight)}"
+    meta name="twitter:site" content="#{yield_meta_tag(:twittersite, '@wardvillage')}"
+    meta name="twitter:description" content="#{yield_meta_tag(:description, 'Ward Village is Hololulu\'s newest contemporary village: a cosmopolitan setting embracing Hawaiian culture with the perfect mix of urban and island living.')}"
+    meta name="twitter:title" content="#{yield_title_tag} | Ward Village"
+    meta name="twitter:image" content="#{yield_meta_tag(:ogimage, "#{request.protocol}#{request.host_with_port}#{request.fullpath}og-image.jpg")}"
+
+    meta property="og:url" content="#{yield_meta_tag(:ogurl, "#{request.protocol}#{request.host_with_port}#{request.fullpath}")}"
+    meta property="og:type" content="#{yield_meta_tag(:ogtype, 'website')}"
+    meta property="og:title" content="#{yield_title_tag} | Ward Village"
+    meta property="og:description" content="#{yield_meta_tag(:description, 'Ward Village is Hololulu\'s newest contemporary village: a cosmopolitan setting embracing Hawaiian culture with the perfect mix of urban and island living.')}"
+    meta property="og:image" content="#{yield_meta_tag(:ogimage, "#{request.protocol}#{request.host_with_port}#{request.fullpath}og-image.jpg")}"
+
+    link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png"
+    link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png"
+    link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png"
+    link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png"
+    link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png"
+    link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png"
+    link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png"
+    link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png"
+    link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196"
+    link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"
+    link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"
+    link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"
+    link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128"
+    meta name="application-name" content="Ward Village"
+    meta name="msapplication-TileColor" content="#FFFFFF"
+    meta name="msapplication-TileImage" content="/mstile-144x144.png"
+    meta name="msapplication-square70x70logo" content="/mstile-70x70.png"
+    meta name="msapplication-square150x150logo" content="/mstile-150x150.png"
+    meta name="msapplication-wide310x150logo" content="/mstile-310x150.png"
+    meta name="msapplication-square310x310logo" content="/mstile-310x310.png"
+    - if "#{controller_name}_#{action_name}" == 'homepages_index'
+      meta name="google-site-verification" content="jhSJIpNllwuCUn4N9wSCFrAPkNLte8jnGz5MbkHY0Iw"
+      meta name="msvalidate.01" content="60A3110C7BBC6E03DB769431E9C80086"
+    title
+      - if content_for?(:title)
+        = yield(:title) + ' | Ward Village'
+      - else
+        | Ward Village
+    = stylesheet_link_tag "https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css"
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+    = csrf_meta_tags
+
+    javascript:
+      window._sdi = window._sdi || {};
+      window._sdi.salesforceData = '';
+      window.hashed_email = '';
+
+    - if Rails.env.production?
+      = javascript_include_tag "//assets.adobedtm.com/e029b2bac37185abb9184b3305a2e84d3b470d2d/satelliteLib-deab71e8f4fe4b3abcb1ce0c2355c176677cf8d8.js", 'data-turbolinks-eval' => 'always'
+    - else
+      = javascript_include_tag "//assets.adobedtm.com/e029b2bac37185abb9184b3305a2e84d3b470d2d/satelliteLib-deab71e8f4fe4b3abcb1ce0c2355c176677cf8d8-staging.js", 'data-turbolinks-eval' => 'always'
+
+    = render "shared/ga/ga"
+
+  body data-js-router="#{front_end_body_class}" class="#{locale.to_s}"
+    - if front_end_body_class == 'marketing_pages_show'
+      = yield
+    - else
+      = render "shared/menu/menu_mobile"
+      = render "shared/menu/menu"
+      .page-wrapper
+        = yield
+        - unless controller_name == 'maps' && action_name == 'index'
+          = render "shared/footer/newsletter_signup"
+          = render "shared/footer/footer"
+
+      = render "shared/register/register_modal"
+
+    script src="https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js"
+
+    / Google reCAPTCHA tag
+    = javascript_include_tag "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", 'data-turbolinks-track' => true, 'async'=>"", 'defer'=>""
+    = render "shared/ga/recaptcha"
+
+    javascript:
+      _satellite.pageBottom();
+    javascript:
+      (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var
+      o={ti:"5439103"};o.q=w[u],w[u]=new
+      UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var
+      s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    noscript
+        img src="//bat.bing.com/action/0?ti=5439103&Ver=2" height="0" width="0" style="display:none; visibility: hidden;"
+
+    / Facebook tracking pixel
+    /! Facebook Pixel Code
+    javascript:
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function()
+
+      {n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+      ;if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1782744981994026');
+
+    noscript
+      img height="1" src="https://www.facebook.com/tr?id=1782744981994026&ev=PageView&noscript=1" style="display:none" width="1" /

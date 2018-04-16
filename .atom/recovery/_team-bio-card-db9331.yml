@@ -1,0 +1,73 @@
+team_bios:
+  -
+    name: Ben Midgley
+    image: team-bios/midgely
+    title: CEO, Crunch Franchise
+    description:
+      - Ben was previously the EVP & President at Planet Fitness and held senior roles at 24 Hour Fitness. With over 25 years of industry experience, Ben is a Founding Partner of the franchise company.
+  -
+    name: Craig Pepin-Donat
+    image: team-bios/pepin-donat
+    title: EVP, Crunch Franchise
+    description:
+      - "Craig overseas all club operations for the Franchise Company. He was formerly President of New York Health and Racquet Club and EVP of Sales and Marketing for 24 Hour Fitness. Craig is also a Founding Partner of the franchise company."
+  -
+    name: Chad C. Waetzig
+    image: team-bios/waetzig
+    title: EVP, Marketing & Branding
+    description:
+      - "Chad leads Crunch’s marketing since 2016. Previously, he was Chief Marketing Officer at The Red Door by Elizabeth Arden. Chad has diverse marketing experience with senior marketing roles at Disney, Marriott, Starwood, P&G and Blink Fitness."
+  -
+    name: Michael J. Blouin
+    image: team-bios/blouin
+    title: Senior Vice President
+    description:
+      - "Mike leads Crunch Franchise’s finance operations. He spent 20 years at Verizon before entering the industry as VP of Finance with Planet Fitness. He has also held industry positions with CYBEX International."
+  -
+    name: Brian Kunkel
+    image: team-bios/kunkel
+    title: Vice President of Real Estate
+    description:
+      - "Brian joined Crunch in 2016 to lead the brand’s Real Estate & Development team. He has prior domestic and international experience with Planet Fitness, CBRE and Trammell Crow Company."
+  -
+    name: Lauren Kanfi
+    image: team-bios/kanfi
+    title: Creative Director
+    description:
+      - "Lauren and her team develop the branding and marketing materials for Crunch. Prior to joining in 2016, she was with Gilt Groupe, Zola and branding agency, Laird + Partners."
+  -
+    name: John Merrion
+    image: team-bios/merrion
+    title: Director of Sales
+    description:
+      - "John joined Crunch in 2009 to lead club development after a strong career in operations and sales development with Nextel, T-Mobile and Cartridge World USA."
+  -
+    name: Hannah E. Karass
+    image: team-bios/karass
+    title: Director of Personal Training
+    description:
+      - "With over 34 years in the fitness industry, Hannah joined Crunch in 2017 to lead the brand's Personal Training growth and development along with her team. Previously she has had leadership roles with Curves International, Jenny Craig and Healthworks Fitness Centers."
+  -
+    name: Jennifer Renfroe
+    image: team-bios/renfroe
+    title: Director of Group Fitness
+    description:
+      - "With more than 20 years of industry experience, and more than half with Crunch, Jen leads Crunch Franchise’s group fitness programming, training and development. She is a continuing education provider for ACE and AFAA."
+  -
+    name: Kate Weis
+    image: team-bios/weis
+    title: Marketing Director
+    description:
+      - "Kate joined Crunch in 2017 to lead franchise marketing after roles with Time Inc., Castrol Premium Lube Express, and ad agency powerhouses Saatchi & Saatchi and Ogilvy."
+  -
+    name: Brent Saul
+    image: team-bios/saul
+    title: Vice President of Construction
+    description:
+      - "Brent Saul joins Crunch Franchise with over 25 years’ experience in the commercial retail construction industry. He has lead the construction/retail development departments for companies such as GUESS Jeans and Liz Claiborne."
+  -
+    name: Brent Saul
+    image: team-bios/saul
+    title: Vice President of Construction
+    description:
+      - "Brent Saul joins Crunch Franchise with over 25 years’ experience in the commercial retail construction industry. He has lead the construction/retail development departments for companies such as GUESS Jeans and Liz Claiborne."

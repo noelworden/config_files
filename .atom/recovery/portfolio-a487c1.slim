@@ -1,0 +1,61 @@
+---
+router: portfolio
+---
+- portfolio_data = contentful_data 'portfolio_page'
+- market_items = data.contentful.markets.map { |i, market| {href: "/markets/#{market.slug}", label: market.market_name} }.sort { |a, b| a[:label] <=> b[:label] }
+- market_slugs = data.contentful.markets.values.map { |m| m.slug }
+- coords_with_markets = data.portfolioPoints.porfolioMapCoords.select { |point| market_slugs.include? point.marketId }
+- page_title = portfolio_data.page_name.split(" ")
+
+= partial "partials/page_hero", locals: { hero_image: 'portfolio', thin_text: 'Our ', bold_text: 'Portfolio' }
+
+section#explore.section.section--animatable.js-animatable-section
+  .max-width
+    = partial "partials/section_heading", locals: { heading: 'Explore Our Markets' }
+    p.section--animatable__body.type--b2 We target top industrial markets that support growing population centers within the U.S. Within those markets, we buy high quality, flexible, single-tenant buildings with market-appropriate size & amenities and we manage the portfolio for stable long term tenancy and high tenant retention.
+    p.section--animatable__body.type--center
+      = link_to 'Explore Our Industrial Portfolio', '/pdfs/GPT_Industrial_Overview.pdf', class: 'type--b2 type--uppercase type--dark-blue', target: '_blank'
+
+section.bg--dark-blue
+  .section.section--portfolio-map
+    .portfolio-map
+      = image_tag("us-dots-map.svg", alt: '', class: 'portfolio-map__img')
+      .portfolio-map__points.js-portfolio-map
+        - coords_with_markets.each do |point|
+          - market = data.contentful.markets.values.find {|val| val.slug == point.marketId }
+          - market_stats = [{type: 'Industrial', footage: market.industrial_square_feet}, {type: 'Office', footage: market.office_square_feet}, {type: 'Specialty', footage: market.specialty_square_feet}]
+          - has_region_state = market.region_state && market.region_state.length > 0
+          = link_to "/markets/#{point.marketId}", class: "portfolio-map-point js-map-tooltip-point js-ga-click", style: "top:#{point.top}%;left:#{point.left}%;", data: { jsCategory: 'Map', jsLabel: market.market_name } do |link|
+            .portfolio-map-point__inner.js-map-tooltip-point-inner
+            .map-tooltip.is-visible-md
+              .map-tooltip__bridge
+              .map-tooltip__inner.js-map-tooltip
+                h3.map-tooltip__hd.type--dark-blue
+                  span.type--c3 = "#{market.market_name}#{has_region_state ? ',' : ''}"
+                  - if has_region_state
+                    span.type--a2< = market.region_state
+                .map-tooltip__inner__body
+                  - market_stats.each do |stat|
+                    - if stat[:footage] > 0
+                      .map-tooltip-stat.type--gpt-blue
+                        span.map-tooltip-stat__type.type--b4 = stat[:type]
+                        span.map-tooltip-stat__value
+                          span.type--c7 = round_millions(stat[:footage])
+                          span.type--a4 SQ FT
+                  = partial "partials/btn", locals: { type: 'button', klass: 'type--b8 map-tooltip__inner__body__link', text: 'Learn More' }
+
+  .section.bg--gpt-blue--20.market-select
+    p.type--b2.type--white.type--center.market-select__label
+      | Preview our markets on the map above.
+      br
+      | Or select a market from the drop down to learn more about a specific region.
+    = partial "partials/list_dropdown", locals: { label: 'Select a Market', items: market_items, klass: 'js-market-dropdown market-select__dropdown' }
+
+section#featured-properties.section.section--cards
+  .max-width.max-width--full-width
+    = partial "partials/section_heading", locals: { heading: 'Featured Properties' }
+    .card-list
+      - portfolio_data.featured_properties.each do |property|
+        = partial "partials/card", locals: { card_type: 'location', with_border: true, label: property.property_type, title_1: property.property_name, title_2: property.city_state, img: property.image, sq_feet: property.rentable_square_feet, acquisition: property.acquisition, occupancy: property.occupancy }
+
+= partial "partials/footer"

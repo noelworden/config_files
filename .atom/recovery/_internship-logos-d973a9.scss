@@ -1,0 +1,73 @@
+//  ==========================================================================
+//
+//  Internship Logo Block
+//
+//  ==========================================================================
+.list-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+
+  @include breakpoint(md) { margin-top: 50px; }
+  @include breakpoint(lg) { margin-top: 58px; }
+  @include breakpoint(xl) { margin-top: 35px; }
+}
+
+.list-logos__item {
+  margin: 0 5px 5px 5px;
+  width: calc(33.333% - 10px);
+
+  &:nth-last-child(2),
+  &:last-of-type { margin-bottom: 0; }
+}
+
+.list-logos__item__link {
+  margin: 0 auto;
+  position: relative;
+
+  @include breakpoint(sm) { max-width: 150px; }
+  @include breakpoint(lg) { max-width: 135px; }
+  @include breakpoint(xl) { max-width: 175px; }
+
+  &:hover {
+    .list-logos__item__link__logo-white { opacity: 1; }
+  }
+
+  &--canvas {
+    margin: 0 auto;
+    max-width: 80%;
+
+    @include breakpoint(sm) {
+      max-width: 122px;
+      width: 82%;
+    }
+
+    @include breakpoint(lg) { max-width: 110px; }
+    @include breakpoint(xl) { max-width: 142px; }
+  }
+}
+
+.list-logos__item__link__logo-white {
+  display: block;
+  height: 100%;
+  height: auto;
+  left: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: $default-animation;
+  width: auto;
+}
+
+.list-logos__item__link__logo-gradient {
+  border: 0;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}

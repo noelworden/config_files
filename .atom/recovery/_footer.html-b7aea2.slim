@@ -1,0 +1,77 @@
+//  ==========================================================================
+//
+//  Footer include
+//
+//  ==========================================================================
+footer.footer.bkgd--brown-footer.is-desktop-visible
+  .footer-group
+    .footer-block
+      .footer-block__unit
+        h2.type--b13 The Beekman
+        = link_to 'https://goo.gl/maps/Xg9mzAAHRqG2', { target: '_blank', class: 'link type--b6 type--eggshell type--inline-block' }
+          | 123 Nassau Street
+          br
+          | New York, NY 10038
+          br
+          | 212.233.2300
+
+      .footer-block__unit
+        h2.type--b13 Reservations
+        p.type--b6
+          = link_to 'BeekmanReservations@ThompsonHotels.com', 'mailto:BeekmanReservations@ThompsonHotels.com', { class: 'link type--b6 type--eggshell type--block' }
+          span.type--block 1.855.5Beekman
+
+      .footer-block__unit
+        h2.type--b13 General sales &amp; event inquiries
+        p
+          = link_to 'BeekmanSales@ThompsonHotels.com', 'mailto:beekmansales@thompsonhotels.com', { class: 'link type--b6 type--eggshell' }
+
+    .footer-block
+      .footer-block__unit
+        h2.type--b13 Sign Up for Exclusive Offers
+      .footer-block__unit
+        form.footer-block__signup.js-newsletter-signup method="post"
+          .form-field--reverse
+            input.form-field--input.type--b12 id="email" type="email" name="email"
+            label.form-field--label.type--d2.type--gold for="email" Email:
+          button.form-field--submit.btn--empty type="submit"
+            span.type--b6.type--uppercase Sign Up
+      .footer-block__unit
+        p.news-margin
+          = link_to '/press', { class: "link--eggshell type--b13 type--uppercase" }
+            | Beekman In The News
+            i.icon.icon--after.icon-right-arrow
+
+    .footer-block
+      .footer-block__unit.footer-block__unit--split.footer-block__unit--top-adjust
+        h2.footer-block__unit__left.type--b13 Follow Us
+        ul.footer-block__unit__right.list--inline.type--center
+          li.list--inline__item
+            = link_to 'https://www.instagram.com/thebeekmanny/', { class: 'list--inline__item__link link--gold-light', target: '_blank' } do |link|
+              i.icon.icon-instagram.type--gold
+          li.list--inline__item
+            = link_to 'https://twitter.com/thebeekmanhotel', { class: 'list--inline__item__link link--gold-light', target: '_blank' } do |link|
+              i.icon.icon-twitter.type--gold
+          li.list--inline__item
+            = link_to 'https://www.facebook.com/The-Beekman-Hotel-Residences-161474093878515/', { class: 'list--inline__item__link link--gold-light', target: '_blank' } do |link|
+              i.icon.icon-facebook.type--gold
+          li.list--inline__item
+            = link_to 'https://www.tripadvisor.com/Hotel_Review-g60763-d8615610-Reviews-The_Beekman_A_Thompson_Hotel-New_York_City_New_York.html', { class: 'list--inline__item__link link--gold-light', target: '_blank' } do |link|
+              i.icon.icon-tripadvisor.type-icon-sm.type--gold
+
+      .footer-block__unit
+        h2.type--b13 More
+        ul.list--simple
+          li.list--simple__item
+            = link_to 'Residences', 'http://residences.thebeekman.com/', { target: '_blank', class: 'list--simple__item__link link type--b7 type--gray' }
+          li.list--simple__item
+            = link_to 'FAQ', faq_path, { target: @target_variable, class: "list--simple__item__link link type--b7 type--gray #{'is-active' if current_page?('/faq')}", target: nil}
+          - if @fact_sheet.present?
+            li.list--simple__item
+              = link_to 'Fact Sheet', @fact_sheet.pdf_url.remote_url, { target: '_blank', class: "list--simple__item__link link type--b7 type--gray" }
+          li.list--simple__item
+            = link_to 'Thompson Hotels Blog', 'http://blog.thompsonhotels.com/', { target: '_blank', class: 'list--simple__item__link link type--b7 type--gray' }
+          li.list--simple__item
+            = link_to 'Thompson Hotels Careers', 'http://www.tworoadshotels.com/hospitality-jobs-careers', { target: '_blank', class: 'list--simple__item__link link type--b7 type--gray' }
+          li.list--simple__item
+            = link_to 'Privacy Policy', privacy_policy_path, { target: @target_variable, class: "list--simple__item__link link type--b7 type--gray #{'is-active' if current_page?('/privacy-policy')}" }

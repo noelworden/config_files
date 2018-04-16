@@ -1,0 +1,37 @@
+//  ======================================================================================================
+//
+//  Landing Page
+//
+//  ======================================================================================================
+- meta_title = @landing_page.meta_title || @landing_page.header_title
+- title meta_title
+- meta_tag :description, @landing_page.meta_description || first_sentence(strip_tags(@landing_page.content))
+- meta_tag :ogtitle, meta_title
+
+.page-wrapper.booking-push.js-booking-push
+  main.page-main.page-main--border
+
+    //  Landing Page Content
+    //  ======================================================================================================
+    header.page-header.page-header--title.page-header--centered-landing
+      .page-header__image style="background: url(#{@landing_page.image.remote_url}) center center / cover no-repeat;"
+      .page-header--hero
+        h1.page-header--hero__header.type--a1-gold.type--center
+          - title_word_count.times do |index|
+            span.text--spacing-70 = first_letter(index)
+            - identify_letters(index).each do |letter|
+              span.text--spacing-20 = letter
+
+    .landing-main
+      h3.landing-item__info__title.waterfall__item.waterfall__item--in-up.type--b2.type--gold = @landing_page.content_title
+
+      .landing-main__content.waterfall__item.waterfall__item--in-up
+        = @landing_page.content.html_safe
+
+      - if @landing_page.button_url.present?
+        .landing-pagination.waterfall__item.waterfall__item--in-up
+          = link_to @landing_page.button_url, class: 'btn--empty', target: '_blank' do |link|
+            span.type--b6.type--uppercase = @landing_page.button_text
+            i.icon.icon--after.icon-right-arrow
+
+    = render "shared/footer"

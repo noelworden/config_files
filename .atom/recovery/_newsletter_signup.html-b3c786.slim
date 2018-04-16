@@ -1,0 +1,40 @@
+//  ==========================================================================
+//
+//  Newsletter Signup Include
+//
+//  ==========================================================================
+
+aside.newsletter-signup
+  .newsletter-signup__group.is-tablet-visible
+    .bg--palm-split.content-module__contain--no-pad
+      .newsletter-signup__section.bg--palm-split--left
+        h3.newsletter-signup__header.type--b1.type--alt= t('footer.neighborhood_updates')
+        p.p.type--c2= t('footer.neighborhood_copy')
+
+        / Begin MailChimp Signup Form
+        link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css"
+        div id="mc_embed_signup"
+        form.form action="//wardcenters.us8.list-manage.com/subscribe/post?u=7a647eabb433c20dfbade3136&amp;id=5273b1ec95" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="true"
+          div id="mc_embed_signup_scroll"
+          div.form-field--inline.type--b3.type--lowercase.mc-field-group
+          	label.form-field__input--label--placeholder for="mce-EMAIL" = t('footer.email_label')
+          	input.form-field__input--email.newsletter-signup__email--placeholder type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+          input.btn--black.type--g1 onclick="bingTrackerNewsletter();" type="submit" value==t('footer.sign_up') name="subscribe" id="mc-embedded-subscribe"
+
+          javascript:
+            function bingTrackerNewsletter(){
+              window.uetq = window.uetq || [];
+              window.uetq.push({ 'ec':'Ward Village Newsletter', 'ea':'Form submission', 'el':"Newsletter Signup", 'ev': 2 });
+            }
+
+          div id="mce-responses"
+            div class="response" id="mce-error-response" style="display:none"
+            div class="response type--h1 type--uppercase" id="mce-success-response" style="display:none"
+            div style="position: absolute; left: -5000px;" aria-hidden="true"
+              input type="text" name="b_7a647eabb433c20dfbade3136_5273b1ec95" tabindex="-1" value=""
+
+      .newsletter-signup__section.bg--palm-split--right
+        .border--left
+          h3.newsletter-signup__header.type--b1.type--alt= t('footer.residential_information')
+          p.p.type--c2.padding--bottom= t('footer.register_copy')
+          = link_to t('marketing.register'), '#', { class: 'btn--black type--g1 js-register-btn' }
