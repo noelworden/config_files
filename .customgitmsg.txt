@@ -1,13 +1,11 @@
-#--------------
-# Ticket Number
-#--------------
--------
 []
 #--------------------------------------------------
 # [ FEAT BUG CHG REFAC PERF DATA TOOL COPY DOC SPEC WIP ]
-# Do not exceed above line in commit txt length
+# Answer this question: If applied, this commit will...
 #--------------------------------------------------
-----------------------------------------
+#This is the empty space to separate the title from the body
+
+#---------------------------------------------------------------------
 
 
 #---------------------------------------------------------------------
