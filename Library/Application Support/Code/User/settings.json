@@ -1,0 +1,51 @@
+{
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Solarized Dark",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line-thin",
+    "editor.find.globalFindClipboard": true,
+    "editor.minimap.enabled": false,
+    "workbench.enableExperiments": false,
+    "javascript.format.enable": false,
+    // "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        {"language": "javascript", "autoFix": true },
+        {"language": "javascriptreact", "autoFix": true },
+        {"language": "typescript", "autoFix": true },
+        {"language": "typescriptreact", "autoFix": true }
+    ],
+    "window.zoomLevel": 0,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#582964"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    // "[javascript]": {
+    //     "editor.formatOnSave": true
+    // },
+    "editor.hover.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "extensions.ignoreRecommendations": false,
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": false,
+    // "editor.codeActionsOnSave": {
+    //     "source.fixAll.eslint": true
+    // },
+    "triggerTaskOnSave.on": false,
+    "triggerTaskOnSave.showStatusBarToggle": true,
+    "triggerTaskOnSave.showNotifications": true,
+    "triggerTaskOnSave.tasks": {
+        "formatter": [
+            "*.exs",
+            "*.ex"
+        ]
+    },
+    "editor.tabSize": 2
+
+}

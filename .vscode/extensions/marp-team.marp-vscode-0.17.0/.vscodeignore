@@ -1,0 +1,10 @@
+*
+*/**
+!node_modules/**
+!.vscodeignore
+!images/**
+!lib/*
+!CHANGELOG.md
+!LICENSE
+!README.md
+!style.css
