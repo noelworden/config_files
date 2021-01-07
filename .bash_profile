@@ -28,8 +28,14 @@ function parse_git_branch () {
 #go to blog post directory
 alias twil="cd Desktop/TWIL/"
 
+#go to AnglersAtlas project
+alias atlas="cd ~ && cd personal/atlas"
+
+#go to journal markdown gist file
+alias journal="cd ~ && cd personal/anglers_atlas_journal && code ."
+
 #go to resume markdown gist file
-alias resume="cd personal/resume && code resume.md"
+alias resume="cd ~ && cd personal/resume && code resume.md"
 
 alias jscheck="grep -Rni --include=*.tsx --include=*.ts --exclude-dir=node_modules 'console.log\|debugger' *"
 
@@ -45,75 +51,42 @@ alias resource='source ~/.bash_profile'
 eval $(thefuck --alias)
 
 #####################
-# Pineapple Payments
-
-alias ppsetup="docker-compose run --rm web mix ecto.setup"
-alias ppcreate="docker-compose run --rm web mix ecto.create"
-alias ppreset="docker-compose run --rm web mix ecto.reset"
-alias ppaws="bash ~/pineapple-aws.sh"
-alias ppclean="docker run --rm -it -v \"$PWD:/source_files\" finance-clean bash -ic \'/source_files/clean-source-files\'"
-alias ppmigrate="dc run --rm web mix ecto.migrate"
-alias ppstagingpod="kubectl --context finance-staging get pods"
-alias useproddump="docker-compose exec -T db psql -h localhost -U postgres -d finance_dev < prod_dump"
-alias usestagingdump="docker-compose exec -T db psql -h localhost -U postgres -d finance_dev < staging_dump"
-alias facts="docker-compose exec web elixir -S mix run -e 'Finance.Facts.load()'"
-#####################
 
 #git
 alias gcb="git checkout -b"
-
 alias gb="git branch"
-
 alias gc="git checkout"
-
 alias gs="git status"
-
 alias ga="git add"
-
 alias gcm="git commit -m"
-
 alias gcp="git commit -p"
-
 alias gdif="git diff --cached"
-
 alias diffword="git diff --word-diff-regex=."
-
-alias gmas="git checkout develop"
-
+alias gmas="git checkout main"
 alias gl='git log -15 --pretty=format:'\''%C(yellow)%h %Cgreen%ad %Cred%an %Creset%s %Cgreen%d'\'' --date=short'
-
 alias gl20='git log -20 --pretty=format:'\''%C(yellow)%h %Cgreen%ad %Cred%an %Creset%s %Cgreen%d'\'' --date=short'
-
 alias gbd='git branch -d'
-
 alias branchboom='git branch | grep -v "master" | xargs git branch -D'
-
 alias hard='git reset HEAD --hard'
-
 #git pull
 alias gpull='git pull'
-
 #git push
 alias gpush='git push'
-
 #git push --force-with-lease
 alias gpushf='git push --force-with-lease'
-
 #git push origin
 alias gpush="git push --set-upstream origin"
-
-#rebase
-alias rebase="git fetch && git rebase origin/develop"
-
+# alias rebase="git fetch && git rebase origin/develop"
+alias rebase="git fetch && git rebase origin/main"
+# alias rebase="git fetch && git rebase origin/master"
 #git add all && amend
 alias amendall='git add . && git commit --amend'
-
 #git commit --amend
 alias amend='git commit --amend'
-
 #git add all and commit
 alias all='git add . && git commit'
-
+# remove all untracked files
+alias gitclean='git clean -d -f'
 ######################
 #docker-compose
 alias dc=docker-compose
@@ -129,9 +102,16 @@ alias dcupb="docker-compose up --build"
 
 #prune docker images
 alias killdockers="docker image prune"
+
+#docker-compose ecto migrate
+alias dcmigrate="dc exec web mix ecto.migrate"
 ######################
 #elixir
+## iex command with docker
 alias econ='docker-compose exec web iex --erl "-kernel shell_history enabled" -S mix'
+
+## iex without docker
+# alias econ='iex --erl "-kernel shell_history enabled" -S mix'
 
 alias formatall="docker-compose exec web mix format"
 
@@ -140,8 +120,8 @@ alias roll="dc exec web mix ecto.rollback --step 1"
 ######################
 #linting
 alias lintjs="bin/yarn lint:js --fix"
-
 alias lintcss="bin/yarn lint:css"
+alias credo="docker-compose exec web mix credo --strict"
 
 #find open processes
 #lsof -i tcp:
@@ -153,9 +133,6 @@ alias open4567="lsof -i tcp:4567"
 # open bash-profile
 alias bashpro='code ~/.bash_profile'
 
-# git autocomplete
-# git autocomplete
-# git autocomplete
 # git autocomplete
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
@@ -169,6 +146,16 @@ fi
 
 irebase () { git rebase -i HEAD~"$1";}
 ireset () { git reset HEAD~"$1";}
+iroll () { dc exec web mix ecto.rollback --step "$1";}
+
+######################
+#gigalixir-specific ENVs and aliases
+export staging="--app_name atlas-staging"
+export prod="--app_name atlas-production"
+
+alias stagingmigrate="gigalixir run mix ecto.migrate --app_name atlas-staging"
+alias staginglogs="gigalixir logs --app_name atlas-staging"
+
 
 PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -220,3 +207,20 @@ if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/she
 # alias bb3='aws --endpoint-url=http://localhost:4575 sns subscribe --topic-arn "arn:aws:sns:us-east-1:000000000000:new-source-files" --protocol "http" --notification-endpoint "http://web:4000/webhook/source-file-notifications"'
 # alias bb4="curl -X PUT -d '<NotificationConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><TopicConfiguration><Id>some-optional-id</Id><Topic>arn:aws:sns:us-east-1:000000000000:new-source-files</Topic><Event>s3:ObjectCreated:*</Event><Filter><S3Key><FilterRule><Name>prefix</Name><Value>import/</Value></FilterRule></S3Key></Filter></TopicConfiguration></NotificationConfiguration>' -s 'http://localhost:4572/demo-bucket/?notification'"
 
+# HomeAdvisor Installer: bash-completion
+# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home"
+
+# Pineapple Payments
+
+# alias ppsetup="docker-compose run --rm web mix ecto.setup"
+# alias ppcreate="docker-compose run --rm web mix ecto.create"
+# alias ppreset="docker-compose run --rm web mix ecto.reset"
+# alias ppaws="bash ~/pineapple-aws.sh"
+# alias ppclean="docker run --rm -it -v \"$PWD:/source_files\" finance-clean bash -ic \'/source_files/clean-source-files\'"
+# alias ppmigrate="dc run --rm web mix ecto.migrate"
+# alias ppstagingpod="kubectl --context finance-staging get pods"
+# alias useproddump="docker-compose exec -T db psql -h localhost -U postgres -d finance_dev < prod_dump"
+# alias usestagingdump="docker-compose exec -T db psql -h localhost -U postgres -d finance_dev < staging_dump"
+# alias facts="docker-compose exec web elixir -S mix run -e 'Finance.Facts.load()'"
