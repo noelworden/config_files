@@ -9,3 +9,5 @@
 	default = current
 [core]
 	editor = vim
+[commit]
+        template = /Users/noelworden/.customgitmsg.txt
