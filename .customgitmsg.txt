@@ -1,19 +1,22 @@
 []
-#--------------------------------------------------
+#-------------------------------------------------
 # [ FEAT BUG CHG REFAC PERF DATA TOOL COPY DOC SPEC WIP ]
 # Answer this question: If applied, this commit will...
+# Capitalize, no period
 #--------------------------------------------------
 #This is the empty space to separate the title from the body
 
-#---------------------------------------------------------------------
+#-----------------------------------------------------------------------
 
 
-#---------------------------------------------------------------------
-# Description of why, not how.
-# Link to issue, if needed.
+#-----------------------------------------------------------------------
+# Description of what & why, not how
+# Link to issue, if needed
 # Wrap summary text at the end of the above line, do not exceed line
 # length
-#---------------------------------------------------------------------
+#
+# :set tw=72
+#-----------------------------------------------------------------------
 #FEAT - feature, new stuff to the site
 #BUG - any bug fix you put in place
 #CHG - change that is NOT a refactor or a COPY change
