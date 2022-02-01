@@ -1,0 +1,324 @@
+{
+	"name": "marp-vscode",
+	"displayName": "Marp for VS Code",
+	"publisher": "marp-team",
+	"version": "1.4.7",
+	"description": "Create slide deck written in Marp Markdown on VS Code",
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"marp",
+		"markdown",
+		"slide",
+		"deck",
+		"presentation"
+	],
+	"license": "MIT",
+	"author": {
+		"name": "Marp team",
+		"url": "https://github.com/marp-team"
+	},
+	"contributors": [
+		{
+			"name": "Yuki Hattori",
+			"url": "https://github.com/yhatt"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/marp-team/marp-vscode"
+	},
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"main": "./lib/extension.js",
+	"browser": "./dist/extension.js",
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#d9edf8",
+		"theme": "light"
+	},
+	"activationEvents": [
+		"onLanguage:markdown",
+		"onCommand:markdown.marp.export",
+		"onCommand:markdown.marp.newMarpMarkdown",
+		"onCommand:markdown.marp.showQuickPick",
+		"onCommand:markdown.marp.toggleMarpFeature"
+	],
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": "limited",
+			"description": "Workspace trust is required for exporting slide deck, and using themes configured in the workspace.",
+			"restrictedConfigurations": [
+				"markdown.marp.enableHtml",
+				"markdown.marp.themes"
+			]
+		},
+		"virtualWorkspaces": true
+	},
+	"contributes": {
+		"colors": [
+			{
+				"id": "marp.directiveKeyForeground",
+				"description": "Forground decoration color for the key of Marp directive",
+				"defaults": {
+					"dark": "#67b8e3ff",
+					"light": "#0288d1ff",
+					"highContrast": "#67b8e3ff"
+				}
+			}
+		],
+		"commands": [
+			{
+				"category": "Marp",
+				"command": "markdown.marp.export",
+				"title": "Export Slide Deck..."
+			},
+			{
+				"category": "Marp",
+				"command": "markdown.marp.newMarpMarkdown",
+				"title": "New Untitled Marp Markdown For Slide Deck",
+				"shortTitle": "Marp Markdown"
+			},
+			{
+				"category": "Marp",
+				"command": "markdown.marp.showQuickPick",
+				"title": "Show Quick Pick Of Marp Commands...",
+				"icon": {
+					"dark": "./images/icon-dark.svg",
+					"light": "./images/icon-light.svg"
+				}
+			},
+			{
+				"category": "Marp",
+				"command": "markdown.marp.toggleMarpFeature",
+				"title": "Toggle Marp Feature For Current Markdown"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Marp for VS Code",
+			"properties": {
+				"markdown.marp.breaks": {
+					"type": "string",
+					"enum": [
+						"off",
+						"on",
+						"inherit"
+					],
+					"default": "on",
+					"description": "Sets how line-breaks are rendered in Marp Markdown. It can set separately because the default setting of Marp ecosystem is different from VS Code.",
+					"markdownEnumDescriptions": [
+						"Ignore line-breaks in rendered Marp Markdown preview.",
+						"Show line-breaks in rendered Marp Markdown preview. It is the default setting of Marp ecosystem.",
+						"Use inherited setting from `#markdown.preview.breaks#`."
+					]
+				},
+				"markdown.marp.chromePath": {
+					"type": "string",
+					"default": "",
+					"description": "Sets the custom path for Chrome or Chromium-based browser to export PDF, PPTX, and image. If it's empty, Marp will find out the installed Google Chrome / Chromium / Microsoft Edge."
+				},
+				"markdown.marp.enableHtml": {
+					"type": "boolean",
+					"default": false,
+					"description": "Enables all HTML elements in Marp Markdown. This setting is working only in the trusted workspace."
+				},
+				"markdown.marp.exportType": {
+					"type": "string",
+					"enum": [
+						"html",
+						"pdf",
+						"pptx",
+						"png",
+						"jpeg"
+					],
+					"default": "pdf",
+					"description": "Sets default export type.",
+					"enumDescriptions": [
+						"HTML slide deck",
+						"PDF slide deck",
+						"PowerPoint document",
+						"PNG image (first slide only)",
+						"JPEG image (first slide only)"
+					]
+				},
+				"markdown.marp.mathTypesetting": {
+					"type": "string",
+					"enum": [
+						"off",
+						"mathjax",
+						"katex"
+					],
+					"default": "katex",
+					"markdownDescription": "Controls math syntax and the default library for rendering math (provided by [Marp Core](https://github.com/marp-team/marp-core)). A using library can override by math global directive in Markdown. Please note that math rendering in Marp Markdown is not following the setting in `#markdown.math.enabled#`.",
+					"markdownEnumDescriptions": [
+						"Disable math syntax and math global directive.",
+						"Use MathJax (https://www.mathjax.org/).",
+						"Use KaTeX (https://katex.org/). It is the default library in Marp Core v2."
+					]
+				},
+				"markdown.marp.outlineExtension": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enables the outline extension for Marp Markdown. If enabled, VS Code's outline view will reflect slide splitters, and you can fold regions of the slide content in the editor."
+				},
+				"markdown.marp.pdf.noteAnnotations": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Adds [presenter notes](https://marpit.marp.app/usage?id=presenter-notes) to exported PDF as note annotations."
+				},
+				"markdown.marp.themes": {
+					"type": "array",
+					"default": [],
+					"markdownDescription": "A list of URLs or local paths to additional [theme CSS](https://marpit.marp.app/theme-css) for Marp core and Marpit framework. The rule for paths is following `#markdown.styles#`.",
+					"items": {
+						"type": "string"
+					}
+				},
+				"markdown.marp.toolbarButtonForQuickPick": {
+					"type": "boolean",
+					"default": true,
+					"description": "Shows editor toolbar button to Markdown document, for accessing quick pick of Marp commands."
+				}
+			}
+		},
+		"markdown.markdownItPlugins": true,
+		"markdown.previewScripts": [
+			"./preview/preview.js"
+		],
+		"markdown.previewStyles": [
+			"./marp-vscode.css"
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "markdown.marp.showQuickPick",
+					"group": "navigation",
+					"when": "config.markdown.marp.toolbarButtonForQuickPick && editorLangId == markdown"
+				}
+			],
+			"file/newFile": [
+				{
+					"command": "markdown.marp.newMarpMarkdown",
+					"group": "file"
+				}
+			]
+		}
+	},
+	"private": true,
+	"vsce": {
+		"yarn": false
+	},
+	"prettier": {
+		"semi": false,
+		"singleQuote": true
+	},
+	"stylelint": {
+		"extends": [
+			"stylelint-config-standard",
+			"stylelint-config-prettier"
+		],
+		"rules": {
+			"selector-type-no-unknown": [
+				true,
+				{
+					"ignoreTypes": [
+						"foreignobject"
+					]
+				}
+			]
+		}
+	},
+	"scripts": {
+		"build": "webpack --env production",
+		"build:node": "webpack --env production --env target=node",
+		"build:preview": "webpack --env production --env target=preview",
+		"build:web": "webpack --env production --env target=web",
+		"check:audit": "npm audit",
+		"check:format": "npm run -s format -- -c",
+		"check:ts": "tsc --noEmit",
+		"dev:web": "vscode-test-web --extensionDevelopmentPath=.",
+		"format": "prettier \"**/*.{css,js,json,md,scss,ts,yaml,yml}\"",
+		"format:write": "npm run -s format -- --write",
+		"lint:css": "stylelint \"./*.{css,scss}\"",
+		"lint:js": "eslint --ext .js,.ts --report-unused-disable-directives --cache .",
+		"package": "vsce package",
+		"preversion": "run-p check:* lint:* test:*:coverage",
+		"test:unit": "jest",
+		"test:unit:coverage": "jest --coverage",
+		"version": "curl https://raw.githubusercontent.com/marp-team/actions/v1/lib/scripts/version.js | node && git add -A CHANGELOG.md",
+		"vsce:publish": "vsce publish",
+		"vscode:prepublish": "run-s preversion build",
+		"watch": "webpack --watch",
+		"watch:node": "webpack --watch --env target=node,preview",
+		"watch:web": "webpack --watch --env target=web,preview"
+	},
+	"devDependencies": {
+		"@babel/preset-env": "^7.16.11",
+		"@marp-team/marp-core": "^2.3.2",
+		"@types/express": "^4.17.13",
+		"@types/jest": "^27.4.0",
+		"@types/lodash.debounce": "^4.0.6",
+		"@types/markdown-it": "^12.2.3",
+		"@types/vscode": "~1.60.0",
+		"@typescript-eslint/eslint-plugin": "^5.10.0",
+		"@typescript-eslint/parser": "^5.10.0",
+		"@vscode/test-web": "^0.0.19",
+		"abort-controller": "^3.0.0",
+		"dedent": "^0.7.0",
+		"esbuild": "^0.14.13",
+		"esbuild-loader": "^2.18.0",
+		"eslint": "^8.7.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-import-resolver-typescript": "^2.5.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-jest": "^25.7.0",
+		"express": "^4.17.2",
+		"fetch-ponyfill": "^7.1.0",
+		"jest": "^27.4.7",
+		"jest-junit": "^13.0.0",
+		"lodash.debounce": "^4.0.8",
+		"markdown-it": "^12.3.2",
+		"nanoid": "^3.2.0",
+		"npm-run-all": "^4.1.5",
+		"os-browserify": "^0.3.0",
+		"path-browserify": "^1.0.1",
+		"portfinder": "^1.0.28",
+		"prettier": "^2.5.1",
+		"process": "^0.11.10",
+		"rehype-parse": "^8.0.3",
+		"remark-math": "^5.1.1",
+		"remark-parse": "^10.0.1",
+		"stylelint": "^14.2.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-standard": "^24.0.0",
+		"ts-jest": "^27.1.3",
+		"tslib": "^2.3.1",
+		"typed-emitter": "^2.1.0",
+		"typescript": "^4.5.5",
+		"unified": "^10.1.1",
+		"unist-util-visit": "^4.1.0",
+		"vsce": "^2.6.3",
+		"vscode-uri": "^3.0.3",
+		"webpack": "^5.67.0",
+		"webpack-cli": "^4.9.1",
+		"yaml": "^2.0.0-5"
+	},
+	"dependencies": {
+		"@marp-team/marp-cli": "^1.5.2"
+	},
+	"overrides": {
+		"markdown-it@10": "$markdown-it",
+		"node-fetch@2": "2.6.7"
+	},
+	"__metadata": {
+		"id": "a6226409-c077-4199-9efe-5fd4d91a253d",
+		"publisherId": "94e93232-0986-46bf-bc92-0417f2f925de",
+		"publisherDisplayName": "Marp team",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1643741850141
+	}
+}

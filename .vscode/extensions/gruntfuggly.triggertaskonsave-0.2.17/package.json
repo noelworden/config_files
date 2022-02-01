@@ -1,0 +1,134 @@
+{
+	"name": "triggertaskonsave",
+	"displayName": "Trigger Task on Save",
+	"icon": "icon.png",
+	"description": "Run tasks when saving files",
+	"version": "0.2.17",
+	"license": "MIT",
+	"publisher": "Gruntfuggly",
+	"repository": "https://github.com/Gruntfuggly/triggertaskonsave",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "triggerTaskOnSave.enable",
+				"title": "Trigger Task On Save: Enable",
+				"category": "Trigger Task On Save"
+			},
+			{
+				"command": "triggerTaskOnSave.disable",
+				"title": "Trigger Task On Save: Disable",
+				"category": "Trigger Task On Save"
+			},
+			{
+				"command": "triggerTaskOnSave.toggle",
+				"title": "Trigger Task On Save: Toggle",
+				"category": "Trigger Task On Save"
+			},
+			{
+				"command": "triggerTaskOnSave.selectTask",
+				"title": "Trigger Task On Save: Select Task",
+				"category": "Trigger Task On Save"
+			},
+			{
+				"command": "triggerTaskOnSave.clearSelectedTask",
+				"title": "Trigger Task On Save: Clear Selected Task",
+				"category": "Trigger Task On Save"
+			},
+			{
+				"command": "triggerTaskOnSave.stopCurrentTask",
+				"title": "Trigger Task On Save: Stop Current Task",
+				"category": "Trigger Task On Save"
+			},
+			{
+				"command": "triggerTaskOnSave.toggleEnabled",
+				"title": "Toggle Enabled",
+				"category": "Trigger Task On Save"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Trigger Task on Save",
+			"properties": {
+				"triggerTaskOnSave.on": {
+					"type": "boolean",
+					"description": "Automatically trigger tasks on save",
+					"default": true
+				},
+				"triggerTaskOnSave.delay": {
+					"type": "integer",
+					"description": "If non-zero, wait for this number of milliseconds before triggering the task",
+					"default": 0
+				},
+				"triggerTaskOnSave.restart": {
+					"type": "boolean",
+					"description": "Kill the task first if it is already running",
+					"default": false
+				},
+				"triggerTaskOnSave.tasks": {
+					"type": "object",
+					"description": "Tasks to associate with file globs, e.g. \"build\": [\"**/*.h\",\"**/*.cpp\"]",
+					"default": {}
+				},
+				"triggerTaskOnSave.selectedTask": {
+					"type": "string",
+					"description": "Name of the task to run when a file is saved. Uses the defined globs, but overrides the task"
+				},
+				"triggerTaskOnSave.showNotifications": {
+					"type": "boolean",
+					"description": "Show popup notifications when tasks start and end",
+					"default": false
+				},
+				"triggerTaskOnSave.showBusyIndicator": {
+					"type": "boolean",
+					"description": "Show a busy indicator with the current task name on the status bar",
+					"default": true
+				},
+				"triggerTaskOnSave.showStatusBarToggle": {
+					"type": "boolean",
+					"description": "Show a status bar item allowing the extension to be enabled or disabled",
+					"default": false
+				},
+				"triggerTaskOnSave.resultIndicator": {
+					"type": "string",
+					"markdownDescription": "An `workbench.colorCustomizations` setting Used in conjunction with *triggerTaskOnSave.failureColour* to indicate when a task returns a non-zero exit code, e.g.`statusBar.background`"
+				},
+				"triggerTaskOnSave.resultIndicatorResetTimeout": {
+					"type": "integer",
+					"markdownDescription": "Number of seconds after which the results indicator is cleared",
+					"default": 10
+				},
+				"triggerTaskOnSave.failureColour": {
+					"type": "string",
+					"markdownDescription": "A colour used in combination with *triggerTaskOnSave.resultIndicator* to indicate when a task returns a non-zero exit code. Overwrites the `workbench.colorCustomizations` in workspace settings. When a task completes successfully, the settings is removed.",
+					"default": "#ff000040"
+				},
+				"triggerTaskOnSave.successColour": {
+					"type": "string",
+					"markdownDescription": "A colour used in combination with *triggerTaskOnSave.resultIndicator* to indicate when a task completes successfully (with an exit code of 0). Overwrites the `workbench.colorCustomizations` in workspace settings. When a task completes successfully, the settings is removed.",
+					"default": "#00ff0040"
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"minimatch": "^3.0.3"
+	},
+	"__metadata": {
+		"id": "d165ee3e-9bb1-4d30-b415-b6592cfffc3f",
+		"publisherId": "d4906d2e-f2ee-492d-9c7c-02b6160599ec",
+		"publisherDisplayName": "Gruntfuggly",
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1643741840243
+	}
+}

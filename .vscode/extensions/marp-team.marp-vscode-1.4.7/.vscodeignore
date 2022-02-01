@@ -1,0 +1,12 @@
+*
+*/**
+!node_modules/**
+!.vscodeignore
+!dist/*
+!images/**
+!lib/*
+!preview/*
+!CHANGELOG.md
+!LICENSE
+!README.md
+!marp-vscode.css
